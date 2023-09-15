@@ -1,8 +1,7 @@
 <template>
   <div>
-    <h1>Home Page</h1>
     <MainNavBar></MainNavBar>
-    <PartnersCarousel></PartnersCarousel>
+    <!-- <PartnersCarousel></PartnersCarousel> -->
   </div>
 </template>
 

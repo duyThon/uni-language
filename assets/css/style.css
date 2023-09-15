@@ -2,9 +2,23 @@
     --text-color: #333;
     --primary-color: #28788C; /* primary-color */
     --background-color: #fff;
+    box-sizing: border-box;
 }
   
 body {
     color: var(--text-color);
     background-color: var(--background-color);
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* mobile */
+@media (max-width: 46.1875em) {
+    
+}
+
+/* tablet */
+@media (min-width: 46.25em) and (max-width: 63.9375em){
+    
 }
