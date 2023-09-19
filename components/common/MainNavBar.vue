@@ -130,6 +130,7 @@ export default {
     backdrop-filter: blur(5px);
 }
 
+
 .homepage-logo-img {
     height: 4em;
 }
@@ -143,18 +144,6 @@ export default {
     list-style: none;
     align-items: center;
     justify-content: center;
-}
-
-.main-navbar-list-item {
-    padding: 0.625em 1.25em 0.5em;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.main-navbar-list-item:hover {
-    background-color: transparent !important;
-    border-bottom: 0.375em solid var(--primary-color);
 }
 
 .el-menu.el-menu--horizontal {
@@ -171,8 +160,17 @@ export default {
     border-bottom: 0.175em solid var(--primary-color) !important;
 }
 
+.el-submenu ~ div {
+    background-color: transparent !important;
+}
+
 .el-submenu.is-opened {
+    background-color: transparent !important;
     border-bottom: 0.175em solid var(--primary-color) !important;
+}
+
+.el-menu--horizontal>.el-submenu .el-submenu__title:hover {
+    background-color: transparent !important;
 }
 
 /* nation css */
