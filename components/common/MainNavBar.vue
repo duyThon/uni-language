@@ -126,13 +126,21 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, .5);
-    backdrop-filter: blur(5px);
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    /* backdrop-filter: blur(5px); */
 }
 
 
 .homepage-logo-img {
-    height: 4em;
+    position: fixed;
+    /* height: 141px;
+    top: 26px;
+    position: fixed; */
+    /* height: 141px; */
+    top: 0px;
+    height: 70px;
+    /* height: 4em; */
 }
 
 .main-navbar-list {
@@ -148,29 +156,15 @@ export default {
 
 .el-menu.el-menu--horizontal {
     border-bottom: none;
-    background-color: transparent !important;
-}
-
-.el-menu-item {
-    background-color: transparent !important;
+    
 }
 
 .el-menu-item:hover  {
-    background-color: transparent !important;
     border-bottom: 0.175em solid var(--primary-color) !important;
-}
-
-.el-submenu ~ div {
-    background-color: transparent !important;
 }
 
 .el-submenu.is-opened {
-    background-color: transparent !important;
     border-bottom: 0.175em solid var(--primary-color) !important;
-}
-
-.el-menu--horizontal>.el-submenu .el-submenu__title:hover {
-    background-color: transparent !important;
 }
 
 /* nation css */
@@ -188,6 +182,7 @@ export default {
     height: 1.75em;
     cursor: pointer;
     margin: 0.25em;
+    border: 2px solid #fff;
 }
 
 .nation-logo-item img:hover {
