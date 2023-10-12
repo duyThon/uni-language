@@ -270,6 +270,7 @@ export default {
     height: 1.75em;
     cursor: pointer;
     margin: 0.25em;
+    border: 2px solid #fff;
 }
 
 .nation-logo-item-mobile img:hover {
