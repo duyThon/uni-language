@@ -1,22 +1,29 @@
 <template>
   <div>
     <MainNavBar></MainNavBar>
-    <!-- <PartnersCarousel></PartnersCarousel> -->
+    <div class="main">
+        <nuxt-child />
+    </div>
+    <StickyInfoContact/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import MainNavBar from "../components/common/MainNavBar.vue"
-import PartnersCarousel from "../components/common/PartnersCarousel.vue"
-export default {
-  data() {
-    return {
+import MainNavBar from "@/components/common/MainNavBar.vue"
+import StickyInfoContact from "@/components/common/StickyInfoContact.vue"
+import Footer from "@/components/common/Footer.vue"
 
-    }
-  },
+export default {
+    
   components: {
     MainNavBar,
-    PartnersCarousel
+    StickyInfoContact,
+    Footer,
   }
 }
 </script>
+
+<style>
+
+</style>

@@ -2,36 +2,97 @@
     <nav>
         <div class="main-navbar" style="padding: 1.25em;">
             <div class="uni-logo">
-                <img class="homepage-logo-img" src="@/assets/logo/logo-uni-ngang-2.png" alt="UNI Language House">
+                <router-link to="/home">
+                    <img class="homepage-logo-img" src="@/assets/logo/logo-uni-ngang-2.png" alt="UNI Language House"/>
+                </router-link>
             </div>
             <div class="main-navbar-list">
                 <el-menu style="margin: 0"
                     mode="horizontal"
                     @select="handleSelect"
-                    text-color="var(--text-color)">
-                    <el-menu-item index="1">GIỚI THIỆU</el-menu-item>
+                    text-color="var(--text-color)"
+                    menu-trigger="click">
+                    <el-menu-item index="1">
+                        <router-link to="/about">
+                            GIỚI THIỆU
+                        </router-link>
+                    </el-menu-item>
                     <el-submenu index="2">
                         <template slot="title">KHÓA HỌC</template>
-                        <el-menu-item index="2-1">Khóa giao tiếp tiêu chuẩn Cambridge</el-menu-item>
-                        <el-submenu index="2-4">
-                        <template slot="title">Khóa học chuyên sâu ngắn hạn</template>
-                        <el-menu-item index="2-4-1">Khóa học steam tiếng anh</el-menu-item>
-                        <el-menu-item index="2-4-2">Khóa học thuyết trình</el-menu-item>
-                        <el-menu-item index="2-4-3">Khóa học tranh biện</el-menu-item>
-                        </el-submenu>
-                        <el-submenu index="3-4">
-                        <template slot="title">Khóa luyện thi</template>
-                        <el-menu-item index="3-4-1">Khóa luyện thi IELT</el-menu-item>
-                        <el-menu-item index="3-4-2">Khóa luyện thi ngữ pháp</el-menu-item>
-                        <el-menu-item index="3-4-3">Khóa luyện thi chuyển cấp</el-menu-item>
-                        <el-menu-item index="3-4-4">Khóa luyện thi TOEIC</el-menu-item>
-                        <el-menu-item index="3-4-5">Khóa luyện thi Cambridge</el-menu-item>
-                        </el-submenu>
+                        <div style="padding: 10px; font-weight: 600; font-size: 15px">Khóa học chính</div>
+                            <el-menu-item index="1-1">
+                                <router-link @click="test" to="/course/kindergarten-course">
+                                    Tiếng anh mầm non 
+                                </router-link>
+                            </el-menu-item>
+                            <el-menu-item index="1-2">
+                                <router-link to="/course/primary-school">
+                                    Tiếng anh tiểu học
+                                </router-link>
+                            </el-menu-item>
+                            <el-menu-item index="1-3">
+                                <router-link to="/course/secondary-school">
+                                    Tiếng anh THCS
+                                </router-link>
+                            </el-menu-item>
+                            <el-menu-item index="1-4">
+                                <router-link to="/course/IELTS-learner">
+                                    Tiếng anh luyện thi IELTS
+                                </router-link>
+                            </el-menu-item>
+                        <div style="padding: 10px; font-weight: 600; font-size: 15px">Khóa học chuyên biệt</div>
+                            <el-menu-item index="2-1">
+                                <router-link to="/">
+                                    Khóa học kể chuyện
+                                </router-link>
+                            </el-menu-item>
+                            <el-menu-item index="2-2">
+                                <router-link to="/">
+                                    Khóa học Steam
+                                </router-link>
+                            </el-menu-item>
+                            <el-menu-item index="2-3">
+                                <router-link to="/">
+                                    Khóa học thuyết trình
+                                </router-link>
+                            </el-menu-item>
+                            <el-menu-item index="2-4">
+                                <router-link to="/">
+                                    Khóa học luyện thi TOEIC
+                                </router-link>
+                            </el-menu-item>
+                            <el-menu-item index="2-5">
+                                <router-link to="/">
+                                    Khóa học bổ ngữ âm - ngữ pháp
+                                </router-link>
+                            </el-menu-item>
+                            <el-menu-item index="2-6">
+                                <router-link to="/">
+                                    Khóa học luyện thi chuyển cấp
+                                </router-link>
+                            </el-menu-item>
+
                     </el-submenu>
-                    <el-menu-item index="3">SỰ KIỆN</el-menu-item>
-                    <el-menu-item index="3">TIN TỨC</el-menu-item>
-                    <el-menu-item index="3">HỌC VIÊN XUẤT SẮC</el-menu-item>
-                    <el-menu-item index="3">THI THỬ</el-menu-item>
+                    <el-menu-item index="3">
+                        <router-link to="/events">
+                            SỰ KIỆN
+                        </router-link>
+                    </el-menu-item>
+                    <el-menu-item index="4">
+                        <router-link to="/news">
+                            TIN TỨC
+                        </router-link>
+                    </el-menu-item>
+                    <el-menu-item index="6">
+                        <router-link to="">
+                            HỌC VIÊN XUẤT SẮC
+                        </router-link>
+                    </el-menu-item>
+                    <el-menu-item index="6">
+                        <router-link to="/testandexam">
+                            THI THỬ
+                        </router-link>
+                    </el-menu-item>
                 </el-menu>
                 <div class="switch-language">
                     <ul class="nation-logo">
@@ -110,6 +171,9 @@ export default {
     methods: {
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
+      },
+      test () {
+        console.log("this.$router")
       }
     }
 }
