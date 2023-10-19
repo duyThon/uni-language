@@ -53,8 +53,8 @@ export default {
 
 <style>
 .footer {
-  padding: 1.25em;
-  padding-bottom: 6.25em;
+  padding: 20px 80px;
+  padding-bottom: 100px;
   background-color: var(--primary-color);
 }
 
@@ -142,5 +142,13 @@ export default {
     to {
         opacity: 1;
     }
+}
+
+/* tablet and mobile */
+@media (max-width: 63.9375em) {
+.footer {
+  padding: 20px 15px;
+  padding-bottom: 100px;
+}
 }
 </style>

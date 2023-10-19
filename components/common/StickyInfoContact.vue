@@ -155,5 +155,12 @@ export default {};
   width: 90%;
 }
 
+/* tablet and mobile */
+@media (max-width: 63.9375em) {
+  .sticky-contact {
+    display: none;
+  }
+}
+
 
 </style>

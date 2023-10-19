@@ -1,8 +1,9 @@
 <template>
   <div>
     <div class="main">
+      <h1>home page</h1>
       <img src="https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg" style="width: 80%" alt="">
-      <img src="https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg" alt="">
+      <!-- <img src="https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg" alt=""> -->
     </div>
     <StickyInfoContact/>
     <nuxt-child />    

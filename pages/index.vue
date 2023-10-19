@@ -1,9 +1,9 @@
 <template>
   <div>
     <MainNavBar></MainNavBar>
-    <div class="main">
+    <main>
         <nuxt-child />
-    </div>
+    </main>
     <StickyInfoContact/>
     <Footer/>
   </div>
@@ -25,5 +25,8 @@ export default {
 </script>
 
 <style>
+main {
+  margin-top: 80px;
+}
 
 </style>
