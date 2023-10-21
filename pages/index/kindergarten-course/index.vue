@@ -79,7 +79,7 @@
               <figure><img src="@/assets/pics/kindergarten/books/my-little-island1.jpg" alt=""></figure>
             </div>
             <div class="section3-content-title">
-              <h3>My Little Island 1</h3>
+              <h4>My Little Island 1</h4>
             </div>
           </div>
         </el-col>
@@ -89,7 +89,7 @@
               <figure><img src="@/assets/pics/kindergarten/books/my-little-island2.jpg" alt=""></figure>
             </div>
             <div class="section3-content-title">
-              <h3>My Little Island 2</h3>
+              <h4>My Little Island 2</h4>
             </div>
           </div>
         </el-col>
@@ -99,13 +99,16 @@
               <figure><img src="@/assets/pics/kindergarten/books/my-little-island3.jpg" alt=""></figure>
             </div>
             <div class="section3-content-title">
-              <h3>My Little Island 3</h3>
+              <h4>My Little Island 3</h4>
             </div>
           </div>
         </el-col>
       </el-row>
     </div>
     <div class="section section4">
+      <h2 style="margin-top: 0; text-align: center">
+        Lộ trình học tập
+      </h2>
       <table class="schedule-table" border="1">
         <tbody>
           <tr>
@@ -127,6 +130,36 @@
           </tr>
         </tbody>
       </table>
+      <div class="btn-sign-up">
+        <a href="#">ĐĂNG KÝ TƯ VẤN NGAY</a>
+      </div>
+    </div>
+    <div class="section section5">
+      <h2 style="margin-top: 0; text-align: center">
+        CÁC CHƯƠNG TRÌNH HỌC KHÁC TẠI UNI LANGUAGE HOUSE
+      </h2>
+      <el-row :gutter="20">
+        <el-col :xs="12" :sm="12" :lg="6">
+          <div class="other-course-content">
+            <h3>TIẾNG ANH MẪU GIÁO</h3>
+          </div>
+        </el-col>
+        <el-col :xs="12" :sm="12" :lg="6">
+          <div class="other-course-content">
+            <h3>TIẾNG ANH TIỂU HỌC</h3>
+          </div>
+        </el-col>
+        <el-col :xs="12" :sm="12" :lg="6">
+          <div class="other-course-content">
+            <h3>TIẾNG ANH THCS</h3>
+          </div>
+        </el-col>
+        <el-col :xs="12" :sm="12" :lg="6">
+          <div class="other-course-content">
+            <h3>TIẾNG ANH LUYỆN THI IELTS</h3>
+          </div>
+        </el-col>
+      </el-row>
     </div>
   </div>
 </template>
@@ -227,6 +260,10 @@ export default {};
 	transform: scale(1.3);
 }
 
+.section4 {
+  text-align: center;
+}
+
 .schedule-table {
   border-collapse: collapse;
   width: 60%;
@@ -251,5 +288,35 @@ export default {};
 
 .schedule-table td {
   padding: 10px 24px;
+}
+
+.btn-sign-up {
+  margin-top: 45px;
+}
+
+.btn-sign-up a {
+  padding: 15px 30px;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  display: inline-block;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.btn-sign-up a:visited {
+  
+  transition: all .2s ease;
+}
+
+.other-course-content {
+  width: 20%;
+  margin-right: 30px;
+  background: #4cb848;
+  border-radius: 30px;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
 }
 </style>
