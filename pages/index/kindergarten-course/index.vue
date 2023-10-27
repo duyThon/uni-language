@@ -1,16 +1,16 @@
 <template>
   <div>
-    <div class="banner-course kindergarten-banner">
+    <div id="kindergarten-course-banner" class="banner-course">
       <div class="intro">TIẾNG ANH</div>
-      <br />
-      <div class="intro fancy">MẦM NON</div>
+      <div style="width: 50%;" class="intro-border"></div>
+      <div class="intro intro-course">MẦM NON</div>
     </div>
     <div class="section section1">
         <el-row :gutter="20">
             <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
                 <div class="section-content-row-fl section1-intro-content">
                     <div class="section1-intro-img">
-                        <img src="https://llv.edu.vn/media/2023/08/vyl-1.png" alt="">
+                        <img src="@/assets/pics/kindergarten/items/kindergarten-01.png" alt="">
                     </div>
                     <div class="section1-intro-text">
                         <p>Học tiếng Anh một cách tự nhiên và hào hứng qua phương pháp học thông qua các hoạt động thể chất (TPR)</p>
@@ -20,7 +20,7 @@
             <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
                 <div class="section-content-row-fl section1-intro-content">
                     <div class="section1-intro-img">
-                        <img src="https://llv.edu.vn/media/2023/08/vyl-2.png" alt="">
+                        <img src="@/assets/pics/kindergarten/items/kindergarten-02.png" alt="">
                     </div>
                     <div class="section1-intro-text">
                         <p>Học phát âm tiếng Anh chuẩn bản ngữ theo giáo trình ngữ âm và phương pháp ghép vần (Phonics) tạo nền tảng vững chắc cho học đọc - viết trong tương lai</p>
@@ -30,7 +30,7 @@
             <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
                 <div class="section-content-row-fl section1-intro-content">
                     <div class="section1-intro-img">
-                        <img src="https://llv.edu.vn/media/2023/08/vyl-3.png" alt="">
+                        <img src="@/assets/pics/kindergarten/items/kindergarten-03.png" alt="">
                     </div>
                     <div class="section1-intro-text">
                         <p>Học tiếng Anh một cách thú vị qua phương pháp kể chuyện (Storytelling) kích thích trí tưởng tượng và rèn luyện năng lực cảm thụ văn học</p>
@@ -131,192 +131,39 @@
         </tbody>
       </table>
       <div class="btn-sign-up">
-        <a href="#">ĐĂNG KÝ TƯ VẤN NGAY</a>
+        <a href="#">ĐĂNG KÝ TƯ VẤN</a>
       </div>
     </div>
-    <div class="section section5">
-      <h2 style="margin-top: 0; text-align: center">
-        CÁC CHƯƠNG TRÌNH HỌC KHÁC TẠI UNI LANGUAGE HOUSE
-      </h2>
-      <el-row :gutter="20">
-        <el-col :xs="12" :sm="12" :lg="6">
-          <div class="other-course-content">
-            <h3>TIẾNG ANH MẪU GIÁO</h3>
-          </div>
-        </el-col>
-        <el-col :xs="12" :sm="12" :lg="6">
-          <div class="other-course-content">
-            <h3>TIẾNG ANH TIỂU HỌC</h3>
-          </div>
-        </el-col>
-        <el-col :xs="12" :sm="12" :lg="6">
-          <div class="other-course-content">
-            <h3>TIẾNG ANH THCS</h3>
-          </div>
-        </el-col>
-        <el-col :xs="12" :sm="12" :lg="6">
-          <div class="other-course-content">
-            <h3>TIẾNG ANH LUYỆN THI IELTS</h3>
-          </div>
-        </el-col>
-      </el-row>
-    </div>
+    <OtherCourseSection/>
   </div>
 </template>
 
 <script>
-export default {};
+import OtherCourseSection from '~/components/common/OtherCourseSection.vue';
+export default {
+  components: {
+    OtherCourseSection
+  }
+};
 </script>
 
 <style>
-.banner-course {
-  background-image: url("~assets/pics/kindergarten/background/background1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 540px;
-}
-
-.kindergarten-banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 700;
-}
-
-.intro {
-  font-size: 8vw;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1;
-  letter-spacing: 5px;
-  text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8);
-}
-
-.fancy {
-  @supports (background-clip: text) or (-webkit-background-clip: text) {
-    background-image: url("~assets/pics/kindergarten/texture/texture.jpg");
-    /* background-size: 110% auto; */
-    background-position: center;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    text-shadow: none;
-  }
-}
-
-.section {
-  margin: 30px 80px;
-}
-
-.section-content-row-fl {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.section1-intro-img {
-    min-height: 242px;
-}
-
-.section1-intro-text {
-    font-weight: 600;
-    text-align: center;
-    margin: 20px 50px;
-}
-
-.section2-intro {
-  padding: 30px 40px;
-  background: #eee;
-  border-radius: 30px;
-  text-align: justify;
-}
-/* 
-.section3-content {
-  margin: 30px 20px;
-  background: #28788c;
-  border-radius: 30px;
-  text-align: justify;
-  color: #fff;
-  height: 350px;
-} */
-
-.section3-content-img img{
-  max-height: 200px;
-}
-
-.section3-content-img figure img {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.section3-content-img figure:hover img {
-	-webkit-transform: scale(1.3);
-	transform: scale(1.3);
-}
-
-.section4 {
-  text-align: center;
-}
-
-.schedule-table {
-  border-collapse: collapse;
-  width: 60%;
-  text-align: center;
-  margin: auto;
-}
-
-.schedule-table tr:first-child {
-  font-weight: 700;
-  background-color: #729faa;
-}
-
-.schedule-table tr {
-  /* border: 1px solid #fff; */
-  padding: 6px;
-  /* background: #f3f0caa1; */
-}
-
-.schedule-table tr:nth-child(2n) {
-  background: #F3F0CA;
-}
-
-.schedule-table td {
-  padding: 10px 24px;
-}
-
-.btn-sign-up {
-  margin-top: 45px;
-}
-
-.btn-sign-up a {
-  padding: 15px 30px;
-  background: var(--primary-color);
-  color: #fff;
-  font-weight: 700;
-  font-size: 16px;
-  display: inline-block;
-  border-radius: 30px;
-  text-decoration: none;
-}
-
-.btn-sign-up a:visited {
-  
-  transition: all .2s ease;
+#kindergarten-course-banner {
+  background-image: url("~assets/pics/kindergarten/background/background.png");
 }
 
 .other-course-content {
-  width: 20%;
-  margin-right: 30px;
-  background: #4cb848;
-  border-radius: 30px;
-  padding: 40px 50px;
-  display: flex;
-  flex-direction: column;
+  background-image: url("~assets/pics/kindergarten/background/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.other-course-content:hover {
+  /* background-image: none; */
+  opacity: 1;
 }
 </style>

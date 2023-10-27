@@ -22,24 +22,22 @@
         <div class="footer-info-link"><a href="">Tầm nhìn</a></div>
         <div class="footer-info-link"><a href="">Sứ mệnh</a></div>
         <div class="footer-info-link"><a href="">Đội ngũ chuyên môn</a></div>
-        <div class="footer-info-link"><a href="">Tin tức</a></div>
-        <div class="footer-info-link"><a href="">Sự kiện</a></div>
-
-        <!-- <img class="homepage-logo-img" src="@/assets/logo/logo-uni-kem-slogan-doc-white.png" alt="UNI Language House"> -->
+        <div class="footer-info-link"><a href="">Tin tức & Sự kiện</a></div>
       </el-col>
       <el-col class="footer-info" :xs="24" :sm="24" :lg="8">
         <h2 class="footer-info-title">CHƯƠNG TRÌNH ĐÀO TẠO</h2>
-        <h3 class="footer-info-subtitle footer-info-link"><a href="">Khóa học giao tiếp tiêu chuẩn Cambridge</a></h3>
-        <h3 class="footer-info-subtitle">Khóa học chuyên sâu ngắn hạn</h3>
-        <div class="footer-info-link"><a href="">Khóa học steam tiếng anh</a></div>
-        <div class="footer-info-link"><a href="">Khóa học steam thuyết trình</a></div>
-        <div class="footer-info-link"><a href="">Khóa học steam tranh biện</a></div>
-        <h3 class="footer-info-subtitle">Khóa học luyện thi</h3>
-        <div class="footer-info-link"><a href="">Khóa luyện thi IELTS</a></div>
-        <div class="footer-info-link"><a href="">Khóa luyện thi ngữ pháp</a></div>
-        <div class="footer-info-link"><a href="">Khóa luyện thi chuyển cấp</a></div>
-        <div class="footer-info-link"><a href="">Khóa luyện thi TOEIC</a></div>
-        <div class="footer-info-link"><a href="">Khóa luyện thi Cambridge</a></div>
+        <h3 class="footer-info-subtitle">Các khóa học chính</h3>
+        <div class="footer-info-link"><router-link to="/kindergarten-course">Khóa học tiếng anh mầm non</router-link></div>
+        <div class="footer-info-link"><router-link to="/primary-course">Khóa học tiếng anh tiểu học</router-link></div>
+        <div class="footer-info-link"><router-link to="secondary-course">Khóa học tiếng anh THCS</router-link></div>
+        <div class="footer-info-link"><router-link to="/ielts">Khóa học tiếng anh luyện thi IELTS</router-link></div>
+        <h3 class="footer-info-subtitle">Các khóa học ngắn hạn</h3>
+        <div class="footer-info-link"><router-link to="/storytelling-course">Khóa học kể chuyện</router-link></div>
+        <div class="footer-info-link"><router-link to="/">Khóa học Steam</router-link></div>
+        <div class="footer-info-link"><router-link to="/">Khóa học thuyết trình</router-link></div>
+        <div class="footer-info-link"><router-link to="/">Khóa luyện thi TOEIC</router-link></div>
+        <div class="footer-info-link"><router-link to="/">Khóa luyện bổ trợ ngữ âm - ngữ pháp</router-link></div>
+        <div class="footer-info-link"><router-link to="/">Khóa luyện thi chuyển cấp</router-link></div>
       </el-col>
     </el-row>
   </div>

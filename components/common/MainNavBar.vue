@@ -11,7 +11,7 @@
                     mode="horizontal"
                     @select="handleSelect"
                     text-color="var(--text-color)"
-                    menu-trigger="click">
+                >
                     <el-menu-item index="1">
                         <router-link to="/about">
                             GIỚI THIỆU
@@ -26,17 +26,17 @@
                                 </router-link>
                             </el-menu-item>
                             <el-menu-item index="1-2">
-                                <router-link to="/course/primary-school">
+                                <router-link to="/primary-course">
                                     Tiếng anh tiểu học
                                 </router-link>
                             </el-menu-item>
                             <el-menu-item index="1-3">
-                                <router-link to="/course/secondary-school">
+                                <router-link to="/secondary-course">
                                     Tiếng anh THCS
                                 </router-link>
                             </el-menu-item>
                             <el-menu-item index="1-4">
-                                <router-link to="/course/IELTS-learner">
+                                <router-link to="/ielts">
                                     Tiếng anh luyện thi IELTS
                                 </router-link>
                             </el-menu-item>
@@ -74,21 +74,16 @@
 
                     </el-submenu>
                     <el-menu-item index="3">
-                        <router-link to="/events">
-                            SỰ KIỆN
+                        <router-link to="/news">
+                            TIN TỨC & SỰ KIỆN
                         </router-link>
                     </el-menu-item>
                     <el-menu-item index="4">
-                        <router-link to="/news">
-                            TIN TỨC
-                        </router-link>
-                    </el-menu-item>
-                    <el-menu-item index="6">
                         <router-link to="">
                             HỌC VIÊN XUẤT SẮC
                         </router-link>
                     </el-menu-item>
-                    <el-menu-item index="6">
+                    <el-menu-item index="5">
                         <router-link to="/testandexam">
                             THI THỬ
                         </router-link>
@@ -131,22 +126,22 @@
                     <template slot="title">KHÓA HỌC</template>
                     <div style="padding: 10px; font-weight: 600; font-size: 15px">Khóa học chính</div>
                         <el-menu-item index="1-1">
-                            <router-link @click="test" to="/course/kindergarten-course">
+                            <router-link @click="test" to="/kindergarten-course">
                                 Tiếng anh mầm non 
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="1-2">
-                            <router-link to="/course/primary-school">
+                            <router-link to="/primary-course">
                                 Tiếng anh tiểu học
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="1-3">
-                            <router-link to="/course/secondary-school">
+                            <router-link to="/secondary-course">
                                 Tiếng anh THCS
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="1-4">
-                            <router-link to="/course/IELTS-learner">
+                            <router-link to="/ielts">
                                 Tiếng anh luyện thi IELTS
                             </router-link>
                         </el-menu-item>
@@ -184,21 +179,16 @@
 
                 </el-submenu>
                 <el-menu-item index="3">
-                    <router-link to="/events">
-                        SỰ KIỆN
+                    <router-link to="/news">
+                        TIN TỨC & SỰ KIỆN
                     </router-link>
                 </el-menu-item>
                 <el-menu-item index="4">
-                    <router-link to="/news">
-                        TIN TỨC
-                    </router-link>
-                </el-menu-item>
-                <el-menu-item index="6">
                     <router-link to="">
                         HỌC VIÊN XUẤT SẮC
                     </router-link>
                 </el-menu-item>
-                <el-menu-item index="6">
+                <el-menu-item index="5">
                     <router-link to="/testandexam">
                         THI THỬ
                     </router-link>
@@ -279,7 +269,10 @@ export default {
 
 .el-menu.el-menu--horizontal {
     border-bottom: none;
-    
+}
+
+.el-menu-item {
+    padding: 0 50px;
 }
 
 .el-menu-item:hover  {
