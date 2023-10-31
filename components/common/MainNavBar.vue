@@ -17,6 +17,9 @@
                             GIỚI THIỆU
                         </router-link>
                     </el-menu-item>
+                    <el-menu-item index="1">
+                        <a href="#footer">LIÊN HỆ</a>
+                    </el-menu-item>
                     <el-submenu index="2">
                         <template slot="title">KHÓA HỌC</template>
                         <div style="padding: 10px; font-weight: 600; font-size: 15px">Khóa học chính</div>
@@ -42,32 +45,32 @@
                             </el-menu-item>
                         <div style="padding: 10px; font-weight: 600; font-size: 15px">Khóa học chuyên biệt</div>
                             <el-menu-item index="2-1">
-                                <router-link to="/">
+                                <router-link to="/storytelling-course">
                                     Khóa học kể chuyện
                                 </router-link>
                             </el-menu-item>
                             <el-menu-item index="2-2">
-                                <router-link to="/">
+                                <router-link to="/steam-course">
                                     Khóa học Steam
                                 </router-link>
                             </el-menu-item>
                             <el-menu-item index="2-3">
-                                <router-link to="/">
+                                <router-link to="/presentation-course">
                                     Khóa học thuyết trình
                                 </router-link>
                             </el-menu-item>
                             <el-menu-item index="2-4">
-                                <router-link to="/">
+                                <router-link to="/toeic">
                                     Khóa học luyện thi TOEIC
                                 </router-link>
                             </el-menu-item>
                             <el-menu-item index="2-5">
-                                <router-link to="/">
+                                <router-link to="/grammar-course">
                                     Khóa học bổ ngữ âm - ngữ pháp
                                 </router-link>
                             </el-menu-item>
                             <el-menu-item index="2-6">
-                                <router-link to="/">
+                                <router-link to="/transition-course">
                                     Khóa học luyện thi chuyển cấp
                                 </router-link>
                             </el-menu-item>
@@ -122,6 +125,9 @@
                         GIỚI THIỆU
                     </router-link>
                 </el-menu-item>
+                <el-menu-item index="1">
+                    <a href="#footer">LIÊN HỆ</a>
+                </el-menu-item>
                 <el-submenu index="2">
                     <template slot="title">KHÓA HỌC</template>
                     <div style="padding: 10px; font-weight: 600; font-size: 15px">Khóa học chính</div>
@@ -147,32 +153,32 @@
                         </el-menu-item>
                     <div style="padding: 10px; font-weight: 600; font-size: 15px">Khóa học chuyên biệt</div>
                         <el-menu-item index="2-1">
-                            <router-link to="/">
+                            <router-link to="/storytelling-course">
                                 Khóa học kể chuyện
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="2-2">
-                            <router-link to="/">
+                            <router-link to="/steam-course">
                                 Khóa học Steam
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="2-3">
-                            <router-link to="/">
+                            <router-link to="/presentation-course">
                                 Khóa học thuyết trình
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="2-4">
-                            <router-link to="/">
+                            <router-link to="/toeic">
                                 Khóa học luyện thi TOEIC
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="2-5">
-                            <router-link to="/">
+                            <router-link to="/grammar-course">
                                 Khóa học bổ ngữ âm - ngữ pháp
                             </router-link>
                         </el-menu-item>
                         <el-menu-item index="2-6">
-                            <router-link to="/">
+                            <router-link to="/transition-course">
                                 Khóa học luyện thi chuyển cấp
                             </router-link>
                         </el-menu-item>
@@ -272,7 +278,7 @@ export default {
 }
 
 .el-menu-item {
-    padding: 0 50px;
+    padding: 0 30px;
 }
 
 .el-menu-item:hover  {

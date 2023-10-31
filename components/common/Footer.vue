@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div id="footer">
     <el-row :gutter="20">
       <el-col class="footer-info" :xs="24" :sm="24" :lg="8">
         <img class="homepage-logo-img" src="@/assets/logo/logo-uni-kem-slogan-doc-white.png" alt="UNI Language House">
@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style>
-.footer {
+#footer {
   padding: 20px 80px;
   padding-bottom: 100px;
   background-color: var(--primary-color);
@@ -144,7 +144,7 @@ export default {
 
 /* tablet and mobile */
 @media (max-width: 63.9375em) {
-.footer {
+#footer {
   padding: 20px 15px;
   padding-bottom: 100px;
 }

@@ -10,7 +10,7 @@
         <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
           <div class="section-content-row-fl section1-intro-content">
             <div class="section1-intro-img">
-              <img src="@/assets/pics/ielts/items/ielts-01.png" alt="" />
+              <img src="@/assets/pics/course/ielts/items/ielts-01.png" alt="" />
             </div>
             <div class="section1-intro-text">
               <p>
@@ -24,7 +24,7 @@
         <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
           <div class="section-content-row-fl section1-intro-content">
             <div class="section1-intro-img">
-              <img src="@/assets/pics/ielts/items/ielts-02.png" alt="" />
+              <img src="@/assets/pics/course/ielts/items/ielts-02.png" alt="" />
             </div>
             <div class="section1-intro-text">
               <p>
@@ -37,7 +37,7 @@
         <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
           <div class="section-content-row-fl section1-intro-content">
             <div class="section1-intro-img">
-              <img src="@/assets/pics/ielts/items/ielts-03.png" alt="" />
+              <img src="@/assets/pics/course/ielts/items/ielts-03.png" alt="" />
             </div>
             <div class="section1-intro-text">
               <p>
@@ -94,7 +94,7 @@
         <el-col :xs="24" :sm="24" :lg="8">
           <div class="section3-content section-content-row-fl">
             <div class="section3-content-img">
-              <figure><img src="@/assets/pics/kindergarten/books/my-little-island1.jpg" alt=""></figure>
+              <figure><img src="@/assets/pics/course/kindergarten/books/my-little-island1.jpg" alt=""></figure>
             </div>
             <div class="section3-content-title">
               <h4>My Little Island 1</h4>
@@ -104,7 +104,7 @@
         <el-col :xs="24" :sm="24" :lg="8">
           <div class="section3-content section-content-row-fl">
             <div class="section3-content-img">
-              <figure><img src="@/assets/pics/kindergarten/books/my-little-island2.jpg" alt=""></figure>
+              <figure><img src="@/assets/pics/course/kindergarten/books/my-little-island2.jpg" alt=""></figure>
             </div>
             <div class="section3-content-title">
               <h4>My Little Island 2</h4>
@@ -114,7 +114,7 @@
         <el-col :xs="24" :sm="24" :lg="8">
           <div class="section3-content section-content-row-fl">
             <div class="section3-content-img">
-              <figure><img src="@/assets/pics/kindergarten/books/my-little-island3.jpg" alt=""></figure>
+              <figure><img src="@/assets/pics/course/kindergarten/books/my-little-island3.jpg" alt=""></figure>
             </div>
             <div class="section3-content-title">
               <h4>My Little Island 3</h4>
@@ -167,7 +167,7 @@ export default {
 
 <style>
 #ielts-course-banner {
-  background-image: url("~assets/pics/kindergarten/background/background1.jpg");
+  background-image: url("~assets/pics/course/kindergarten/background/background1.jpg");
 }
 
 </style>

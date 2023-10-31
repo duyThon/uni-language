@@ -55,7 +55,7 @@ body {
   }
   
   .section {
-    margin: 30px 80px;
+    margin: 60px 80px;
   }
   
   .section-content-row-fl {
@@ -72,7 +72,12 @@ body {
   .section1-intro-text {
     font-weight: 600;
     text-align: center;
-    margin: 20px 50px;
+    margin: 20px 0;
+    max-width: 250px;
+  }
+
+  .section2 {
+    margin: 30px 400px;
   }
   
   .section2-intro {
@@ -172,17 +177,104 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .overlay-other-course {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    border-radius: 30px;
+    opacity: 1;
+    transition: all .3s ease;
   }
   
+  .other-course-content:hover .overlay-other-course {
+    opacity: 0.5;
+  }
 
+  .other-course-content-short-term {
+    padding: 20px 50px;
+  }
+
+  .other-course-content-short-term h2 {
+    font-size: 20px !important;
+  }
   
   .other-course-content h2 {
     margin: 0;
     font-weight: 700;
     font-size: 28px;
     color: #fff;
+    z-index: 99;
   }
 
+  /* banner text */
+  
+
+.banner-text {
+  width: 440px;
+  max-width: 100%;
+  background: #28788c;
+  padding: 0 0 30px 60px;
+  min-height: 300px;
+  position: relative;
+  top: 10px;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-right: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.banner-text-content {
+  text-align: end;
+  margin-right: 40px;
+}
+
+.banner-text p {
+  color: #F99417;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 700;
+  background: #fff;
+  display: inline-block;
+  padding: 8px 15px 6px;
+  border-radius: 30px;
+}
+
+.banner-text h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin: 15px 0 15px 20px;
+}
+
+.banner-text h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.banner-border-bottom {
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f99417;
+}
 
 
 /* mobile */
@@ -207,8 +299,12 @@ body {
         width: 80%;
     }
     
+    .section1-intro-img img{
+      height: 130px;
+    }
+
     .section1-intro-text {
-      margin: 20px 60px;
+      margin: 20px 10px;
     }
 }
 

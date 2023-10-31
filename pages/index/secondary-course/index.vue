@@ -10,7 +10,7 @@
         <el-col class="section1-intro" :xs="24" :sm="24" :lg="6">
           <div class="section-content-row-fl section1-intro-content">
             <div class="section1-intro-img">
-              <img src="@/assets/pics/secondary/items/secondary-01.png" alt="" />
+              <img src="@/assets/pics/course/secondary/items/secondary-01.png" alt="" />
             </div>
             <div class="section1-intro-text">
               <p>
@@ -24,7 +24,7 @@
         <el-col class="section1-intro" :xs="24" :sm="24" :lg="6">
           <div class="section-content-row-fl section1-intro-content">
             <div class="section1-intro-img">
-              <img src="@/assets/pics/secondary/items/secondary-02.png" alt="" />
+              <img src="@/assets/pics/course/secondary/items/secondary-02.png" alt="" />
             </div>
             <div class="section1-intro-text">
               <p>
@@ -38,7 +38,7 @@
         <el-col class="section1-intro" :xs="24" :sm="24" :lg="6">
           <div class="section-content-row-fl section1-intro-content">
             <div class="section1-intro-img">
-              <img src="@/assets/pics/secondary/items/secondary-03.png" alt="" />
+              <img src="@/assets/pics/course/secondary/items/secondary-03.png" alt="" />
             </div>
             <div class="section1-intro-text">
               <p>
@@ -52,7 +52,7 @@
         <el-col class="section1-intro" :xs="24" :sm="24" :lg="6">
           <div class="section-content-row-fl section1-intro-content">
             <div class="section1-intro-img">
-              <img src="@/assets/pics/secondary/items/secondary-04.png" alt="" />
+              <img src="@/assets/pics/course/secondary/items/secondary-04.png" alt="" />
             </div>
             <div class="section1-intro-text">
               <p>
@@ -110,7 +110,7 @@
             <div class="section3-content-img">
               <figure>
                 <img
-                  src="@/assets/pics/kindergarten/books/my-little-island1.jpg"
+                  src="@/assets/pics/course/kindergarten/books/my-little-island1.jpg"
                   alt=""
                 />
               </figure>
@@ -125,7 +125,7 @@
             <div class="section3-content-img">
               <figure>
                 <img
-                  src="@/assets/pics/kindergarten/books/my-little-island2.jpg"
+                  src="@/assets/pics/course/kindergarten/books/my-little-island2.jpg"
                   alt=""
                 />
               </figure>
@@ -140,7 +140,7 @@
             <div class="section3-content-img">
               <figure>
                 <img
-                  src="@/assets/pics/kindergarten/books/my-little-island3.jpg"
+                  src="@/assets/pics/course/kindergarten/books/my-little-island3.jpg"
                   alt=""
                 />
               </figure>
@@ -196,7 +196,7 @@ export default {
 
 <style>
 #secondary-course-banner {
-  background-image: url("~assets/pics/kindergarten/background/background1.jpg");
+  background-image: url("~assets/pics/course/kindergarten/background/background1.jpg");
 }
 
 </style>

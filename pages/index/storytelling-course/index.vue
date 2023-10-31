@@ -6,9 +6,9 @@
                 <p>DÀNH CHO ĐỘ TUỔI: 6-8 TUỔI</p>
                 <h1>KHÓA HỌC KỂ CHUYỆN</h1>
                 <h2>STORYTELLING COURSE</h2>
-                <h2>THỜI GIAN ĐÀO TẠO: 3 THÁNG</h2>
+                <h4 style="margin:5px 0">THỜI GIAN ĐÀO TẠO: 3 THÁNG</h4>
             </div>
-            <div class="bg-banner-pro" style="height: 30px;position: absolute;bottom: 0;left: 0;width: 100%;background: #ffdf68"></div>
+            <div class="banner-border-bottom"></div>
         </div>
     </div>
     <div class="section section1">
@@ -16,7 +16,7 @@
             <el-col class="section1-intro" :xs="12" :sm="12" :lg="6">
                 <div class="section-content-row-fl section1-intro-content">
                     <div class="section1-intro-img">
-                        <img src="@/assets/pics/kindergarten/items/kindergarten-01.png" alt="">
+                        <img src="@/assets/pics/course/storytelling/items/item1.png" alt="">
                     </div>
                     <div class="section1-intro-text">
                         <p>Trở thành sứ giả kể chuyện chuyên nghiệp</p>
@@ -26,7 +26,7 @@
             <el-col class="section1-intro" :xs="12" :sm="12" :lg="6">
                 <div class="section-content-row-fl section1-intro-content">
                     <div class="section1-intro-img">
-                        <img src="@/assets/pics/kindergarten/items/kindergarten-02.png" alt="">
+                        <img src="@/assets/pics/course/storytelling/items/item2.png" alt="">
                     </div>
                     <div class="section1-intro-text">
                         <p>Đào tạo bài bản kỹ năng trình diễn trước công chúng</p>
@@ -36,7 +36,7 @@
             <el-col class="section1-intro" :xs="12" :sm="12" :lg="6">
                 <div class="section-content-row-fl section1-intro-content">
                     <div class="section1-intro-img">
-                        <img src="@/assets/pics/kindergarten/items/kindergarten-01.png" alt="">
+                        <img src="@/assets/pics/course/storytelling/items/item3.png" alt="">
                     </div>
                     <div class="section1-intro-text">
                         <p>Phương pháp học đầy cảm hứng, giàu sáng tạo, đậm chất nghệ thuật</p>
@@ -46,7 +46,7 @@
             <el-col class="section1-intro" :xs="12" :sm="12" :lg="6">
                 <div class="section-content-row-fl section1-intro-content">
                     <div class="section1-intro-img">
-                        <img src="@/assets/pics/kindergarten/items/kindergarten-03.png" alt="">
+                        <img src="@/assets/pics/course/storytelling/items/item4.png" alt="">
                     </div>
                     <div class="section1-intro-text">
                         <p>Trải nghiệm các nền văn hóa đa dạng trên thế giới</p>
@@ -70,55 +70,8 @@ export default {
 
 <style>
 #storytelling-course-banner {
-    background-image: url("~assets/pics/kindergarten/background/background.png");
+    background-image: url("~assets/pics/course/kindergarten/background/background.png");
     align-items: flex-end;
     margin-right: 50p;
 }
-
-.banner-text {
-    width: 440px;
-    max-width: 100%;
-    background: #28788c;
-    padding: 0 0 30px 60px;
-    min-height: 300px;
-    position: relative;
-    top: 10px;
-    border-radius: 30px;
-    overflow: hidden;
-    margin-right: 40px;
-    display: flex;
-    align-items: center;
-}
-
-.banner-text-content {
-    text-align: end;
-    margin-right: 40px;
-}
-
-.banner-text p {
-    color: #F99417;
-    margin-bottom: 0;
-    font-size: 18px;
-    font-weight: 700;
-    background: #fff;
-    display: inline-block;
-    padding: 8px 15px 6px;
-    border-radius: 30px;
-}
-
-.banner-text h1 {
-    font-size: 56px;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.2;
-    margin: 15px 0 15px 70px;
-}
-
-.banner-text h2 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #fff;
-    margin: 0;
-}
-
 </style>

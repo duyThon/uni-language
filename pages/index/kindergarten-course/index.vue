@@ -10,7 +10,7 @@
             <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
                 <div class="section-content-row-fl section1-intro-content">
                     <div class="section1-intro-img">
-                        <img src="@/assets/pics/kindergarten/items/kindergarten-01.png" alt="">
+                        <img src="@/assets/pics/course/kindergarten/items/kindergarten-01.png" alt="">
                     </div>
                     <div class="section1-intro-text">
                         <p>Học tiếng Anh một cách tự nhiên và hào hứng qua phương pháp học thông qua các hoạt động thể chất (TPR)</p>
@@ -20,7 +20,7 @@
             <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
                 <div class="section-content-row-fl section1-intro-content">
                     <div class="section1-intro-img">
-                        <img src="@/assets/pics/kindergarten/items/kindergarten-02.png" alt="">
+                        <img src="@/assets/pics/course/kindergarten/items/kindergarten-02.png" alt="">
                     </div>
                     <div class="section1-intro-text">
                         <p>Học phát âm tiếng Anh chuẩn bản ngữ theo giáo trình ngữ âm và phương pháp ghép vần (Phonics) tạo nền tảng vững chắc cho học đọc - viết trong tương lai</p>
@@ -30,7 +30,7 @@
             <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
                 <div class="section-content-row-fl section1-intro-content">
                     <div class="section1-intro-img">
-                        <img src="@/assets/pics/kindergarten/items/kindergarten-03.png" alt="">
+                        <img src="@/assets/pics/course/kindergarten/items/kindergarten-03.png" alt="">
                     </div>
                     <div class="section1-intro-text">
                         <p>Học tiếng Anh một cách thú vị qua phương pháp kể chuyện (Storytelling) kích thích trí tưởng tượng và rèn luyện năng lực cảm thụ văn học</p>
@@ -76,7 +76,7 @@
         <el-col :xs="24" :sm="24" :lg="8">
           <div class="section3-content section-content-row-fl">
             <div class="section3-content-img">
-              <figure><img src="@/assets/pics/kindergarten/books/my-little-island1.jpg" alt=""></figure>
+              <figure><img src="@/assets/pics/course/kindergarten/books/my-little-island1.jpg" alt=""></figure>
             </div>
             <div class="section3-content-title">
               <h4>My Little Island 1</h4>
@@ -86,7 +86,7 @@
         <el-col :xs="24" :sm="24" :lg="8">
           <div class="section3-content section-content-row-fl">
             <div class="section3-content-img">
-              <figure><img src="@/assets/pics/kindergarten/books/my-little-island2.jpg" alt=""></figure>
+              <figure><img src="@/assets/pics/course/kindergarten/books/my-little-island2.jpg" alt=""></figure>
             </div>
             <div class="section3-content-title">
               <h4>My Little Island 2</h4>
@@ -96,7 +96,7 @@
         <el-col :xs="24" :sm="24" :lg="8">
           <div class="section3-content section-content-row-fl">
             <div class="section3-content-img">
-              <figure><img src="@/assets/pics/kindergarten/books/my-little-island3.jpg" alt=""></figure>
+              <figure><img src="@/assets/pics/course/kindergarten/books/my-little-island3.jpg" alt=""></figure>
             </div>
             <div class="section3-content-title">
               <h4>My Little Island 3</h4>
@@ -149,21 +149,6 @@ export default {
 
 <style>
 #kindergarten-course-banner {
-  background-image: url("~assets/pics/kindergarten/background/background.png");
-}
-
-.other-course-content {
-  background-image: url("~assets/pics/kindergarten/background/background.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: 0.3s;
-}
-
-.other-course-content:hover {
-  /* background-image: none; */
-  opacity: 1;
+  background-image: url("~assets/pics/course/kindergarten/background/background.png");
 }
 </style>
