@@ -19,12 +19,13 @@ body {
 
 
 /* course */
-.banner-course {
+.banner {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     min-height: 540px;
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -142,7 +143,10 @@ body {
   }
   
   .btn-sign-up {
-    margin-top: 45px;
+    margin: 45px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .btn-sign-up a {

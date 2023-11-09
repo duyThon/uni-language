@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="storytelling-course-banner" class="banner-course">
+    <div id="storytelling-course-banner" class="banner">
         <div class="banner-text">
             <div class="banner-text-content">
                 <p>DÀNH CHO ĐỘ TUỔI: 6-8 TUỔI</p>

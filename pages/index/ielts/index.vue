@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="ielts-course-banner" class="banner-course">
+    <div id="ielts-course-banner" class="banner">
       <div class="intro">TIẾNG ANH</div>
       <div style="width: 70%;" class="intro-border"></div>
       <div class="intro intro-course">LUYỆN THI IELTS</div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="primary-course-banner" class="banner-course">
+    <div id="primary-course-banner" class="banner">
       <div class="intro">TIẾNG ANH</div>
       <div style="width: 50%;" class="intro-border"></div>
       <div class="intro intro-course">TIỂU HỌC</div>
