@@ -1,5 +1,6 @@
 <template>
   <div class="partners-carousel">
+    <h2>ĐỐI TÁC CỦA UNI LANGUAGE HOUSE SƠN LA</h2>
     <div class="slider">
       <div class="slide-track">
         <div class="slide">
@@ -62,7 +63,16 @@ export default {
   display: flex;
   height: 300px;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
+
+.partners-carousel h2 {
+  font-size: 34px;
+  font-style: italic;
+  color: #28788c;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);

@@ -23,7 +23,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    { src: "~/plugins/lightGallery.client.js", ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -31,7 +32,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    'vue-ssr-carousel/nuxt'
+    'vue-ssr-carousel/nuxt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
