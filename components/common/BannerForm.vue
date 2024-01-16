@@ -54,7 +54,7 @@ export default {
 }
 </script>
 
-<style>
+<style style="scope">
 
 #banner-form {
     background: #eee;
@@ -90,6 +90,7 @@ export default {
     #banner-form {
         width: 90%;
         bottom: -450px;
+        padding: 30px 10px 0;
     }
  }
 

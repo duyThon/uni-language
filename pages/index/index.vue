@@ -4,10 +4,10 @@
       <BannerForm />
     </div>
     <div id="home-page-container">
-      <h1>CÁC KHÓA HỌC TẠI UNI LANGUAGE HOUSE</h1>
+      <h1 class="text-center-responsive">CÁC KHÓA HỌC TẠI UNI LANGUAGE HOUSE</h1>
       <OtherCourseSection />
-      <h1>UNI LANGUAGE HOUSE - TRUNG TÂM TIẾNG ANH HÀNG ĐẦU TẠI SƠN LA</h1>
-      <p>
+      <h1 class="text-center-responsive">UNI LANGUAGE HOUSE - TRUNG TÂM TIẾNG ANH HÀNG ĐẦU TẠI SƠN LA</h1>
+      <p class="text-center-responsive">
         Với tầm nhìn như vậy hãy cùng khám phá tại UNI LANGUAGE HOUSE có những
         gì nhé!
       </p>
@@ -15,7 +15,7 @@
           <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
               <div class="section-content-row-fl section1-intro-content">
                   <div class="section1-intro-img">
-                      <img src="@/assets/pics/main-background/icons/earth-globe-1.png" alt="">
+                      <img class="rotate-img" src="@/assets/pics/main-background/icons/earth-globe-1.png" alt="">
                   </div>
                   <div class="section1-intro-text">
                       <p>Áp dụng chương trình giảng dạy theo tiêu chuẩn quốc tế, phù hợp với từng độ tuổi </p>
@@ -25,7 +25,7 @@
           <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
               <div class="section-content-row-fl section1-intro-content">
                   <div class="section1-intro-img">
-                      <img src="@/assets/pics/main-background/icons/education-hat-1.png" alt="">
+                      <img class="rotate-img" src="@/assets/pics/main-background/icons/education-hat-1.png" alt="">
                   </div>
                   <div class="section1-intro-text">
                       <p>Đội ngũ giáo viên bản ngữ có kinh nghiệm & đầy đủ bằng cấp giảng dạy</p>
@@ -35,7 +35,7 @@
           <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
               <div class="section-content-row-fl section1-intro-content">
                   <div class="section1-intro-img">
-                      <img src="@/assets/pics/main-background/icons/school-building-1.png" alt="">
+                      <img class="rotate-img" src="@/assets/pics/main-background/icons/school-building-1.png" alt="">
                   </div>
                   <div class="section1-intro-text">
                       <p>Cơ sở vật chất với tiêu chuẩn cao phù hợp với từng độ tuổi của học sinh</p>
@@ -51,6 +51,7 @@
     <ParentsComment/>
     <Maps/>
     <PartnersCarousel />
+    <el-backtop :right="100" :bottom="100" />
     <nuxt-child />
   </div>
 </template>
@@ -76,6 +77,19 @@ export default {
     LightGallery,
     Maps,
   },
+
+  mounted() {
+    this.runAnimation()
+  },
+
+  methods: {
+    runAnimation() {
+      const gsap = this.$gsap;
+      gsap.to('.text-center-responsive', {scrollTrigger:'.text-center-responsive', y:0,opacity:1,duration: .5});
+      gsap.to('.rotate-img', {scrollTrigger:'.rotate-img', rotation:0,opacity:1,duration: 1});
+      gsap.to('.btn-sign-up', {scrollTrigger:'.btn-sign-up', y:0,opacity:1,duration: .5});
+    }
+  }
 };
 </script>
 
@@ -88,7 +102,33 @@ export default {
   margin: 200px 80px 0;
 }
 
-.carousel-parent-comment {
-  margin: 80px;
+.text-center-responsive {
+  transform: translateY(100px);
+  opacity: 0;
 }
+
+.rotate-img {
+  rotate: -180deg;
+  opacity: 0
+}
+
+
+
+
+/* mobile */
+@media screen and (max-width: 739px) {
+}
+
+/* tablet */
+@media screen and (min-width: 740px) and (max-width: 1023px){
+    
+}
+
+/* tablet & mobile */
+@media (max-width: 1024px) {
+  #home-page-container {
+    margin: 500px 0 0;
+  }
+}
+
 </style>

@@ -1,49 +1,49 @@
 <template>
   <div class="partners-carousel">
-    <h2>ĐỐI TÁC CỦA UNI LANGUAGE HOUSE SƠN LA</h2>
+    <h2 class="partners-carousel-heading">ĐỐI TÁC CỦA UNI LANGUAGE HOUSE SƠN LA</h2>
     <div class="slider">
       <div class="slide-track">
         <div class="slide">
-          <img src="@/assets/pics/partners/dht.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/dht.png" alt="" />
         </div>
         <div class="slide">
-          <img src="@/assets/pics/partners/ltb.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/ltb.png" alt="" />
         </div>
         <div class="slide">
-          <img src="@/assets/pics/partners/idp.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/idp.png" alt="" />
         </div>
         <div class="slide">
-          <img src="@/assets/pics/partners/slt.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/slt.png" alt="" />
         </div>
         <div class="slide">
-          <img src="@/assets/pics/partners/th.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/th.png" alt="" />
         </div>
         <div class="slide">
-          <img src="@/assets/pics/partners/csl.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/csl.png" alt="" />
         </div>
         <div class="slide">
-          <img src="@/assets/pics/partners/rag.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/rag.png" alt="" />
         </div>
         <div class="slide">
-          <img src="@/assets/pics/partners/dht.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/dht.png" alt="" />
         </div>
         <div class="slide">
-          <img src="@/assets/pics/partners/ltb.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/ltb.png" alt="" />
         </div>
         <div class="slide">
-          <img src="@/assets/pics/partners/idp.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/idp.png" alt="" />
         </div>
         <div class="slide">
-          <img src="@/assets/pics/partners/slt.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/slt.png" alt="" />
         </div>
         <div class="slide">
-          <img src="@/assets/pics/partners/th.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/th.png" alt="" />
         </div>
         <div class="slide">
-          <img src="@/assets/pics/partners/csl.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/csl.png" alt="" />
         </div>
         <div class="slide">
-          <img src="@/assets/pics/partners/rag.png" height="150" width="150" alt="" />
+          <img src="@/assets/pics/partners/rag.png" alt="" />
         </div>
       </div>
     </div>
@@ -53,11 +53,23 @@
 <script>
 export default {
 
+  mounted() {
+    this.runAnimation();
+  },
+
+  methods: {
+    runAnimation() {
+      const gsap = this.$gsap;
+      gsap.to('.partners-carousel-heading', {scrollTrigger: '.partners-carousel-heading', opacity: 1, duration:.5, y: 0})
+    },
+  }
+
 }
 </script>
 
 <style>
 .partners-carousel {
+  text-align: center;
   align-items: center;
   background: transparent;
   display: flex;
@@ -65,12 +77,15 @@ export default {
   justify-content: center;
   display: flex;
   flex-direction: column;
+  margin: 30px 0;
 }
 
-.partners-carousel h2 {
+.partners-carousel-heading {
   font-size: 34px;
   font-style: italic;
   color: #28788c;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 @keyframes scroll {
@@ -117,5 +132,35 @@ export default {
   padding: 0 50px;
 }
 
+.slide img {
+  width: 150px;  
+  height: 150px;
+}
+
+
+/* mobile */
+@media screen and (max-width: 739px) {
+    .partners-carousel h2 {
+      margin: auto 20px;
+      font-size: 22px;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 740px) and (max-width: 1023px){
+    .partners-carousel h2 {
+      font-size: 30px;
+    }
+}
+
+/* tablet & mobile */
+@media (max-width: 1024px) {
+    .slider::before, .slider::after {
+      height: 150px;
+      position: absolute;
+      width: 100px;
+      z-index: 2;
+    }
+}
 
 </style>

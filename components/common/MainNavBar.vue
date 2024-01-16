@@ -24,7 +24,7 @@
                         <template slot="title">KHÓA HỌC</template>
                         <div style="padding: 10px; font-weight: 600; font-size: 15px">Khóa học chính</div>
                             <el-menu-item index="1-1">
-                                <router-link @click="test" to="/kindergarten-course">
+                                <router-link to="/kindergarten-course">
                                     Tiếng anh mầm non 
                                 </router-link>
                             </el-menu-item>
@@ -87,7 +87,7 @@
                         </router-link>
                     </el-menu-item>
                     <el-menu-item index="5">
-                        <router-link to="/testandexam">
+                        <router-link to="/online-testing">
                             THI THỬ
                         </router-link>
                     </el-menu-item>
@@ -95,10 +95,11 @@
                 <div class="switch-language">
                     <ul class="nation-logo">
                         <li class="nation-logo-item">
-                            <img src="@/assets/icons/nation-logo/vietnam-flag-rounded-icon.webp" alt="Vietnamese">
+                            <img @click="changeLang('vi')" src="@/assets/icons/nation-logo/vietnam-flag-rounded-icon.webp" alt="Vietnamese">
                         </li>
                         <li class="nation-logo-item">
-                            <img src="@/assets/icons/nation-logo/uk-flag-rounded-icon.webp" alt="English">
+                            <p>{{ $t('hello') }}</p>
+                            <img @click="changeLang('en')" src="@/assets/icons/nation-logo/uk-flag-rounded-icon.webp" alt="English">
                         </li>
                     </ul>
                 </div>
@@ -132,7 +133,7 @@
                     <template slot="title">KHÓA HỌC</template>
                     <div style="padding: 10px; font-weight: 600; font-size: 15px">Khóa học chính</div>
                         <el-menu-item index="1-1">
-                            <router-link @click="test" to="/kindergarten-course">
+                            <router-link to="/kindergarten-course">
                                 Tiếng anh mầm non 
                             </router-link>
                         </el-menu-item>
@@ -195,7 +196,7 @@
                     </router-link>
                 </el-menu-item>
                 <el-menu-item index="5">
-                    <router-link to="/testandexam">
+                    <router-link to="/online-testing">
                         THI THỬ
                     </router-link>
                 </el-menu-item>
@@ -204,10 +205,10 @@
                 <div class="switch-language-mobile-title">NGÔN NGỮ</div>
                 <ul class="nation-logo-mobile">
                     <li class="nation-logo-item-mobile">
-                        <img src="@/assets/icons/nation-logo/vietnam-flag-rounded-icon.webp" alt="Vietnamese">
+                        <img @click="changeLang('vi')" src="@/assets/icons/nation-logo/vietnam-flag-rounded-icon.webp" alt="Vietnamese">
                     </li>
                     <li class="nation-logo-item-mobile">
-                        <img src="@/assets/icons/nation-logo/uk-flag-rounded-icon.webp" alt="English">
+                        <img @click="changeLang('en')" src="@/assets/icons/nation-logo/uk-flag-rounded-icon.webp" alt="English">
                     </li>
                 </ul>
             </div>
@@ -226,8 +227,10 @@ export default {
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
       },
-      test () {
-        console.log("this.$router")
+
+      changeLang(lang) {
+        console.log(lang);
+        this.$i18n.locale = lang
       }
     }
 }
@@ -450,7 +453,7 @@ export default {
 }
 
 /* tablet */
-@media (min-width: 46.25em) and (max-width: 63.9375em){
+@media screen and (min-width: 740px) and (max-width: 1023px){
 }
 
 </style>

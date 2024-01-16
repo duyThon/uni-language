@@ -147,6 +147,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateY(100px);
   }
   
   .btn-sign-up a {
@@ -169,6 +171,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    padding: 0 !important;
   }
   
   .other-course-content {
@@ -219,7 +222,7 @@ body {
     font-weight: 700;
     font-size: 28px;
     color: #fff;
-    z-index: 99;
+    z-index: 98;
   }
 
   /* banner text */
@@ -280,21 +283,45 @@ body {
   background: #f99417;
 }
 
+.transform-left {
+  transform: translateX(-200px);
+  opacity: 0;
+} 
+
+.transform-right {
+  transform: translateX(200px);
+  opacity: 0;
+}
+
+.el-backtop {
+  color: black;
+  background-color: #fe3341;
+}
+
+
 
 /* mobile */
 /* < 740px */
 @media (max-width: 46.1875em) {
+  .mobile-col-reverse {
+    
+    flex-direction: column-reverse;
+  }
     
 }
 
 /* tablet */
 /* > 740px and < 1024px */
-@media (min-width: 46.25em) and (max-width: 63.9375em){
+@media screen and (min-width: 740px) and (max-width: 1023px){
     
 }
 
 /* tablet and moblie */
 @media (max-width: 63.9375em) {
+    .text-center-responsive {
+      text-align: center;
+    }
+
     .section {
         margin: 30px 40px;
     }
@@ -309,6 +336,10 @@ body {
 
     .section1-intro-text {
       margin: 20px 10px;
+    }
+
+    .el-backtop {
+      display: none;
     }
 }
 

@@ -3,7 +3,7 @@
     <h1 class="news-container-heading">Tin tức & Sự kiện</h1>
     <div class="latest-news">
       <el-row>
-        <el-col :xs="24" :sm="24" :lg="12">
+        <el-col class="latest-news-first-child" :xs="24" :sm="24" :lg="12">
           <div class="latest-news-item">
             <div class="news-heading-image">
               <img
@@ -315,11 +315,11 @@ export default {
 }
 
 .news-container-main-img img {
-  width: 300px;
+  width: 100%;
 }
 
 .news-desc {
-  height: 70px;
+  height: 100%;
   overflow: hidden;
   --line-clamp: 3;
   -webkit-line-clamp: 3;
@@ -337,5 +337,32 @@ export default {
   margin-bottom: 20px;
   font-weight: 700;
   background: url(~assets/icons/hr-heading-news.png) left bottom no-repeat;
+}
+
+/* mobile */
+@media screen and (max-width: 739px) {
+    
+}
+
+/* tablet */
+@media screen and (min-width: 740px) and (max-width: 1023px){
+    
+}
+
+/* tablet & mobile */
+@media (max-width: 1024px) {
+  #news-container {
+    margin: 15px;
+  }
+  .news-container-heading {
+    margin-top: 90px;
+  }
+  .latest-news-first-child {
+    margin-bottom: 20px;
+  }
+
+  .news-title h3 {
+    margin-top: 0;
+  }
 }
 </style>

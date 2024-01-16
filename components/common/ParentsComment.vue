@@ -1,6 +1,6 @@
 <template>
   <div class="carousel-parent-comment">
-    <ssr-carousel :slides-per-page="2" loop show-dots>
+    <ssr-carousel :slides-per-page="this.slidesPerPage" loop show-dots>
       <slide :index="1">
         <div class="parents-comment-item">
           <div class="speech-bubble">
@@ -139,10 +139,34 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      slidesPerPage: 2,
+    }
+  },
+
+  mounted() {
+    const width = window.outerWidth;
+    console.log(width);
+    width < 740 ? this.slidesPerPage = 1 : this.slidesPerPage = 2;
+  },
+
+  // computed: {
+  //   getSlidesPerPage() {
+  //   // const width = document.documentElement.clientWidth;
+  //   //   // console.log(window.outerWidth);
+  //   //   return width < 740 ? 1 : this.slidesPerPage;
+  //   },
+  // }
+};
 </script>
 
 <style>
+.carousel-parent-comment {
+  margin: 80px;
+}
+
 .parents-comment-item {
   width: 450px;
   height: 500px;
@@ -198,5 +222,56 @@ export default {};
 
 .parents-comment-info p {
   margin: 10px 0;
+}
+
+/* mobile */
+@media screen and (max-width: 739px) {
+  .carousel-parent-comment {
+    margin: 0;
+  }
+
+  .parents-comment-item {
+    width: 380px;
+    height: 600px
+  }
+
+  .speech-bubble {
+    margin: 10px auto 40px auto;
+    
+    padding: 10px 20px;
+    width: 80%;
+    font-size: 20px;
+    min-height: 300px;
+
+  }
+  .parents-comment-info {
+    margin: 0;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 740px) and (max-width: 1023px){
+  .carousel-parent-comment {
+    margin: 80px 0;
+  }
+
+  .parents-comment-item {
+    width: 320px;
+    height: 540px;
+  }
+
+  .speech-bubble {
+    margin: 10px auto;
+    padding: 10px 20px;
+  }
+
+  .parents-comment-info {
+    margin: 0;
+  }
+
+
+  .ssr-carousel-slide {
+    /* margin: 0 !important; */
+  }
 }
 </style>
