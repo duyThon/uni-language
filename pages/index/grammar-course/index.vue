@@ -31,6 +31,10 @@ import OtherCourseSection from '~/components/common/OtherCourseSection.vue';
 export default {
     components: {
         OtherCourseSection
+    },
+
+    mounted() {
+        this.$gsap.to(window, { duration: .5, scrollTo: 0 })
     }
 }
 </script>

@@ -51,7 +51,6 @@
     <ParentsComment/>
     <Maps/>
     <PartnersCarousel />
-    <el-backtop :right="100" :bottom="100" />
     <nuxt-child />
   </div>
 </template>
@@ -78,6 +77,15 @@ export default {
     Maps,
   },
 
+  watch: {
+    '$store.state.locale': {
+        handler(newLocale) {
+            this.$i18n.locale = newLocale
+        },
+        immediate: true
+    }
+  },
+
   mounted() {
     this.runAnimation()
   },
@@ -95,7 +103,7 @@ export default {
 
 <style scoped>
 #homepage-background {
-  background-image: url("~assets/pics/main-background/pic1.png");
+  background-image: url("~assets/pics/main-background/gallery/item.jpg");
 }
 
 #home-page-container {

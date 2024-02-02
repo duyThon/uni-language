@@ -1,5 +1,6 @@
 <template>
   <div class="online-testing-container">
+    {{currentLocale}}
     <h2 class="online-testing-heading">Đăng Kí Thi Thử Miễn Phí</h2>
     <div class="ot-main">
         <el-row :gutter="20">
@@ -50,7 +51,7 @@
                         </el-col>
                         <el-col :xs="24" :sm="24" :lg="24">
                             <div class="btn-confirm">
-                                <a href="#">ĐĂNG KÝ NHẬN ĐỀ THI THỬ MIỄN PHÍ</a>
+                                <a href="#">{{ $t('onlineTestingSignUp') }}</a>
                             </div>
                         </el-col>
                     </el-row>        
@@ -83,7 +84,23 @@ export default {
                 ]
             }
         }
+    },
+
+    async created() {
+        const language = this.$store.state.locale;
+        await this.$store.commit('setLocale', language);
+    },
+
+    mounted() {
+        this.$gsap.to(window, { duration: .5, scrollTo: 0 });
+    },
+
+    computed: {
+        currentLocale() {
+            return this.$store.state.locale;
+        },
     }
+
 }
 </script>
 
@@ -124,9 +141,6 @@ export default {
     margin: 20px 0;
 }
 
-.check-icon {
-    padding: 10px;
-}
 
 .el-form-item {
     margin-bottom: 20px;
@@ -164,7 +178,9 @@ export default {
 /* mobile */
 /* < 740px */
 @media (max-width: 46.1875em) {
-
+.benefit-desc {
+    max-width: 80%;
+}
 }
 
 /* tablet */

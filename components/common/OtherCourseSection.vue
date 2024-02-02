@@ -5,25 +5,25 @@
       </h2>
       <el-row class="other-course-section" :gutter="20">
         <el-col class="other-course" :xs="12" :sm="12" :lg="6">
-            <div id="other-course-kindergarten" class="other-course-content transform-left">
+            <div @click="router('kindergarten-course')" id="other-course-kindergarten" class="other-course-content ">
               <h2>TIẾNG ANH MẪU GIÁO</h2>
               <div class="overlay-other-course"></div>
             </div>
         </el-col>
         <el-col class="other-course" :xs="12" :sm="12" :lg="6">
-            <div id="other-course-primary" class="other-course-content transform-right">
+            <div @click="router('primary-course')" id="other-course-primary" class="other-course-content ">
               <h2>TIẾNG ANH TIỂU HỌC</h2>
               <div class="overlay-other-course"></div>
             </div>
         </el-col>
         <el-col class="other-course" :xs="12" :sm="12" :lg="6">
-            <div id="other-course-secondary" class="other-course-content transform-left">
+            <div @click="router('secondary-course')" id="other-course-secondary" class="other-course-content ">
               <h2>TIẾNG ANH THCS</h2>
               <div class="overlay-other-course"></div>
             </div>
         </el-col>
         <el-col class="other-course" :xs="12" :sm="12" :lg="6">
-            <div id="other-course-ielts" class="other-course-content transform-right">
+            <div @click="router('ielts')" id="other-course-ielts" class="other-course-content ">
               <h2>TIẾNG ANH LUYỆN THI IELTS</h2>
               <div class="overlay-other-course"></div>
             </div>
@@ -35,37 +35,37 @@
       </h2>
       <el-row class="other-course-section" :gutter="20">
         <el-col class="other-course" :xs="12" :sm="12" :lg="4">
-            <div id="other-course-storytelling" class="other-course-content other-course-content-short-term transform-left">
+            <div @click="router('storytelling-course')" id="other-course-storytelling" class="other-course-content other-course-content-short-term ">
               <h2>KHÓA HỌC KỂ CHUYỆN</h2>
               <div class="overlay-other-course"></div>
             </div>
         </el-col>
         <el-col class="other-course" :xs="12" :sm="12" :lg="4">
-            <div id="other-course-steam" class="other-course-content other-course-content-short-term transform-right">
+            <div @click="router('steam-course')" id="other-course-steam" class="other-course-content other-course-content-short-term ">
               <h2>KHÓA HỌC STEAM</h2>
               <div class="overlay-other-course"></div>
             </div>
         </el-col>
         <el-col class="other-course" :xs="12" :sm="12" :lg="4">
-            <div id="other-course-presentation" class="other-course-content other-course-content-short-term transform-left">
+            <div @click="router('presentation-course')" id="other-course-presentation" class="other-course-content other-course-content-short-term ">
               <h2>KHÓA HỌC THUYẾT TRÌNH</h2>
               <div class="overlay-other-course"></div>
             </div>
         </el-col>
         <el-col class="other-course" :xs="12" :sm="12" :lg="4">
-            <div id="other-course-toeic" class="other-course-content other-course-content-short-term transform-right">
+            <div @click="router('toeic')" id="other-course-toeic" class="other-course-content other-course-content-short-term ">
               <h2>LUYỆN THI TOEIC</h2>
               <div class="overlay-other-course"></div>
             </div>
         </el-col>
         <el-col class="other-course" :xs="12" :sm="12" :lg="4">
-            <div id="other-course-grammar" class="other-course-content other-course-content-short-term transform-left">
+            <div @click="router('grammar-course')" id="other-course-grammar" class="other-course-content other-course-content-short-term ">
               <h2>BỔ TRỢ NGỮ ÂM <br/> -<br/> NGỮ PHÁP</h2>
               <div class="overlay-other-course"></div>
             </div>
         </el-col>
         <el-col class="other-course" :xs="12" :sm="12" :lg="4">
-            <div id="other-course-transition" class="other-course-content other-course-content-short-term transform-right">
+            <div @click="router('transition-course')" id="other-course-transition" class="other-course-content other-course-content-short-term ">
               <h2>LUYỆN THI CHUYỂN CẤP</h2>
               <div class="overlay-other-course"></div>
             </div>
@@ -86,8 +86,12 @@ export default {
       const gsap = this.$gsap;
       gsap.to('.other-course-section-heading', {scrollTrigger:'.other-course-section-heading', y:0,opacity:1,duration: .5})
       gsap.to('.main-course-section-heading', {scrollTrigger:'.main-course-section-heading', y:0,opacity:1,duration: .5})
-      gsap.to('.transform-left', {scrollTrigger:'.transform-left', x:0,opacity:1,duration: .5})
-      gsap.to('.transform-right', {scrollTrigger:'.transform-right', x:0,opacity:1,duration: .5})
+    },
+
+    router(course) {
+      this.$router.push({ 
+        path: `/${course}`
+      });
     }
   }
 

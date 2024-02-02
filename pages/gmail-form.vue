@@ -18,7 +18,6 @@ export default {
   },
 
   async fetch() {
-    console.log('object');
     this.res = await fetch(
       "http://localhost:8888/news/658309dc840fe90512e79ce1"
     ).then(

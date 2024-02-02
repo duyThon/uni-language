@@ -86,15 +86,24 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/i18n',
+    '@nuxtjs/dotenv'
   ],
 
   i18n: {
     locales: [
-      { code: 'vi', iso: 'vi-VN', name: 'Tiếng Việt' },
-      { code: 'en', iso: 'en-US', name: 'English' },
+      { code: 'vi', iso: 'vi-VN' },
+      { code: 'en', iso: 'en-US'},
     ],
+
+    vuex: {
+      moduleName: 'locale',
+      mutations: {
+        setLocale: 'setLocale',
+      },
+      preserveState: true,
+    },
+
     defaultLocale: 'vi',
-    noPrefixDefaultLocale: true,
     vueI18n: {
       fallbackLocale: 'vi',
       messages: {

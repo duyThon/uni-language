@@ -74,13 +74,16 @@ import OtherCourseSection from '~/components/common/OtherCourseSection.vue';
 export default {
     components: {
         OtherCourseSection
+    },
+    mounted() {
+        this.$gsap.to(window, { duration: .5, scrollTo: 0 })
     }
 }
 </script>
 
 <style>
 #storytelling-course-banner {
-    background-image: url("~assets/pics/course/presentation/background/item.png");
+    background-image: url("~assets/pics/course/presentation/background/item1.jpg");
     align-items: flex-end;
     margin-right: 50p;
 }

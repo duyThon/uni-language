@@ -129,7 +129,6 @@
         </el-col>
       </el-row>
     </div>
-    <DemoTestGSAP/>
     <Maps />
     <PartnersCarousel />
   </div>
@@ -145,6 +144,7 @@ export default {
   },
 
   mounted() {
+    this.$gsap.to(window, { duration: .5, scrollTo: 0 })
     this.boxRotation()
   },
 
@@ -165,7 +165,7 @@ export default {
 
 <style>
 #about-background {
-  background-image: url("~assets/pics/about/background2.png");
+  background-image: url("~assets/pics/about/background1.jpg");
 }
 
 #core-value {
@@ -287,7 +287,7 @@ export default {
   }
 
   .vision-mission img {
-    height: 360px;
+    height: 290px;
   }
 
   .vision-mission-info {

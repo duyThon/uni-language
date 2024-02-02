@@ -88,70 +88,6 @@
         </p>
       </div>
     </div>
-    <!-- <div class="section section3">
-      <h2 style="margin-top: 0; text-align: center">Giáo trình cho khóa học</h2>
-      <el-row :gutter="20">
-        <el-col :xs="24" :sm="24" :lg="8">
-          <div class="section3-content section-content-row-fl">
-            <div class="section3-content-img">
-              <figure><img src="@/assets/pics/course/kindergarten/books/my-little-island1.jpg" alt=""></figure>
-            </div>
-            <div class="section3-content-title">
-              <h4>My Little Island 1</h4>
-            </div>
-          </div>
-        </el-col>
-        <el-col :xs="24" :sm="24" :lg="8">
-          <div class="section3-content section-content-row-fl">
-            <div class="section3-content-img">
-              <figure><img src="@/assets/pics/course/kindergarten/books/my-little-island2.jpg" alt=""></figure>
-            </div>
-            <div class="section3-content-title">
-              <h4>My Little Island 2</h4>
-            </div>
-          </div>
-        </el-col>
-        <el-col :xs="24" :sm="24" :lg="8">
-          <div class="section3-content section-content-row-fl">
-            <div class="section3-content-img">
-              <figure><img src="@/assets/pics/course/kindergarten/books/my-little-island3.jpg" alt=""></figure>
-            </div>
-            <div class="section3-content-title">
-              <h4>My Little Island 3</h4>
-            </div>
-          </div>
-        </el-col>
-      </el-row>
-    </div>
-    <div class="section section4">
-      <h2 style="margin-top: 0; text-align: center">
-        Lộ trình học tập
-      </h2>
-      <table class="schedule-table" border="1">
-        <tbody>
-          <tr>
-            <td colspan="4">Thời lượng học</td>
-            <td>Lịch học</td>
-          </tr>
-          <tr>
-            <td>3 tháng</td>
-            <td>6 tháng</td>
-            <td>9 tháng</td>
-            <td>1 năm</td>
-            <td rowspan="2">2 buổi / tuần<br/>+<br/>1 buổi bổ trợ chuyên sâu ngữ âm</td>
-          </tr>
-          <tr>
-            <td>24 buổi</td>
-            <td>48 buổi</td>
-            <td>72 buổi</td>
-            <td>96 buổi</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="btn-sign-up">
-        <a href="#">ĐĂNG KÝ TƯ VẤN</a>
-      </div>
-    </div> -->
     <OtherCourseSection/>
   </div>
 </template>
@@ -161,6 +97,10 @@ import OtherCourseSection from '~/components/common/OtherCourseSection.vue';
 export default {
   components: {
     OtherCourseSection
+  },
+
+  mounted() {
+    this.$gsap.to(window, { duration: .5, scrollTo: 0 })
   }
 };
 </script>

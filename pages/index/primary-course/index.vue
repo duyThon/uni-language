@@ -2,7 +2,7 @@
   <div>
     <div id="primary-course-banner" class="banner">
       <div class="intro">TIẾNG ANH</div>
-      <div style="width: 50%;" class="intro-border"></div>
+      <div style="width: 50%" class="intro-border"></div>
       <div class="intro intro-course">TIỂU HỌC</div>
     </div>
     <div class="section section1">
@@ -10,7 +10,10 @@
         <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
           <div class="section-content-row-fl section1-intro-content">
             <div class="section1-intro-img">
-              <img src="@/assets/pics/course/primary/items/primary-01.png" alt="" />
+              <img
+                src="@/assets/pics/course/primary/items/primary-01.png"
+                alt=""
+              />
             </div>
             <div class="section1-intro-text">
               <p>
@@ -23,7 +26,10 @@
         <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
           <div class="section-content-row-fl section1-intro-content">
             <div class="section1-intro-img">
-              <img src="@/assets/pics/course/primary/items/primary-02.png" alt="" />
+              <img
+                src="@/assets/pics/course/primary/items/primary-02.png"
+                alt=""
+              />
             </div>
             <div class="section1-intro-text">
               <p>
@@ -37,7 +43,10 @@
         <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
           <div class="section-content-row-fl section1-intro-content">
             <div class="section1-intro-img">
-              <img src="@/assets/pics/course/primary/items/primary-03.png" alt="" />
+              <img
+                src="@/assets/pics/course/primary/items/primary-03.png"
+                alt=""
+              />
             </div>
             <div class="section1-intro-text">
               <p>
@@ -84,55 +93,123 @@
         </p>
       </div>
     </div>
-    <div class="section section3">
-      <h2 style="margin-top: 0; text-align: center">Giáo trình cho khóa học</h2>
-      <el-row :gutter="20">
-        <el-col :xs="24" :sm="24" :lg="8">
-          <div class="section3-content section-content-row-fl">
-            <div class="section3-content-img">
-              <figure>
-                <img
-                  src="@/assets/pics/course/kindergarten/books/my-little-island1.jpg"
-                  alt=""
-                />
-              </figure>
-            </div>
-            <div class="section3-content-title">
-              <h4>My Little Island 1</h4>
-            </div>
-          </div>
-        </el-col>
-        <el-col :xs="24" :sm="24" :lg="8">
-          <div class="section3-content section-content-row-fl">
-            <div class="section3-content-img">
-              <figure>
-                <img
-                  src="@/assets/pics/course/kindergarten/books/my-little-island2.jpg"
-                  alt=""
-                />
-              </figure>
-            </div>
-            <div class="section3-content-title">
-              <h4>My Little Island 2</h4>
-            </div>
-          </div>
-        </el-col>
-        <el-col :xs="24" :sm="24" :lg="8">
-          <div class="section3-content section-content-row-fl">
-            <div class="section3-content-img">
-              <figure>
-                <img
-                  src="@/assets/pics/course/kindergarten/books/my-little-island3.jpg"
-                  alt=""
-                />
-              </figure>
-            </div>
-            <div class="section3-content-title">
-              <h4>My Little Island 3</h4>
-            </div>
-          </div>
-        </el-col>
-      </el-row>
+    <div style="margin-top: 100px" class="section section3 have-commitment-section">
+      <h1 class="have-commitment-section-heading">Cam kết đào tạo</h1>
+      <div style="position: relative">
+        <ul class="commitment-training-list">
+          <li class="commitment-training-item">
+            <svg
+              fill="#1fd655"
+              class="check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="30"
+              width="30"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+              />
+            </svg>
+            <p>
+              Con đạt trình độ tiếng Anh tương ứng với chuẩn quốc tế phù hợp với
+              cấp bậc theo học: Cambridge Starters - Flyers/ KET hoặc tương đương
+              trình độ từ Pre-A1 tới A2 theo chuẩn CEFR.
+            </p>
+          </li>
+          <li class="commitment-training-item">
+            <svg
+              fill="#1fd655"
+              class="check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="30"
+              width="30"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+              />
+            </svg>
+            <p>
+              Con làm chủ các kỹ năng viết, nói tiếng Anh, sẵn sàng chinh phục các
+              kì thi lấy chứng chỉ tiếng Anh quốc tế dành cho độ tuổi của mình.
+            </p>
+          </li>
+          <li class="commitment-training-item">
+            <svg
+              fill="#1fd655"
+              class="check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="30"
+              width="30"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+              />
+            </svg>
+            <p>
+              Con tự tin giao tiếp trôi chảy bằng tiếng Anh, chủ động nhận biết và
+              hoàn thiện các lỗi ngôn ngữ đọc, viết, biết cách trình bày thuyết
+              phục, tạo ảnh hưởng với người khác.
+            </p>
+          </li>
+          <li class="commitment-training-item">
+            <svg
+              fill="#1fd655"
+              class="check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="30"
+              width="30"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+              />
+            </svg>
+            <p>
+              Con hình thành thói quen học tập chủ động khi biết thu xếp việc học
+              của bản thân.
+            </p>
+          </li>
+          <li class="commitment-training-item">
+            <svg
+              fill="#1fd655"
+              class="check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="30"
+              width="30"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+              />
+            </svg>
+            <p>
+              Con biết ứng dụng công nghệ hiện đại vào học tập, thích ứng tốt với
+              các phương pháp học tập đa dạng khác nhau.
+            </p>
+          </li>
+        </ul>
+        <div style="top: 70px;right: 26%;" class="illustration-img illustration-img4"></div>
+        <img
+          style="top: -20px;right: 4%;"
+          class="illustration-img illustration-img3"
+          src="@/assets/pics/course/illustration-imgs/illustration-img2.jpg"
+          alt=""
+        />
+        <img
+          style="top: -130px;right: 20%;"
+          class="illustration-img illustration-img1"
+          src="@/assets/pics/course/illustration-imgs/illustration-img1.webp"
+          alt=""
+        />
+        <img
+          style="top: 190px;right: 20%;"
+          class="illustration-img illustration-img2"
+          src="@/assets/pics/course/illustration-imgs/illustration-img2.jpg"
+          alt=""
+        />
+      </div>
     </div>
     <div class="section section4">
       <h2 style="margin-top: 0; text-align: center">Lộ trình học tập</h2>
@@ -163,16 +240,20 @@
         <a href="#">ĐĂNG KÝ TƯ VẤN</a>
       </div>
     </div>
-    <OtherCourseSection/>
+    <OtherCourseSection />
   </div>
 </template>
 
 <script>
-import OtherCourseSection from '~/components/common/OtherCourseSection.vue';
+import OtherCourseSection from "~/components/common/OtherCourseSection.vue";
 export default {
   components: {
-    OtherCourseSection
-  }
+    OtherCourseSection,
+  },
+
+  mounted() {
+    this.$gsap.to(window, { duration: 0.5, scrollTo: 0 });
+  },
 };
 </script>
 

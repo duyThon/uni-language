@@ -3,7 +3,14 @@
     <h1 class="news-container-heading">Tin tức & Sự kiện</h1>
     <div class="latest-news">
       <el-row>
-        <el-col class="latest-news-first-child" :xs="24" :sm="24" :lg="12">
+        <el-col
+          v-for="data in lastestData"
+          :key="data.id"
+          class="latest-news-first-child"
+          :xs="24"
+          :sm="24"
+          :lg="12"
+        >
           <div class="latest-news-item">
             <div class="news-heading-image">
               <img
@@ -13,23 +20,8 @@
               <div class="overlay-news-heading"></div>
             </div>
             <div class="news-heading">
-              <h2>Tips thuyết trình bằng tiếng Anh và mẫu câu</h2>
-              <p>28/10/2023</p>
-            </div>
-          </div>
-        </el-col>
-        <el-col :xs="24" :sm="24" :lg="12">
-          <div class="latest-news-item">
-            <div class="news-heading-image">
-              <img
-                src="https://llv.edu.vn/media/2023/11/Banner-web-thumbnail-WP-contest-01-800x419.jpg"
-                alt=""
-              />
-              <div class="overlay-news-heading"></div>
-            </div>
-            <div class="news-heading">
-              <h2>Ở độ tuổi nào trẻ em nên bắt đầu chú trọng học ngữ pháp</h2>
-              <p>28/10/2023</p>
+              <h2>{{data.titleVn}}</h2>
+              <p>{{renderDate(data.createdAt)}}</p>
             </div>
           </div>
         </el-col>
@@ -39,151 +31,38 @@
       <el-row :gutter="20">
         <el-col :xs="24" :sm="24" :lg="16">
           <div class="news-container-main">
-            <div class="news-container-main-item">
-              <el-row :gutter="20">
-                <el-col :xs="8" :sm="8" :lg="8">
-                  <div class="news-container-main-img">
-                    <img
-                      src="https://llv.edu.vn/media/2023/09/FullMoon2023-1200x628-01-1-500x262.jpg"
-                      alt=""
-                    />
-                  </div>
-                </el-col>
-                <el-col :xs="16" :sm="16" :lg="16">
-                  <div class="news-container-main-info">
-                    <div class="news-title">
-                      <h3>
-                        Phương pháp giúp con Tiểu học ghi nhớ từ vựng tiếng Anh
-                      </h3>
-                      <p class="date">31/02/2023</p>
+            <div v-for="data in dataTable" :key="data.id" class="news-container-main-item">
+              <div @click="openNews(data._id)">
+                <el-row :gutter="20">
+                  <el-col :xs="8" :sm="8" :lg="8">
+                    <div class="news-container-main-img">
+                      <img src="@/assets/pics/loading-img.jpg" alt="" />
                     </div>
-                    <div class="news-desc">
-                      Vốn từ vựng đóng vai trò vô cùng quan trọng trong việc học
-                      tiếng Anh của trẻ, bởi một ngân hàng từ đủ lớn sẽ hỗ trợ
-                      quá trình giao tiếp của con thêm hiệu quả, tạo nền tảng
-                      phát triển toàn diện 4 kỹ năng nghe, nói, đọc và viết học
-                      thuật. Hôm nay...
+                  </el-col>
+                  <el-col :xs="16" :sm="16" :lg="16">
+                    <div class="news-container-main-info">
+                      <div class="news-title">
+                        <h3>
+                          {{data.titleVn}}
+                        </h3>
+                        <p class="date">{{renderDate(data.createdAt)}}</p>
+                      </div>
+                      <div class="news-desc" v-html="data.descriptionEn">
+                      </div>
                     </div>
-                  </div>
-                </el-col>
-              </el-row>
+                  </el-col>
+                </el-row>
+              </div>
             </div>
-            <div class="news-container-main-item">
-              <el-row :gutter="20">
-                <el-col :xs="8" :sm="8" :lg="8">
-                  <div class="news-container-main-img">
-                    <img
-                      src="https://llv.edu.vn/media/2023/08/Banner-Slider-01-600x314.jpg"
-                      alt=""
-                    />
-                  </div>
-                </el-col>
-                <el-col :xs="16" :sm="16" :lg="16">
-                  <div class="news-container-main-info">
-                    <div class="news-title">
-                      <h3>“Gõ cửa” Thế giới với Language Link Academic</h3>
-                      <p class="date">31/02/2023</p>
-                    </div>
-                    <div class="news-desc">
-                      Language Link Academic hân hạnh chào đón Quý phụ huynh &
-                      các bạn nhỏ thân yêu tới tham dự sự kiện mang tên “Gõ cửa
-                      thế giới với Language Link Academic”. Hoạt động đặc biệt
-                      chào năm học mới với mục tiêu mang đến cho con không chỉ
-                      một môi trường phát triển Anh ngữ...
-                    </div>
-                  </div>
-                </el-col>
-              </el-row>
-            </div>
-            <div class="news-container-main-item">
-              <el-row :gutter="20">
-                <el-col :xs="8" :sm="8" :lg="8">
-                  <div class="news-container-main-img">
-                    <img
-                      src="https://llv.edu.vn/media/2023/09/Artboard-3-600x314.jpg"
-                      alt=""
-                    />
-                  </div>
-                </el-col>
-                <el-col :xs="16" :sm="16" :lg="16">
-                  <div class="news-container-main-info">
-                    <div class="news-title">
-                      <h3>
-                        Lễ ký kết hợp tác giữa Language Link với trường Trung
-                        cấp Quốc tế Sài Gòn
-                      </h3>
-                      <p class="date">31/02/2023</p>
-                    </div>
-                    <div class="news-desc">
-                      Trung tâm Language Link Việt Nam gửi lời cảm ơn chân thành
-                      đến ban Tổ chức SGI College vì đã tin tưởng và lựa chọn
-                      đồng hành để thực hiện chương trình Ký kết Hợp tác. Trường
-                      Trung cấp Quốc tế Sài Gòn tổ chức buổi lễ Khai giảng để
-                      chào đón các em...
-                    </div>
-                  </div>
-                </el-col>
-              </el-row>
-            </div>
-            <div class="news-container-main-item">
-              <el-row :gutter="20">
-                <el-col :xs="8" :sm="8" :lg="8">
-                  <div class="news-container-main-img">
-                    <img
-                      src="https://llv.edu.vn/media/2023/08/DSC09463-600x400.jpg"
-                      alt=""
-                    />
-                  </div>
-                </el-col>
-                <el-col :xs="16" :sm="16" :lg="16">
-                  <div class="news-container-main-info">
-                    <div class="news-title">
-                      <h3>
-                        Học tiếng Anh tại Language Link Academic, con tự tin
-                        bước ra Thế giới
-                      </h3>
-                      <p class="date">31/02/2023</p>
-                    </div>
-                    <div class="news-desc">
-                      Tiếng Anh đã và đang là ngôn ngữ toàn cầu, chính vì thế
-                      con hãy đặt bước chân đầu tiên dẫn tới con đường thành
-                      công bằng việc trau dồi khả năng Anh ngữ. Mùa tựu trường
-                      năm 2023, Language Link Academic tặng học bổng lên đến 30%
-                      học phí khóa tiếng Anh chuyên Tiểu...
-                    </div>
-                  </div>
-                </el-col>
-              </el-row>
-            </div>
-            <div class="news-container-main-item">
-              <el-row :gutter="20">
-                <el-col :xs="8" :sm="8" :lg="8">
-                  <div class="news-container-main-img">
-                    <img
-                      src="https://llv.edu.vn/media/2023/09/FullMoon2023-1200x628-01-1-500x262.jpg"
-                      alt=""
-                    />
-                  </div>
-                </el-col>
-                <el-col :xs="16" :sm="16" :lg="16">
-                  <div class="news-container-main-info">
-                    <div class="news-title">
-                      <h3>
-                        Phương pháp giúp con Tiểu học ghi nhớ từ vựng tiếng Anh
-                      </h3>
-                      <p class="date">31/02/2023</p>
-                    </div>
-                    <div class="news-desc">
-                      Vốn từ vựng đóng vai trò vô cùng quan trọng trong việc học
-                      tiếng Anh của trẻ, bởi một ngân hàng từ đủ lớn sẽ hỗ trợ
-                      quá trình giao tiếp của con thêm hiệu quả, tạo nền tảng
-                      phát triển toàn diện 4 kỹ năng nghe, nói, đọc và viết học
-                      thuật. Hôm nay...
-                    </div>
-                  </div>
-                </el-col>
-              </el-row>
-            </div>
+            <el-pagination
+              :hide-on-single-page="true"
+              layout="prev, pager, next"
+              :total="totalItem"
+              :page-size="perPage"
+              align="right"
+              background
+              @change="updatePage"
+            ></el-pagination>
           </div>
         </el-col>
         <el-col :xs="24" :sm="24" :lg="8">
@@ -238,16 +117,68 @@
         </el-col>
       </el-row>
     </div>
-    <PartnersCarousel/>
+    <PartnersCarousel />
   </div>
 </template>
 
 <script>
 import PartnersCarousel from "@/components/common/PartnersCarousel.vue";
+
 export default {
-    components: {
-        PartnersCarousel
+  data() {
+    return {
+      lastestData: [
+      ],
+      dataTable: [],
+      totalItem: 0,
+      perPage: 0,
+      apiUrl: process.env.API_URL
+    };
+  },
+
+  components: {
+    PartnersCarousel,
+  },
+
+  async mounted() {
+    await this.getListData()
+    this.$gsap.to(window, { duration: 0.5, scrollTo: 0 });
+  },
+
+  methods: {
+    async getListData() {
+      let res = await fetch(
+          `${this.apiUrl}/news/search`,
+          {
+            method: "POST",
+            body: {"queryString": "{tags} == '''news'''"}
+          }
+        ).then(
+          res => res.json(),
+        );
+        if(res.success) {
+          this.dataTable = res.data
+        }
+        this.dataTable = res.data;
+        this.totalItem = res.total;
+        this.perPage = res.perPage;
+        this.lastestData = res.data.slice(0, 2);
+    },
+
+    renderDate(date) {
+      const formatedDate = new Date(date)
+      return formatedDate.toLocaleDateString('en-GB')
+    },
+
+    openNews(id) {
+      this.$router.push({ 
+        path: `news/${id}`
+      });
+    },
+    updatePage(page) {
+      console.log(page);
     }
+  }
 };
 </script>
 
@@ -273,6 +204,7 @@ export default {
 
 .latest-news-item {
   background: var(--primary-color);
+  min-height: 530px;
 }
 
 .news-heading-image {
@@ -314,6 +246,10 @@ export default {
   margin-bottom: 60px;
 }
 
+.news-container-main-item:hover {
+  cursor: pointer;
+}
+
 .news-container-main-img img {
   width: 100%;
 }
@@ -327,7 +263,7 @@ export default {
 }
 
 .most-read {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .most-read-heading {
@@ -341,12 +277,10 @@ export default {
 
 /* mobile */
 @media screen and (max-width: 739px) {
-    
 }
 
 /* tablet */
-@media screen and (min-width: 740px) and (max-width: 1023px){
-    
+@media screen and (min-width: 740px) and (max-width: 1023px) {
 }
 
 /* tablet & mobile */
