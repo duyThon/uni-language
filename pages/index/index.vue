@@ -103,7 +103,7 @@ export default {
 
 <style scoped>
 #homepage-background {
-  background-image: url("~assets/pics/main-background/gallery/item.jpg");
+  background-image: url("~assets/pics/main-background/gallery/item1.jpg");
 }
 
 #home-page-container {
