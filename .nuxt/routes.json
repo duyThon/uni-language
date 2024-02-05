@@ -1,0 +1,312 @@
+[
+  {
+    "name": "admin-uni___vi",
+    "path": "/admin-uni",
+    "component": "/home/duc/Desktop/Playing/uni-language/pages/admin-uni.vue",
+    "chunkName": "pages/admin-uni",
+    "_name": "_27c49426"
+  },
+  {
+    "path": "/en",
+    "component": "/home/duc/Desktop/Playing/uni-language/pages/index.vue",
+    "chunkName": "pages/index",
+    "children": [
+      {
+        "name": "index___en",
+        "path": "",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/index.vue",
+        "chunkName": "pages/index/index",
+        "_name": "_d160d8e0"
+      },
+      {
+        "name": "index-about___en",
+        "path": "about",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/about/index.vue",
+        "chunkName": "pages/index/about/index",
+        "_name": "_a96989e4"
+      },
+      {
+        "name": "index-grammar-course___en",
+        "path": "grammar-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/grammar-course/index.vue",
+        "chunkName": "pages/index/grammar-course/index",
+        "_name": "_6a3400f6"
+      },
+      {
+        "name": "index-hall-of-fame___en",
+        "path": "hall-of-fame",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/hall-of-fame/index.vue",
+        "chunkName": "pages/index/hall-of-fame/index",
+        "_name": "_df7f4cac"
+      },
+      {
+        "name": "index-ielts___en",
+        "path": "ielts",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/ielts/index.vue",
+        "chunkName": "pages/index/ielts/index",
+        "_name": "_90bf0360"
+      },
+      {
+        "name": "index-kindergarten-course___en",
+        "path": "kindergarten-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/kindergarten-course/index.vue",
+        "chunkName": "pages/index/kindergarten-course/index",
+        "_name": "_76d0647a"
+      },
+      {
+        "name": "index-news___en",
+        "path": "news",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/news/index.vue",
+        "chunkName": "pages/index/news/index",
+        "_name": "_1668c670"
+      },
+      {
+        "name": "index-online-testing___en",
+        "path": "online-testing",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/online-testing/index.vue",
+        "chunkName": "pages/index/online-testing/index",
+        "_name": "_2254ca4b"
+      },
+      {
+        "name": "index-presentation-course___en",
+        "path": "presentation-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/presentation-course/index.vue",
+        "chunkName": "pages/index/presentation-course/index",
+        "_name": "_24c6e1ef"
+      },
+      {
+        "name": "index-primary-course___en",
+        "path": "primary-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/primary-course/index.vue",
+        "chunkName": "pages/index/primary-course/index",
+        "_name": "_b1b1080a"
+      },
+      {
+        "name": "index-secondary-course___en",
+        "path": "secondary-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/secondary-course/index.vue",
+        "chunkName": "pages/index/secondary-course/index",
+        "_name": "_786be76e"
+      },
+      {
+        "name": "index-steam-course___en",
+        "path": "steam-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/steam-course/index.vue",
+        "chunkName": "pages/index/steam-course/index",
+        "_name": "_3affbced"
+      },
+      {
+        "name": "index-storytelling-course___en",
+        "path": "storytelling-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/storytelling-course/index.vue",
+        "chunkName": "pages/index/storytelling-course/index",
+        "_name": "_543dc566"
+      },
+      {
+        "name": "index-toeic___en",
+        "path": "toeic",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/toeic/index.vue",
+        "chunkName": "pages/index/toeic/index",
+        "_name": "_3e357aa5"
+      },
+      {
+        "name": "index-transition-course___en",
+        "path": "transition-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/transition-course/index.vue",
+        "chunkName": "pages/index/transition-course/index",
+        "_name": "_19bda294"
+      },
+      {
+        "name": "index-news-abc___en",
+        "path": "news/abc",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/news/abc.vue",
+        "chunkName": "pages/index/news/abc",
+        "_name": "_2476a3d8"
+      },
+      {
+        "name": "index-hall-of-fame-id___en",
+        "path": "hall-of-fame/:id?",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/hall-of-fame/_id.vue",
+        "chunkName": "pages/index/hall-of-fame/_id",
+        "_name": "_508cbe92"
+      },
+      {
+        "name": "index-news-id___en",
+        "path": "news/:id",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/news/_id.vue",
+        "chunkName": "pages/index/news/_id",
+        "_name": "_72ab9da0"
+      }
+    ],
+    "_name": "_71e11acd"
+  },
+  {
+    "name": "gmail-form___vi",
+    "path": "/gmail-form",
+    "component": "/home/duc/Desktop/Playing/uni-language/pages/gmail-form.vue",
+    "chunkName": "pages/gmail-form",
+    "_name": "_31e7a528"
+  },
+  {
+    "name": "login___vi",
+    "path": "/login",
+    "component": "/home/duc/Desktop/Playing/uni-language/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_3b88bde4"
+  },
+  {
+    "name": "admin-uni___en",
+    "path": "/en/admin-uni",
+    "component": "/home/duc/Desktop/Playing/uni-language/pages/admin-uni.vue",
+    "chunkName": "pages/admin-uni",
+    "_name": "_27c49426"
+  },
+  {
+    "name": "gmail-form___en",
+    "path": "/en/gmail-form",
+    "component": "/home/duc/Desktop/Playing/uni-language/pages/gmail-form.vue",
+    "chunkName": "pages/gmail-form",
+    "_name": "_31e7a528"
+  },
+  {
+    "name": "login___en",
+    "path": "/en/login",
+    "component": "/home/duc/Desktop/Playing/uni-language/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_3b88bde4"
+  },
+  {
+    "path": "/",
+    "component": "/home/duc/Desktop/Playing/uni-language/pages/index.vue",
+    "chunkName": "pages/index",
+    "children": [
+      {
+        "name": "index___vi",
+        "path": "",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/index.vue",
+        "chunkName": "pages/index/index",
+        "_name": "_d160d8e0"
+      },
+      {
+        "name": "index-about___vi",
+        "path": "about",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/about/index.vue",
+        "chunkName": "pages/index/about/index",
+        "_name": "_a96989e4"
+      },
+      {
+        "name": "index-grammar-course___vi",
+        "path": "grammar-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/grammar-course/index.vue",
+        "chunkName": "pages/index/grammar-course/index",
+        "_name": "_6a3400f6"
+      },
+      {
+        "name": "index-hall-of-fame___vi",
+        "path": "hall-of-fame",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/hall-of-fame/index.vue",
+        "chunkName": "pages/index/hall-of-fame/index",
+        "_name": "_df7f4cac"
+      },
+      {
+        "name": "index-ielts___vi",
+        "path": "ielts",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/ielts/index.vue",
+        "chunkName": "pages/index/ielts/index",
+        "_name": "_90bf0360"
+      },
+      {
+        "name": "index-kindergarten-course___vi",
+        "path": "kindergarten-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/kindergarten-course/index.vue",
+        "chunkName": "pages/index/kindergarten-course/index",
+        "_name": "_76d0647a"
+      },
+      {
+        "name": "index-news___vi",
+        "path": "news",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/news/index.vue",
+        "chunkName": "pages/index/news/index",
+        "_name": "_1668c670"
+      },
+      {
+        "name": "index-online-testing___vi",
+        "path": "online-testing",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/online-testing/index.vue",
+        "chunkName": "pages/index/online-testing/index",
+        "_name": "_2254ca4b"
+      },
+      {
+        "name": "index-presentation-course___vi",
+        "path": "presentation-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/presentation-course/index.vue",
+        "chunkName": "pages/index/presentation-course/index",
+        "_name": "_24c6e1ef"
+      },
+      {
+        "name": "index-primary-course___vi",
+        "path": "primary-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/primary-course/index.vue",
+        "chunkName": "pages/index/primary-course/index",
+        "_name": "_b1b1080a"
+      },
+      {
+        "name": "index-secondary-course___vi",
+        "path": "secondary-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/secondary-course/index.vue",
+        "chunkName": "pages/index/secondary-course/index",
+        "_name": "_786be76e"
+      },
+      {
+        "name": "index-steam-course___vi",
+        "path": "steam-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/steam-course/index.vue",
+        "chunkName": "pages/index/steam-course/index",
+        "_name": "_3affbced"
+      },
+      {
+        "name": "index-storytelling-course___vi",
+        "path": "storytelling-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/storytelling-course/index.vue",
+        "chunkName": "pages/index/storytelling-course/index",
+        "_name": "_543dc566"
+      },
+      {
+        "name": "index-toeic___vi",
+        "path": "toeic",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/toeic/index.vue",
+        "chunkName": "pages/index/toeic/index",
+        "_name": "_3e357aa5"
+      },
+      {
+        "name": "index-transition-course___vi",
+        "path": "transition-course",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/transition-course/index.vue",
+        "chunkName": "pages/index/transition-course/index",
+        "_name": "_19bda294"
+      },
+      {
+        "name": "index-news-abc___vi",
+        "path": "news/abc",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/news/abc.vue",
+        "chunkName": "pages/index/news/abc",
+        "_name": "_2476a3d8"
+      },
+      {
+        "name": "index-hall-of-fame-id___vi",
+        "path": "hall-of-fame/:id?",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/hall-of-fame/_id.vue",
+        "chunkName": "pages/index/hall-of-fame/_id",
+        "_name": "_508cbe92"
+      },
+      {
+        "name": "index-news-id___vi",
+        "path": "news/:id",
+        "component": "/home/duc/Desktop/Playing/uni-language/pages/index/news/_id.vue",
+        "chunkName": "pages/index/news/_id",
+        "_name": "_72ab9da0"
+      }
+    ],
+    "_name": "_71e11acd"
+  }
+]
