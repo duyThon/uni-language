@@ -73,14 +73,14 @@ const defaultTransition = {"name":"page","mode":"out-in","css":false,"beforeEnte
       this.$gsap.to(el, {
         opacity: 1,
         duration: 0.5,
-        ease: 'power2.inOut',
+        ease: "power2.inOut",
         onComplete: done
       });
     },"leave":function(el, done) {
       this.$gsap.to(el, {
         opacity: 0,
         duration: 0.5,
-        ease: 'power2.inOut',
+        ease: "power2.inOut",
         onComplete: done
       });
     },"appear":false,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}

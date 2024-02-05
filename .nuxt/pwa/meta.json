@@ -23,7 +23,7 @@
     {
       "hid": "description",
       "name": "description",
-      "content": "## Build Setup"
+      "content": "# node v18.19.0"
     },
     {
       "hid": "og:type",
@@ -47,7 +47,7 @@
       "hid": "og:description",
       "name": "og:description",
       "property": "og:description",
-      "content": "## Build Setup"
+      "content": "# node v18.19.0"
     }
   ],
   "link": [
@@ -64,7 +64,7 @@
     },
     {
       "rel": "manifest",
-      "href": "/_nuxt/manifest.1d37d982.json",
+      "href": "/_nuxt/manifest.3971a8bd.json",
       "hid": "manifest"
     }
   ],

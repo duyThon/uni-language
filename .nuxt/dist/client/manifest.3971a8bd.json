@@ -1,7 +1,7 @@
 {
   "name": "uni-english-center",
   "short_name": "uni-english-center",
-  "description": "## Build Setup",
+  "description": "# node v18.19.0",
   "icons": [
     {
       "src": "/_nuxt/icons/icon_64x64.e3e9fb.png",
