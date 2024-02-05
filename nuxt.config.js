@@ -136,7 +136,7 @@ export default {
 
   // server config
   server: {
-    // host: "0.0.0.0",
-    port: 80,
+    host: "0.0.0.0",
+    // port: 80,
   },
 };
