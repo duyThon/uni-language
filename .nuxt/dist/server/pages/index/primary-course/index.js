@@ -424,27 +424,27 @@ module.exports = __webpack_require__.p + "img/illustration-img2.384bccd.jpg";
 
 /***/ }),
 
-/***/ 173:
+/***/ 171:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/background1.9b42a83.jpg";
 
 /***/ }),
 
-/***/ 174:
+/***/ 172:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/illustration-img1.c9dec24.webp";
 
 /***/ }),
 
-/***/ 203:
+/***/ 199:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(268);
+var content = __webpack_require__(265);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -456,46 +456,46 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 264:
+/***/ 261:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/primary-01.e57cec8.png";
 
 /***/ }),
 
-/***/ 265:
+/***/ 262:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/primary-02.c090caf.png";
 
 /***/ }),
 
-/***/ 266:
+/***/ 263:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/primary-03.418bd93.png";
 
 /***/ }),
 
-/***/ 267:
+/***/ 264:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_6dc6c575_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(203);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_6dc6c575_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(199);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_6dc6c575_prod_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_6dc6c575_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_6dc6c575_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_6dc6c575_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
 
-/***/ 268:
+/***/ 265:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(9);
 var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(36);
-var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(173);
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(171);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
@@ -507,7 +507,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 321:
+/***/ 318:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -535,7 +535,7 @@ var render = function render() {
     staticClass: "section1-intro-img"
   }, [_c('img', {
     attrs: {
-      "src": __webpack_require__(264),
+      "src": __webpack_require__(261),
       "alt": ""
     }
   })]), _vm._v(" "), _c('div', {
@@ -553,7 +553,7 @@ var render = function render() {
     staticClass: "section1-intro-img"
   }, [_c('img', {
     attrs: {
-      "src": __webpack_require__(265),
+      "src": __webpack_require__(262),
       "alt": ""
     }
   })]), _vm._v(" "), _c('div', {
@@ -571,12 +571,12 @@ var render = function render() {
     staticClass: "section1-intro-img"
   }, [_c('img', {
     attrs: {
-      "src": __webpack_require__(266),
+      "src": __webpack_require__(263),
       "alt": ""
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "section1-intro-text"
-  }, [_c('p', [_vm._v("\n              Tăng cường các nội dung luyện thi cho giai đoạn cuối cấp nhằm\n              sẵn sàng cho các bài thi chứng chỉ quốc tế hay kì thi chuyển cấp\n            ")])])])])], 1)], 1), _vm._ssrNode(" <div class=\"section section2\"><div class=\"section2-intro\"><h2 style=\"margin-top: 0; text-align: center\">\n        Giới thiệu về khóa học\n      </h2> <p>\n        Tiểu học là bậc học được Bộ Giáo dục và Đào tạo khuyến khích học tập\n        Anh ngữ. Nhằm giúp các bé học tiếng Anh một cách dễ dàng và hiệu quả,\n        các chuyên gia học thuật đến từ Uni đã nghiên cứu và thiết kế ra\n        chương trình Tiếng Anh Chuyên Tiểu học giúp xây dựng nền tảng kiến\n        thức vững chắc, tuyệt vời cho các bé và qua đó, giúp các con tự tin\n        khi học và sử dụng tiếng Anh. Nội dung chương trình tích hợp các học\n        phần giao tiếp chuẩn quốc tế, ngữ pháp tiêu chuẩn với rèn luyện kỹ\n        năng thi cử ở các hình thức khác nhau, bao gồm cả lớp học thực tế và\n        chương trình bổ trợ trực tuyến theo tiêu chuẩn Mỹ.\n      </p> <p>\n        Đội ngũ giảng dạy là các giáo viên đến từ các quốc gia nói tiếng Anh\n        (như Anh, Mĩ, Úc, Canada, v.v.) và trong nước, sở hữu bằng cử nhân,\n        thạc sĩ giáo dục cùng chứng chỉ sư phạm quốc tế với kinh nghiệm giảng\n        dạy phong phú và tình yêu với trẻ nhỏ. Ngoài ra, đội ngũ GVVN 100%\n        chuyên ngành sư phạm, ngôn ngữ anh cùng giảng dạy và quản lý lớp để\n        đảm bảo chương trình học được đa mục tiêu (chuẩn giao tiếp, giỏi ngữ\n        pháp, bám sát Cambridge).\n      </p> <p>\n        Nội dung chương trình được Uni tinh chỉnh để phù hợp hơn với văn hoá,\n        sở thích, năng lực tiếp thu của trẻ em Việt Nam và vẫn đảm bảo hiệu\n        quả học tiếng Anh theo các tiêu chuẩn quốc tế và Bộ GD ĐT Việt Nam quy\n        định. Chúng tôi tự tin có thể giúp các học viên bé có nền tảng vững\n        chắc cho các bậc học cao hơn và phát triển niềm vui thích và cảm xúc\n        hứng khởi với tiếng Anh.\n      </p></div></div> <div class=\"section section3 have-commitment-section\" style=\"margin-top: 100px\"><h1 class=\"have-commitment-section-heading\">Cam kết đào tạo</h1> <div style=\"position: relative\"><ul class=\"commitment-training-list\"><li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con đạt trình độ tiếng Anh tương ứng với chuẩn quốc tế phù hợp với\n            cấp bậc theo học: Cambridge Starters - Flyers/ KET hoặc tương đương\n            trình độ từ Pre-A1 tới A2 theo chuẩn CEFR.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con làm chủ các kỹ năng viết, nói tiếng Anh, sẵn sàng chinh phục các\n            kì thi lấy chứng chỉ tiếng Anh quốc tế dành cho độ tuổi của mình.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con tự tin giao tiếp trôi chảy bằng tiếng Anh, chủ động nhận biết và\n            hoàn thiện các lỗi ngôn ngữ đọc, viết, biết cách trình bày thuyết\n            phục, tạo ảnh hưởng với người khác.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con hình thành thói quen học tập chủ động khi biết thu xếp việc học\n            của bản thân.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con biết ứng dụng công nghệ hiện đại vào học tập, thích ứng tốt với\n            các phương pháp học tập đa dạng khác nhau.\n          </p></li></ul> <div class=\"illustration-img illustration-img4\" style=\"top: 70px;right: 26%;\"></div> <img" + _vm._ssrAttr("src", __webpack_require__(161)) + " alt class=\"illustration-img illustration-img3\" style=\"top: -20px;right: 4%;\"> <img" + _vm._ssrAttr("src", __webpack_require__(174)) + " alt class=\"illustration-img illustration-img1\" style=\"top: -130px;right: 20%;\"> <img" + _vm._ssrAttr("src", __webpack_require__(161)) + " alt class=\"illustration-img illustration-img2\" style=\"top: 190px;right: 20%;\"></div></div> <div class=\"section section4\"><h2 style=\"margin-top: 0; text-align: center\">Lộ trình học tập</h2> <table border=\"1\" class=\"schedule-table\"><tbody><tr><td colspan=\"4\">Thời lượng học</td> <td>Lịch học</td></tr> <tr><td>3 tháng</td> <td>6 tháng</td> <td>9 tháng</td> <td>1 năm</td> <td rowspan=\"2\">\n            2 buổi / tuần<br>+<br>1 buổi bổ trợ ngữ pháp\n          </td></tr> <tr><td>24 buổi</td> <td>48 buổi</td> <td>72 buổi</td> <td>96 buổi</td></tr></tbody></table> <div class=\"btn-sign-up\"><a href=\"#\">ĐĂNG KÝ TƯ VẤN</a></div></div> "), _c('OtherCourseSection')], 2);
+  }, [_c('p', [_vm._v("\n              Tăng cường các nội dung luyện thi cho giai đoạn cuối cấp nhằm\n              sẵn sàng cho các bài thi chứng chỉ quốc tế hay kì thi chuyển cấp\n            ")])])])])], 1)], 1), _vm._ssrNode(" <div class=\"section section2\"><div class=\"section2-intro\"><h2 style=\"margin-top: 0; text-align: center\">\n        Giới thiệu về khóa học\n      </h2> <p>\n        Tiểu học là bậc học được Bộ Giáo dục và Đào tạo khuyến khích học tập\n        Anh ngữ. Nhằm giúp các bé học tiếng Anh một cách dễ dàng và hiệu quả,\n        các chuyên gia học thuật đến từ Uni đã nghiên cứu và thiết kế ra\n        chương trình Tiếng Anh Chuyên Tiểu học giúp xây dựng nền tảng kiến\n        thức vững chắc, tuyệt vời cho các bé và qua đó, giúp các con tự tin\n        khi học và sử dụng tiếng Anh. Nội dung chương trình tích hợp các học\n        phần giao tiếp chuẩn quốc tế, ngữ pháp tiêu chuẩn với rèn luyện kỹ\n        năng thi cử ở các hình thức khác nhau, bao gồm cả lớp học thực tế và\n        chương trình bổ trợ trực tuyến theo tiêu chuẩn Mỹ.\n      </p> <p>\n        Đội ngũ giảng dạy là các giáo viên đến từ các quốc gia nói tiếng Anh\n        (như Anh, Mĩ, Úc, Canada, v.v.) và trong nước, sở hữu bằng cử nhân,\n        thạc sĩ giáo dục cùng chứng chỉ sư phạm quốc tế với kinh nghiệm giảng\n        dạy phong phú và tình yêu với trẻ nhỏ. Ngoài ra, đội ngũ GVVN 100%\n        chuyên ngành sư phạm, ngôn ngữ anh cùng giảng dạy và quản lý lớp để\n        đảm bảo chương trình học được đa mục tiêu (chuẩn giao tiếp, giỏi ngữ\n        pháp, bám sát Cambridge).\n      </p> <p>\n        Nội dung chương trình được Uni tinh chỉnh để phù hợp hơn với văn hoá,\n        sở thích, năng lực tiếp thu của trẻ em Việt Nam và vẫn đảm bảo hiệu\n        quả học tiếng Anh theo các tiêu chuẩn quốc tế và Bộ GD ĐT Việt Nam quy\n        định. Chúng tôi tự tin có thể giúp các học viên bé có nền tảng vững\n        chắc cho các bậc học cao hơn và phát triển niềm vui thích và cảm xúc\n        hứng khởi với tiếng Anh.\n      </p></div></div> <div class=\"section section3 have-commitment-section\" style=\"margin-top: 100px\"><h1 class=\"have-commitment-section-heading\">Cam kết đào tạo</h1> <div style=\"position: relative\"><ul class=\"commitment-training-list\"><li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con đạt trình độ tiếng Anh tương ứng với chuẩn quốc tế phù hợp với\n            cấp bậc theo học: Cambridge Starters - Flyers/ KET hoặc tương đương\n            trình độ từ Pre-A1 tới A2 theo chuẩn CEFR.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con làm chủ các kỹ năng viết, nói tiếng Anh, sẵn sàng chinh phục các\n            kì thi lấy chứng chỉ tiếng Anh quốc tế dành cho độ tuổi của mình.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con tự tin giao tiếp trôi chảy bằng tiếng Anh, chủ động nhận biết và\n            hoàn thiện các lỗi ngôn ngữ đọc, viết, biết cách trình bày thuyết\n            phục, tạo ảnh hưởng với người khác.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con hình thành thói quen học tập chủ động khi biết thu xếp việc học\n            của bản thân.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con biết ứng dụng công nghệ hiện đại vào học tập, thích ứng tốt với\n            các phương pháp học tập đa dạng khác nhau.\n          </p></li></ul> <div class=\"illustration-img illustration-img4\" style=\"top: 70px;right: 26%;\"></div> <img" + _vm._ssrAttr("src", __webpack_require__(161)) + " alt class=\"illustration-img illustration-img3\" style=\"top: -20px;right: 4%;\"> <img" + _vm._ssrAttr("src", __webpack_require__(172)) + " alt class=\"illustration-img illustration-img1\" style=\"top: -130px;right: 20%;\"> <img" + _vm._ssrAttr("src", __webpack_require__(161)) + " alt class=\"illustration-img illustration-img2\" style=\"top: 190px;right: 20%;\"></div></div> <div class=\"section section4\"><h2 style=\"margin-top: 0; text-align: center\">Lộ trình học tập</h2> <table border=\"1\" class=\"schedule-table\"><tbody><tr><td colspan=\"4\">Thời lượng học</td> <td>Lịch học</td></tr> <tr><td>3 tháng</td> <td>6 tháng</td> <td>9 tháng</td> <td>1 năm</td> <td rowspan=\"2\">\n            2 buổi / tuần<br>+<br>1 buổi bổ trợ ngữ pháp\n          </td></tr> <tr><td>24 buổi</td> <td>48 buổi</td> <td>72 buổi</td> <td>96 buổi</td></tr></tbody></table> <div class=\"btn-sign-up\"><a href=\"#\">ĐĂNG KÝ TƯ VẤN</a></div></div> "), _c('OtherCourseSection')], 2);
 };
 var staticRenderFns = [];
 
@@ -609,7 +609,7 @@ var componentNormalizer = __webpack_require__(8);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(267)
+  var style0 = __webpack_require__(264)
 if (style0.__inject__) style0.__inject__(context)
 
 }

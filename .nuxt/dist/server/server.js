@@ -71122,28 +71122,28 @@ function shouldScrollToTop(route) {
 
 
 
-const _27c49426 = () => interopDefault(__webpack_require__.e(/* import() | pages/admin-uni */ 13).then(__webpack_require__.bind(null, 310)));
-const _71e11acd = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 15).then(__webpack_require__.bind(null, 311)));
-const _d160d8e0 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/index */ 21).then(__webpack_require__.bind(null, 312)));
-const _a96989e4 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/about/index */ 16).then(__webpack_require__.bind(null, 313)));
-const _6a3400f6 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/grammar-course/index */ 17).then(__webpack_require__.bind(null, 314)));
-const _df7f4cac = () => interopDefault(__webpack_require__.e(/* import() | pages/index/hall-of-fame/index */ 19).then(__webpack_require__.bind(null, 315)));
-const _90bf0360 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/ielts/index */ 20).then(__webpack_require__.bind(null, 316)));
-const _76d0647a = () => interopDefault(__webpack_require__.e(/* import() | pages/index/kindergarten-course/index */ 22).then(__webpack_require__.bind(null, 317)));
-const _1668c670 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/news/index */ 25).then(__webpack_require__.bind(null, 318)));
-const _2254ca4b = () => interopDefault(__webpack_require__.e(/* import() | pages/index/online-testing/index */ 26).then(__webpack_require__.bind(null, 319)));
-const _24c6e1ef = () => interopDefault(__webpack_require__.e(/* import() | pages/index/presentation-course/index */ 27).then(__webpack_require__.bind(null, 320)));
-const _b1b1080a = () => interopDefault(__webpack_require__.e(/* import() | pages/index/primary-course/index */ 28).then(__webpack_require__.bind(null, 321)));
-const _786be76e = () => interopDefault(__webpack_require__.e(/* import() | pages/index/secondary-course/index */ 29).then(__webpack_require__.bind(null, 322)));
-const _3affbced = () => interopDefault(__webpack_require__.e(/* import() | pages/index/steam-course/index */ 30).then(__webpack_require__.bind(null, 323)));
-const _543dc566 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/storytelling-course/index */ 31).then(__webpack_require__.bind(null, 324)));
-const _3e357aa5 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/toeic/index */ 32).then(__webpack_require__.bind(null, 325)));
-const _19bda294 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/transition-course/index */ 33).then(__webpack_require__.bind(null, 326)));
-const _2476a3d8 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/news/abc */ 24).then(__webpack_require__.bind(null, 327)));
-const _508cbe92 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/hall-of-fame/_id */ 18).then(__webpack_require__.bind(null, 328)));
-const _72ab9da0 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/news/_id */ 23).then(__webpack_require__.bind(null, 329)));
-const _31e7a528 = () => interopDefault(__webpack_require__.e(/* import() | pages/gmail-form */ 14).then(__webpack_require__.bind(null, 330)));
-const _3b88bde4 = () => interopDefault(__webpack_require__.e(/* import() | pages/login */ 34).then(__webpack_require__.bind(null, 331)));
+const _27c49426 = () => interopDefault(__webpack_require__.e(/* import() | pages/admin-uni */ 13).then(__webpack_require__.bind(null, 307)));
+const _71e11acd = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 15).then(__webpack_require__.bind(null, 308)));
+const _d160d8e0 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/index */ 21).then(__webpack_require__.bind(null, 309)));
+const _a96989e4 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/about/index */ 16).then(__webpack_require__.bind(null, 310)));
+const _6a3400f6 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/grammar-course/index */ 17).then(__webpack_require__.bind(null, 311)));
+const _df7f4cac = () => interopDefault(__webpack_require__.e(/* import() | pages/index/hall-of-fame/index */ 19).then(__webpack_require__.bind(null, 312)));
+const _90bf0360 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/ielts/index */ 20).then(__webpack_require__.bind(null, 313)));
+const _76d0647a = () => interopDefault(__webpack_require__.e(/* import() | pages/index/kindergarten-course/index */ 22).then(__webpack_require__.bind(null, 314)));
+const _1668c670 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/news/index */ 25).then(__webpack_require__.bind(null, 315)));
+const _2254ca4b = () => interopDefault(__webpack_require__.e(/* import() | pages/index/online-testing/index */ 26).then(__webpack_require__.bind(null, 316)));
+const _24c6e1ef = () => interopDefault(__webpack_require__.e(/* import() | pages/index/presentation-course/index */ 27).then(__webpack_require__.bind(null, 317)));
+const _b1b1080a = () => interopDefault(__webpack_require__.e(/* import() | pages/index/primary-course/index */ 28).then(__webpack_require__.bind(null, 318)));
+const _786be76e = () => interopDefault(__webpack_require__.e(/* import() | pages/index/secondary-course/index */ 29).then(__webpack_require__.bind(null, 319)));
+const _3affbced = () => interopDefault(__webpack_require__.e(/* import() | pages/index/steam-course/index */ 30).then(__webpack_require__.bind(null, 320)));
+const _543dc566 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/storytelling-course/index */ 31).then(__webpack_require__.bind(null, 321)));
+const _3e357aa5 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/toeic/index */ 32).then(__webpack_require__.bind(null, 322)));
+const _19bda294 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/transition-course/index */ 33).then(__webpack_require__.bind(null, 323)));
+const _2476a3d8 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/news/abc */ 24).then(__webpack_require__.bind(null, 324)));
+const _508cbe92 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/hall-of-fame/_id */ 18).then(__webpack_require__.bind(null, 325)));
+const _72ab9da0 = () => interopDefault(__webpack_require__.e(/* import() | pages/index/news/_id */ 23).then(__webpack_require__.bind(null, 326)));
+const _31e7a528 = () => interopDefault(__webpack_require__.e(/* import() | pages/gmail-form */ 14).then(__webpack_require__.bind(null, 327)));
+const _3b88bde4 = () => interopDefault(__webpack_require__.e(/* import() | pages/login */ 34).then(__webpack_require__.bind(null, 328)));
 const emptyFn = () => {};
 external_vue_default.a.use(external_vue_router_default.a);
 const routerOptions = {
@@ -72015,18 +72015,18 @@ function normalizeModule(moduleData, filePath) {
   return moduleData;
 }
 // CONCATENATED MODULE: ./.nuxt/components/index.js
-const SsrCarousel = () => __webpack_require__.e(/* import() | components/ssr-carousel */ 12).then(__webpack_require__.t.bind(null, 176, 7)).then(c => wrapFunctional(c.default || c));
-const CommonBannerForm = () => __webpack_require__.e(/* import() | components/common-banner-form */ 1).then(__webpack_require__.bind(null, 215)).then(c => wrapFunctional(c.default || c));
+const SsrCarousel = () => __webpack_require__.e(/* import() | components/ssr-carousel */ 12).then(__webpack_require__.t.bind(null, 174, 7)).then(c => wrapFunctional(c.default || c));
+const CommonBannerForm = () => __webpack_require__.e(/* import() | components/common-banner-form */ 1).then(__webpack_require__.bind(null, 212)).then(c => wrapFunctional(c.default || c));
 const CommonFooter = () => __webpack_require__.e(/* import() | components/common-footer */ 3).then(__webpack_require__.bind(null, 164)).then(c => wrapFunctional(c.default || c));
-const CommonLightGallery = () => __webpack_require__.e(/* import() | components/common-light-gallery */ 4).then(__webpack_require__.bind(null, 216)).then(c => wrapFunctional(c.default || c));
+const CommonLightGallery = () => __webpack_require__.e(/* import() | components/common-light-gallery */ 4).then(__webpack_require__.bind(null, 213)).then(c => wrapFunctional(c.default || c));
 const CommonMainNavBar = () => __webpack_require__.e(/* import() | components/common-main-nav-bar */ 5).then(__webpack_require__.bind(null, 162)).then(c => wrapFunctional(c.default || c));
-const CommonMaps = () => __webpack_require__.e(/* import() | components/common-maps */ 6).then(__webpack_require__.bind(null, 177)).then(c => wrapFunctional(c.default || c));
-const CommonMessengerPlugin = () => __webpack_require__.e(/* import() | components/common-messenger-plugin */ 7).then(__webpack_require__.bind(null, 192)).then(c => wrapFunctional(c.default || c));
+const CommonMaps = () => __webpack_require__.e(/* import() | components/common-maps */ 6).then(__webpack_require__.bind(null, 175)).then(c => wrapFunctional(c.default || c));
+const CommonMessengerPlugin = () => __webpack_require__.e(/* import() | components/common-messenger-plugin */ 7).then(__webpack_require__.bind(null, 211)).then(c => wrapFunctional(c.default || c));
 const CommonOtherCourseSection = () => __webpack_require__.e(/* import() | components/common-other-course-section */ 8).then(__webpack_require__.bind(null, 138)).then(c => wrapFunctional(c.default || c));
-const CommonParentsComment = () => __webpack_require__.e(/* import() | components/common-parents-comment */ 9).then(__webpack_require__.bind(null, 217)).then(c => wrapFunctional(c.default || c));
+const CommonParentsComment = () => __webpack_require__.e(/* import() | components/common-parents-comment */ 9).then(__webpack_require__.bind(null, 214)).then(c => wrapFunctional(c.default || c));
 const CommonPartnersCarousel = () => __webpack_require__.e(/* import() | components/common-partners-carousel */ 10).then(__webpack_require__.bind(null, 145)).then(c => wrapFunctional(c.default || c));
 const CommonStickyInfoContact = () => __webpack_require__.e(/* import() | components/common-sticky-info-contact */ 11).then(__webpack_require__.bind(null, 163)).then(c => wrapFunctional(c.default || c));
-const CommonCkeditor = () => __webpack_require__.e(/* import() | components/common-ckeditor */ 2).then(__webpack_require__.bind(null, 214)).then(c => wrapFunctional(c.default || c));
+const CommonCkeditor = () => __webpack_require__.e(/* import() | components/common-ckeditor */ 2).then(__webpack_require__.bind(null, 210)).then(c => wrapFunctional(c.default || c));
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

@@ -8,7 +8,7 @@ module.exports = __webpack_require__.p + "img/logo-uni-ngang-2.3cffcc6.png";
 
 /***/ }),
 
-/***/ 330:
+/***/ 327:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

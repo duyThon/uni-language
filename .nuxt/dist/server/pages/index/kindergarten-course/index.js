@@ -424,27 +424,27 @@ module.exports = __webpack_require__.p + "img/illustration-img2.384bccd.jpg";
 
 /***/ }),
 
-/***/ 167:
+/***/ 165:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/background.0d19e51.png";
 
 /***/ }),
 
-/***/ 174:
+/***/ 172:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/illustration-img1.c9dec24.webp";
 
 /***/ }),
 
-/***/ 199:
+/***/ 195:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(251);
+var content = __webpack_require__(248);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -456,46 +456,46 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 247:
+/***/ 244:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/kindergarten-01.76d34d1.png";
 
 /***/ }),
 
-/***/ 248:
+/***/ 245:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/kindergarten-02.f4f4997.png";
 
 /***/ }),
 
-/***/ 249:
+/***/ 246:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/kindergarten-03.2f5bb8d.png";
 
 /***/ }),
 
-/***/ 250:
+/***/ 247:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_51aa46b7_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(199);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_51aa46b7_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(195);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_51aa46b7_prod_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_51aa46b7_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_51aa46b7_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_51aa46b7_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
 
-/***/ 251:
+/***/ 248:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(9);
 var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(36);
-var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(167);
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(165);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
@@ -507,7 +507,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 317:
+/***/ 314:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -535,7 +535,7 @@ var render = function render() {
     staticClass: "section1-intro-img"
   }, [_c('img', {
     attrs: {
-      "src": __webpack_require__(247),
+      "src": __webpack_require__(244),
       "alt": ""
     }
   })]), _vm._v(" "), _c('div', {
@@ -553,7 +553,7 @@ var render = function render() {
     staticClass: "section1-intro-img"
   }, [_c('img', {
     attrs: {
-      "src": __webpack_require__(248),
+      "src": __webpack_require__(245),
       "alt": ""
     }
   })]), _vm._v(" "), _c('div', {
@@ -571,12 +571,12 @@ var render = function render() {
     staticClass: "section1-intro-img"
   }, [_c('img', {
     attrs: {
-      "src": __webpack_require__(249),
+      "src": __webpack_require__(246),
       "alt": ""
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "section1-intro-text"
-  }, [_c('p', [_vm._v("\n              Học tiếng Anh một cách thú vị qua phương pháp kể chuyện\n              (Storytelling) kích thích trí tưởng tượng và rèn luyện năng lực\n              cảm thụ văn học\n            ")])])])])], 1)], 1), _vm._ssrNode(" <div class=\"section section2\"><div class=\"section2-intro\"><h2 style=\"margin-top: 0; text-align: center\">\n        Giới thiệu về khóa học\n      </h2> <p>\n        Những nghiên cứu khoa học cho biết: từ 3 đến 6 tuổi chính là “độ tuổi\n        vàng” để học các loại ngôn ngữ. Và cũng chính trong giai đoạn này, nếu\n        áp dụng những phương pháp học tập thiếu khoa học thì sẽ tác động tiêu\n        cực tới hiệu quả tiếp thu và sử dụng ngôn ngữ của trẻ trong tương\n        lai.Được nghiên cứu và thiết kế bởi các chuyên gia Anh ngữ hàng đầu\n        tại châu u và Mĩ, Tiếng Anh Mẫu giáo tại Uni là một trong những chương\n        trình học Anh ngữ được đánh giá cao nhất dành cho trẻ từ 3,5 đến 6\n        tuổi.\n      </p> <p>\n        Đội ngũ giảng dạy là các giáo viên đến từ các quốc gia nói tiếng Anh\n        (như Anh, Mĩ, Úc, Canada, Nam Phi v.v.) sở hữu bằng cử nhân, thạc sĩ\n        giáo dục cùng chứng chỉ sư phạm quốc tế với kinh nghiệm giảng dạy\n        phong phú và tình yêu với trẻ nhỏ.\n      </p> <p>\n        Nội dung chương trình được Uni tinh chỉnh để phù hợp hơn với văn hoá,\n        sở thích, năng lực tiếp thu của trẻ em Việt Nam và vẫn đảm bảo hiệu\n        quả học tiếng Anh theo các chuẩn bản ngữ của bộ giáo dục tại Anh quốc\n        và Mỹ. Chúng tôi tự tin có thể giúp các học viên bé có nền tảng vững\n        chắc cho các bậc học cao hơn và phát triển niềm vui thích và cảm xúc\n        hứng khởi với tiếng Anh.\n      </p></div></div> <div class=\"section section3 have-commitment-section\" style=\"margin:130px 0\"><h1 class=\"have-commitment-section-heading\">Cam kết đào tạo</h1> <div style=\"position: relative\"><ul class=\"commitment-training-list\"><li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con có phản xạ ngôn ngữ và diễn đạt tự nhiên với phát âm chuẩn\n            trong các hội thoại đơn giản.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con nhận biết âm và đọc được từ đơn, nói cả câu. Con có thể chủ\n            động tự viết chữ cái.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con hình thành tư duy sáng tạo, phản biện. Con tự tin thể hiện kỹ\n            năng giao tiếp, hợp tác trong hoạt động thường ngày.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>Con được rèn kỹ năng cần thiết để sẵn sàng vào lớp 1.</p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Khơi sáng tình yêu học tập với nội dung học thú vị và lôi cuốn.\n          </p></li></ul> <div class=\"illustration-img illustration-img4\" style=\"right: 26%;top: 20px;\"></div> <img" + _vm._ssrAttr("src", __webpack_require__(161)) + " alt class=\"illustration-img illustration-img3\" style=\"bottom: -20px;right: 4%;\"> <img" + _vm._ssrAttr("src", __webpack_require__(174)) + " alt class=\"illustration-img illustration-img1\" style=\"right: 20%;top: -150px;\"> <img" + _vm._ssrAttr("src", __webpack_require__(161)) + " alt class=\"illustration-img illustration-img2\" style=\"bottom: -26px;right: 20%;\"></div></div> <div class=\"section section4\"><h2 style=\"margin-top: 0; text-align: center\">Lộ trình học tập</h2> <table border=\"1\" class=\"schedule-table\"><tbody><tr><td colspan=\"4\">Thời lượng học</td> <td>Lịch học</td></tr> <tr><td>3 tháng</td> <td>6 tháng</td> <td>9 tháng</td> <td>1 năm</td> <td rowspan=\"2\">\n            2 buổi / tuần<br>+<br>1 buổi bổ trợ chuyên sâu ngữ âm\n          </td></tr> <tr><td>24 buổi</td> <td>48 buổi</td> <td>72 buổi</td> <td>96 buổi</td></tr></tbody></table> <div class=\"btn-sign-up\"><a href=\"#\">ĐĂNG KÝ TƯ VẤN</a></div></div> "), _c('OtherCourseSection')], 2);
+  }, [_c('p', [_vm._v("\n              Học tiếng Anh một cách thú vị qua phương pháp kể chuyện\n              (Storytelling) kích thích trí tưởng tượng và rèn luyện năng lực\n              cảm thụ văn học\n            ")])])])])], 1)], 1), _vm._ssrNode(" <div class=\"section section2\"><div class=\"section2-intro\"><h2 style=\"margin-top: 0; text-align: center\">\n        Giới thiệu về khóa học\n      </h2> <p>\n        Những nghiên cứu khoa học cho biết: từ 3 đến 6 tuổi chính là “độ tuổi\n        vàng” để học các loại ngôn ngữ. Và cũng chính trong giai đoạn này, nếu\n        áp dụng những phương pháp học tập thiếu khoa học thì sẽ tác động tiêu\n        cực tới hiệu quả tiếp thu và sử dụng ngôn ngữ của trẻ trong tương\n        lai.Được nghiên cứu và thiết kế bởi các chuyên gia Anh ngữ hàng đầu\n        tại châu u và Mĩ, Tiếng Anh Mẫu giáo tại Uni là một trong những chương\n        trình học Anh ngữ được đánh giá cao nhất dành cho trẻ từ 3,5 đến 6\n        tuổi.\n      </p> <p>\n        Đội ngũ giảng dạy là các giáo viên đến từ các quốc gia nói tiếng Anh\n        (như Anh, Mĩ, Úc, Canada, Nam Phi v.v.) sở hữu bằng cử nhân, thạc sĩ\n        giáo dục cùng chứng chỉ sư phạm quốc tế với kinh nghiệm giảng dạy\n        phong phú và tình yêu với trẻ nhỏ.\n      </p> <p>\n        Nội dung chương trình được Uni tinh chỉnh để phù hợp hơn với văn hoá,\n        sở thích, năng lực tiếp thu của trẻ em Việt Nam và vẫn đảm bảo hiệu\n        quả học tiếng Anh theo các chuẩn bản ngữ của bộ giáo dục tại Anh quốc\n        và Mỹ. Chúng tôi tự tin có thể giúp các học viên bé có nền tảng vững\n        chắc cho các bậc học cao hơn và phát triển niềm vui thích và cảm xúc\n        hứng khởi với tiếng Anh.\n      </p></div></div> <div class=\"section section3 have-commitment-section\" style=\"margin:130px 0\"><h1 class=\"have-commitment-section-heading\">Cam kết đào tạo</h1> <div style=\"position: relative\"><ul class=\"commitment-training-list\"><li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con có phản xạ ngôn ngữ và diễn đạt tự nhiên với phát âm chuẩn\n            trong các hội thoại đơn giản.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con nhận biết âm và đọc được từ đơn, nói cả câu. Con có thể chủ\n            động tự viết chữ cái.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Con hình thành tư duy sáng tạo, phản biện. Con tự tin thể hiện kỹ\n            năng giao tiếp, hợp tác trong hoạt động thường ngày.\n          </p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>Con được rèn kỹ năng cần thiết để sẵn sàng vào lớp 1.</p></li> <li class=\"commitment-training-item\"><svg fill=\"#1fd655\" xmlns=\"http://www.w3.org/2000/svg\" height=\"30\" width=\"30\" viewBox=\"0 0 512 512\" class=\"check-icon\"><path d=\"M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z\"></path></svg> <p>\n            Khơi sáng tình yêu học tập với nội dung học thú vị và lôi cuốn.\n          </p></li></ul> <div class=\"illustration-img illustration-img4\" style=\"right: 26%;top: 20px;\"></div> <img" + _vm._ssrAttr("src", __webpack_require__(161)) + " alt class=\"illustration-img illustration-img3\" style=\"bottom: -20px;right: 4%;\"> <img" + _vm._ssrAttr("src", __webpack_require__(172)) + " alt class=\"illustration-img illustration-img1\" style=\"right: 20%;top: -150px;\"> <img" + _vm._ssrAttr("src", __webpack_require__(161)) + " alt class=\"illustration-img illustration-img2\" style=\"bottom: -26px;right: 20%;\"></div></div> <div class=\"section section4\"><h2 style=\"margin-top: 0; text-align: center\">Lộ trình học tập</h2> <table border=\"1\" class=\"schedule-table\"><tbody><tr><td colspan=\"4\">Thời lượng học</td> <td>Lịch học</td></tr> <tr><td>3 tháng</td> <td>6 tháng</td> <td>9 tháng</td> <td>1 năm</td> <td rowspan=\"2\">\n            2 buổi / tuần<br>+<br>1 buổi bổ trợ chuyên sâu ngữ âm\n          </td></tr> <tr><td>24 buổi</td> <td>48 buổi</td> <td>72 buổi</td> <td>96 buổi</td></tr></tbody></table> <div class=\"btn-sign-up\"><a href=\"#\">ĐĂNG KÝ TƯ VẤN</a></div></div> "), _c('OtherCourseSection')], 2);
 };
 var staticRenderFns = [];
 
@@ -609,7 +609,7 @@ var componentNormalizer = __webpack_require__(8);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(250)
+  var style0 = __webpack_require__(247)
 if (style0.__inject__) style0.__inject__(context)
 
 }
