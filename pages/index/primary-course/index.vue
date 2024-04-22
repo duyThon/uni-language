@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="primary-course-banner" class="banner">
-      <div class="intro">TIẾNG ANH</div>
+      <div class="intro english-intro">TIẾNG ANH</div>
       <div style="width: 50%" class="intro-border"></div>
       <div class="intro intro-course">TIỂU HỌC</div>
     </div>
@@ -93,124 +93,7 @@
         </p>
       </div>
     </div>
-    <div style="margin-top: 100px" class="section section3 have-commitment-section">
-      <h1 class="have-commitment-section-heading">Cam kết đào tạo</h1>
-      <div style="position: relative">
-        <ul class="commitment-training-list">
-          <li class="commitment-training-item">
-            <svg
-              fill="#1fd655"
-              class="check-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              width="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
-              />
-            </svg>
-            <p>
-              Con đạt trình độ tiếng Anh tương ứng với chuẩn quốc tế phù hợp với
-              cấp bậc theo học: Cambridge Starters - Flyers/ KET hoặc tương đương
-              trình độ từ Pre-A1 tới A2 theo chuẩn CEFR.
-            </p>
-          </li>
-          <li class="commitment-training-item">
-            <svg
-              fill="#1fd655"
-              class="check-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              width="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
-              />
-            </svg>
-            <p>
-              Con làm chủ các kỹ năng viết, nói tiếng Anh, sẵn sàng chinh phục các
-              kì thi lấy chứng chỉ tiếng Anh quốc tế dành cho độ tuổi của mình.
-            </p>
-          </li>
-          <li class="commitment-training-item">
-            <svg
-              fill="#1fd655"
-              class="check-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              width="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
-              />
-            </svg>
-            <p>
-              Con tự tin giao tiếp trôi chảy bằng tiếng Anh, chủ động nhận biết và
-              hoàn thiện các lỗi ngôn ngữ đọc, viết, biết cách trình bày thuyết
-              phục, tạo ảnh hưởng với người khác.
-            </p>
-          </li>
-          <li class="commitment-training-item">
-            <svg
-              fill="#1fd655"
-              class="check-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              width="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
-              />
-            </svg>
-            <p>
-              Con hình thành thói quen học tập chủ động khi biết thu xếp việc học
-              của bản thân.
-            </p>
-          </li>
-          <li class="commitment-training-item">
-            <svg
-              fill="#1fd655"
-              class="check-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              width="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
-              />
-            </svg>
-            <p>
-              Con biết ứng dụng công nghệ hiện đại vào học tập, thích ứng tốt với
-              các phương pháp học tập đa dạng khác nhau.
-            </p>
-          </li>
-        </ul>
-        <div style="top: 70px;right: 26%;" class="illustration-img illustration-img4"></div>
-        <img
-          style="top: -20px;right: 4%;"
-          class="illustration-img illustration-img3"
-          src="@/assets/pics/course/illustration-imgs/illustration-img2.jpg"
-          alt=""
-        />
-        <img
-          style="top: -130px;right: 20%;"
-          class="illustration-img illustration-img1"
-          src="@/assets/pics/course/illustration-imgs/illustration-img1.webp"
-          alt=""
-        />
-        <img
-          style="top: 190px;right: 20%;"
-          class="illustration-img illustration-img2"
-          src="@/assets/pics/course/illustration-imgs/illustration-img2.jpg"
-          alt=""
-        />
-      </div>
-    </div>
+    <CommitmentTraining :commitmentTrainingContent="this.commitmentTrainingContent"/>
     <div class="section section4">
       <h2 style="margin-top: 0; text-align: center">Lộ trình học tập</h2>
       <table class="schedule-table" border="1">
@@ -246,14 +129,45 @@
 
 <script>
 import OtherCourseSection from "~/components/common/OtherCourseSection.vue";
+import CommitmentTraining from "~/components/common/ComitmentTraining.vue"
+
 export default {
+  data() {
+    return {
+      commitmentTrainingContent: {
+          texts: [
+            "Con đạt trình độ tiếng Anh tương ứng với chuẩn quốc tế phù hợp với cấp bậc theo học: Cambridge Starters - Flyers/ KET hoặc tương đương trình độ từ Pre-A1 tới A2 theo chuẩn CEFR.",
+            "Con làm chủ các kỹ năng viết, nói tiếng Anh, sẵn sàng chinh phục các kì thi lấy chứng chỉ tiếng Anh quốc tế dành cho độ tuổi của mình.",
+            "Con hình thành tư duy sáng tạo, phản biện. Con tự tin thể hiện kỹ năng giao tiếp, hợp tác trong hoạt động thường ngày.",
+            "Con tự tin giao tiếp trôi chảy bằng tiếng Anh, chủ động nhận biết và hoàn thiện các lỗi ngôn ngữ đọc, viết, biết cách trình bày thuyết phục, tạo ảnh hưởng với người khác.",
+            "Con hình thành thói quen học tập chủ động khi biết thu xếp việc học của bản thân.",
+            "Con biết ứng dụng công nghệ hiện đại vào học tập, thích ứng tốt với các phương pháp học tập đa dạng khác nhau."
+          ]
+        ,
+          imgs: [
+            `${process.env.APP_DOMAIN}/assets//pics/course/primary/items/primary-03.png`,
+            `${process.env.APP_DOMAIN}/assets/pics/course/secondary/items/secondary-01.png`,
+            `${process.env.APP_DOMAIN}/assets/pics/course/presentation/items/item2.png`
+          ]
+      }
+    }
+  },
   components: {
     OtherCourseSection,
+    CommitmentTraining
   },
-
-  mounted() {
-    this.$gsap.to(window, { duration: 0.5, scrollTo: 0 });
+  
+  async mounted() {
+    await this.$gsap.to(window, { duration: .5, scrollTo: 0 })
+    this.runAnimation()
   },
+  methods: {
+    runAnimation() {
+      const gsap = this.$gsap;
+      gsap.to('.english-intro', {scrollTrigger:'.english-intro', opacity:1, y:0, duration: 1});
+      gsap.to('.intro-course', {scrollTrigger:'.intro-course', opacity:1, y:0, duration: 1});
+    }
+  }
 };
 </script>
 

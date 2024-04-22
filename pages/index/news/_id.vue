@@ -93,23 +93,23 @@
               </div>
             </el-col>
             <el-col :xs="24" :sm="24" :lg="5">
-                <div class="most-read">
-            <div class="most-read-heading">CÁC BÀI VIẾT XEM NHIỀU</div>
-            <div class="most-read-item">
+                <div class="most-viewed">
+            <div class="most-viewed-heading">CÁC BÀI VIẾT XEM NHIỀU</div>
+            <div class="most-viewed-item">
               <p>
                 218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic
                 Tiếng Anh THCS năm học 2017-2018
               </p>
               <p class="date">20/11/2023</p>
             </div>
-            <div class="most-read-item">
+            <div class="most-viewed-item">
               <p>
                 218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic
                 Tiếng Anh THCS năm học 2017-2018
               </p>
               <p class="date">20/11/2023</p>
             </div>
-            <div class="most-read-item">
+            <div class="most-viewed-item">
               <p>
                 218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic
                 Tiếng Anh THCS năm học 2017-2018
@@ -117,23 +117,23 @@
               <p class="date">20/11/2023</p>
             </div>
           </div>
-          <div class="most-read">
-            <div class="most-read-heading">CÁC BÀI VIẾT NGẪU NHIÊN</div>
-            <div class="most-read-item">
+          <div class="most-viewed">
+            <div class="most-viewed-heading">CÁC BÀI VIẾT NGẪU NHIÊN</div>
+            <div class="most-viewed-item">
               <p>
                 218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic
                 Tiếng Anh THCS năm học 2017-2018
               </p>
               <p class="date">20/11/2023</p>
             </div>
-            <div class="most-read-item">
+            <div class="most-viewed-item">
               <p>
                 218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic
                 Tiếng Anh THCS năm học 2017-2018
               </p>
               <p class="date">20/11/2023</p>
             </div>
-            <div class="most-read-item">
+            <div class="most-viewed-item">
               <p>
                 218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic
                 Tiếng Anh THCS năm học 2017-2018
@@ -191,11 +191,11 @@ export default {
 
 
 
-.most-read {
+.most-viewed {
     margin: 100px 0 60px 0;
 }
 
-.most-read-heading {
+.most-viewed-heading {
   font-size: 22px;
   line-height: 26px;
   padding: 10px 0px 20px 0px;

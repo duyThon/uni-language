@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="secondary-course-banner" class="banner">
-      <div class="intro">TIẾNG ANH</div>
+      <div class="intro english-intro">TIẾNG ANH</div>
       <div style="width: 80%;" class="intro-border"></div>
       <div class="intro intro-course">TRUNG HỌC CƠ SỞ</div>
     </div>
@@ -102,83 +102,7 @@
         </p>
       </div>
     </div>
-    <div style="margin:100px 0 140px 0" class="section section3 have-commitment-section">
-      <h1 class="have-commitment-section-heading">Cam kết đào tạo</h1>
-      <div style="position: relative">
-        <ul class="commitment-training-list">
-          <li class="commitment-training-item">
-            <svg
-              fill="#1fd655"
-              class="check-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              width="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
-              />
-            </svg>
-            <p>
-              Con hiểu được các khái niệm ngữ pháp phức tạp, trình bày chặt chẽ trong kỹ năng viết và nói.
-            </p>
-          </li>
-          <li class="commitment-training-item">
-            <svg
-              fill="#1fd655"
-              class="check-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              width="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
-              />
-            </svg>
-            <p>
-              Sở hữu tư duy cầu tiến. Con thành thục ứng dụng bộ kỹ năng của thế kỷ 21, các kỹ năng mềm và tư duy cảm xúc xã hội.
-            </p>
-          </li>
-          <li class="commitment-training-item">
-            <svg
-              fill="#1fd655"
-              class="check-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              width="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
-              />
-            </svg>
-            <p>
-              Làm chủ các kỹ năng học thuật, con sẵn sàng chinh phục các kỳ thi quốc tế với khả năng đạt điểm cao.
-            </p>
-          </li>
-        </ul>
-        <div style="top: 10px;right: 26%;" class="illustration-img illustration-img4"></div>
-        <img
-          style="top: -90px;right: 4%;"
-          class="illustration-img illustration-img3"
-          src="@/assets/pics/course/illustration-imgs/illustration-img2.jpg"
-          alt=""
-        />
-        <img
-          style="top: -200px;right: 20%;"
-          class="illustration-img illustration-img1"
-          src="@/assets/pics/course/illustration-imgs/illustration-img1.webp"
-          alt=""
-        />
-        <img
-          style="top: 120px;right: 20%;"
-          class="illustration-img illustration-img2"
-          src="@/assets/pics/course/illustration-imgs/illustration-img2.jpg"
-          alt=""
-        />
-      </div>
-    </div>
+    <CommonComitmentTraining :commitmentTrainingContent="this.commitmentTrainingContent"/>
     <div class="section section4">
       <h2 style="margin-top: 0; text-align: center">Lộ trình học tập</h2>
       <table class="schedule-table" border="1">
@@ -214,13 +138,40 @@
 
 <script>
 import OtherCourseSection from '~/components/common/OtherCourseSection.vue';
+import CommitmentTraining from "~/components/common/ComitmentTraining.vue"
 export default {
-  components: {
-    OtherCourseSection
+  data() {
+    return {
+      commitmentTrainingContent: {
+          texts: [
+            "Con hiểu được các khái niệm ngữ pháp phức tạp, trình bày chặt chẽ trong kỹ năng viết và nói.",
+            "Sở hữu tư duy cầu tiến. Con thành thục ứng dụng bộ kỹ năng của thế kỷ 21, các kỹ năng mềm và tư duy cảm xúc xã hội.",
+            "Làm chủ các kỹ năng học thuật, con sẵn sàng chinh phục các kỳ thi quốc tế với khả năng đạt điểm cao."
+          ]
+        ,
+          imgs: [
+            `${process.env.APP_DOMAIN}/assets/pics/course/presentation/items/item2.png`,
+            `${process.env.APP_DOMAIN}/assets/pics/course/secondary/items/secondary-01.png`,
+            `${process.env.APP_DOMAIN}/assets//pics/course/primary/items/primary-03.png`,
+          ]
+      }
+    }
   },
-
-  mounted() {
-    this.$gsap.to(window, { duration: .5, scrollTo: 0 })
+  components: {
+    OtherCourseSection,
+    CommitmentTraining
+  },
+  
+  async mounted() {
+    await this.$gsap.to(window, { duration: .5, scrollTo: 0 })
+    this.runAnimation()
+  },
+  methods: {
+    runAnimation() {
+      const gsap = this.$gsap;
+      gsap.to('.english-intro', {scrollTrigger:'.english-intro', opacity:1, y:0, duration: 1});
+      gsap.to('.intro-course', {scrollTrigger:'.intro-course', opacity:1, y:0, duration: 1});
+    }
   }
 };
 </script>

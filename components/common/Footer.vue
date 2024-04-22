@@ -33,11 +33,11 @@
         <div class="footer-info-link"><router-link to="/ielts">Khóa học tiếng anh luyện thi IELTS</router-link></div>
         <h3 class="footer-info-subtitle">Các khóa học ngắn hạn</h3>
         <div class="footer-info-link"><router-link to="/storytelling-course">Khóa học kể chuyện</router-link></div>
-        <div class="footer-info-link"><router-link to="/">Khóa học Steam</router-link></div>
-        <div class="footer-info-link"><router-link to="/">Khóa học thuyết trình</router-link></div>
-        <div class="footer-info-link"><router-link to="/">Khóa luyện thi TOEIC</router-link></div>
-        <div class="footer-info-link"><router-link to="/">Khóa luyện bổ trợ ngữ âm - ngữ pháp</router-link></div>
-        <div class="footer-info-link"><router-link to="/">Khóa luyện thi chuyển cấp</router-link></div>
+        <div class="footer-info-link"><router-link to="/steam-course">Khóa học Steam</router-link></div>
+        <div class="footer-info-link"><router-link to="/presentation-course">Khóa học thuyết trình</router-link></div>
+        <div class="footer-info-link"><router-link to="/toeic">Khóa luyện thi TOEIC</router-link></div>
+        <div class="footer-info-link"><router-link to="/grammar-course">Khóa luyện bổ trợ ngữ âm - ngữ pháp</router-link></div>
+        <div class="footer-info-link"><router-link to="/transition-course">Khóa luyện thi chuyển cấp</router-link></div>
       </el-col>
     </el-row>
   </div>
@@ -52,8 +52,11 @@ export default {
 <style>
 #footer {
   padding: 20px 80px;
-  padding-bottom: 100px;
-  background-color: var(--primary-color);
+  padding-bottom: 300px;
+  background-image: url("~assets/pics/footer/footer.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
@@ -142,11 +145,20 @@ export default {
     }
 }
 
-/* tablet and mobile */
-@media (max-width: 63.9375em) {
+/*mobile */
+@media screen and (max-width: 739px) {
 #footer {
   padding: 20px 15px;
   padding-bottom: 500px;
+  background-image: url("~assets/pics/footer/footer-mobile.jpg");
 }
+}
+
+@media screen and (min-width: 740px) and (max-width: 1023px){
+  #footer {
+    padding: 20px 15px;
+    padding-bottom: 400px;
+    background-image: url("~assets/pics/footer/footer-tablet.jpg");
+  }
 }
 </style>

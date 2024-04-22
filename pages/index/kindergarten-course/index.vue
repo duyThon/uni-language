@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="kindergarten-course-banner" class="banner">
-      <div class="intro">TIẾNG ANH</div>
+      <div class="intro english-intro">TIẾNG ANH</div>
       <div style="width: 50%" class="intro-border"></div>
       <div class="intro intro-course">MẦM NON</div>
     </div>
@@ -90,156 +90,7 @@
         </p>
       </div>
     </div>
-    <!-- <div class="section section3">
-      <h2 style="margin-top: 0; text-align: center">Giáo trình cho khóa học</h2>
-      <el-row :gutter="20">
-        <el-col :xs="24" :sm="24" :lg="8">
-          <div class="section3-content section-content-row-fl">
-            <div class="section3-content-img">
-              <figure><img src="@/assets/pics/course/kindergarten/books/my-little-island1.jpg" alt=""></figure>
-            </div>
-            <div class="section3-content-title">
-              <h4>My Little Island 1</h4>
-            </div>
-          </div>
-        </el-col>
-        <el-col :xs="24" :sm="24" :lg="8">
-          <div class="section3-content section-content-row-fl">
-            <div class="section3-content-img">
-              <figure><img src="@/assets/pics/course/kindergarten/books/my-little-island2.jpg" alt=""></figure>
-            </div>
-            <div class="section3-content-title">
-              <h4>My Little Island 2</h4>
-            </div>
-          </div>
-        </el-col>
-        <el-col :xs="24" :sm="24" :lg="8">
-          <div class="section3-content section-content-row-fl">
-            <div class="section3-content-img">
-              <figure><img src="@/assets/pics/course/kindergarten/books/my-little-island3.jpg" alt=""></figure>
-            </div>
-            <div class="section3-content-title">
-              <h4>My Little Island 3</h4>
-            </div>
-          </div>
-        </el-col>
-      </el-row>
-    </div> -->
-    <div
-      style="margin:130px 0"
-      class="section section3 have-commitment-section"
-    >
-      <h1 class="have-commitment-section-heading">Cam kết đào tạo</h1>
-      <div style="position: relative">
-        <ul class="commitment-training-list">
-          <li class="commitment-training-item">
-            <svg
-              fill="#1fd655"
-              class="check-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              width="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
-              />
-            </svg>
-            <p>
-              Con có phản xạ ngôn ngữ và diễn đạt tự nhiên với phát âm chuẩn
-              trong các hội thoại đơn giản.
-            </p>
-          </li>
-          <li class="commitment-training-item">
-            <svg
-              fill="#1fd655"
-              class="check-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              width="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
-              />
-            </svg>
-            <p>
-              Con nhận biết âm và đọc được từ đơn, nói cả câu. Con có thể chủ
-              động tự viết chữ cái.
-            </p>
-          </li>
-          <li class="commitment-training-item">
-            <svg
-              fill="#1fd655"
-              class="check-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              width="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
-              />
-            </svg>
-            <p>
-              Con hình thành tư duy sáng tạo, phản biện. Con tự tin thể hiện kỹ
-              năng giao tiếp, hợp tác trong hoạt động thường ngày.
-            </p>
-          </li>
-          <li class="commitment-training-item">
-            <svg
-              fill="#1fd655"
-              class="check-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              width="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
-              />
-            </svg>
-            <p>Con được rèn kỹ năng cần thiết để sẵn sàng vào lớp 1.</p>
-          </li>
-          <li class="commitment-training-item">
-            <svg
-              fill="#1fd655"
-              class="check-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="30"
-              width="30"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
-              />
-            </svg>
-            <p>
-              Khơi sáng tình yêu học tập với nội dung học thú vị và lôi cuốn.
-            </p>
-          </li>
-        </ul>
-        <div style="right: 26%;top: 20px;" class="illustration-img illustration-img4"></div>
-        <img
-          style="bottom: -20px;right: 4%;"
-          class="illustration-img illustration-img3"
-          src="@/assets/pics/course/illustration-imgs/illustration-img2.jpg"
-          alt=""
-        />
-        <img
-          style="right: 20%;top: -150px;"
-          class="illustration-img illustration-img1"
-          src="@/assets/pics/course/illustration-imgs/illustration-img1.webp"
-          alt=""
-        />
-        <img
-          style="bottom: -26px;right: 20%;"
-          class="illustration-img illustration-img2"
-          src="@/assets/pics/course/illustration-imgs/illustration-img2.jpg"
-          alt=""
-        />
-      </div>
-    </div>
+    <CommitmentTraining :commitmentTrainingContent="this.commitmentTrainingContent"/>
     <div class="section section4">
       <h2 style="margin-top: 0; text-align: center">Lộ trình học tập</h2>
       <table class="schedule-table" border="1">
@@ -275,14 +126,44 @@
 
 <script>
 import OtherCourseSection from "~/components/common/OtherCourseSection.vue";
+import CommitmentTraining from "~/components/common/ComitmentTraining.vue"
 export default {
-  components: {
-    OtherCourseSection,
+  data() {
+    return {
+      commitmentTrainingContent: {
+          texts: [
+            "Con có phản xạ ngôn ngữ và diễn đạt tự nhiên với phát âm chuẩn trong các hội thoại đơn giản.",
+            "Con nhận biết âm và đọc được từ đơn, nói cả câu. Con có thể chủ động tự viết chữ cái.",
+            "Con hình thành tư duy sáng tạo, phản biện. Con tự tin thể hiện kỹ năng giao tiếp, hợp tác trong hoạt động thường ngày.",
+            "Con được rèn kỹ năng cần thiết để sẵn sàng vào lớp 1.",
+            "Khơi sáng tình yêu học tập với nội dung học thú vị và lôi cuốn."
+          ]
+        ,
+          imgs: [
+            `${process.env.APP_DOMAIN}/assets/pics/course/kindergarten/items/kindergarten-02.png`,
+            `${process.env.APP_DOMAIN}/assets/pics/course/presentation/items/item5.png`,
+            `${process.env.APP_DOMAIN}/assets/pics/course/primary/items/primary-01.png`
+          ]
+      }
+    }
   },
 
-  mounted() {
-    this.$gsap.to(window, { duration: 0.5, scrollTo: 0 });
+  components: {
+    OtherCourseSection,
+    CommitmentTraining
   },
+
+  async mounted() {
+    await this.$gsap.to(window, { duration: .5, scrollTo: 0 })
+    this.runAnimation()
+  },
+  methods: {
+    runAnimation() {
+      const gsap = this.$gsap;
+      gsap.to('.english-intro', {scrollTrigger:'.english-intro', opacity:1, y:0, duration: 1});
+      gsap.to('.intro-course', {scrollTrigger:'.intro-course', opacity:1, y:0, duration: 1});
+    }
+  }
 };
 </script>
 

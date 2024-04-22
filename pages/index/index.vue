@@ -11,7 +11,7 @@
         Với tầm nhìn như vậy hãy cùng khám phá tại UNI LANGUAGE HOUSE có những
         gì nhé!
       </p>
-      <el-row :gutter="20">
+      <el-row class="uni-intro" :gutter="20">
           <el-col class="section1-intro" :xs="24" :sm="24" :lg="8">
               <div class="section-content-row-fl section1-intro-content">
                   <div class="section1-intro-img">
@@ -103,7 +103,7 @@ export default {
 
 <style scoped>
 #homepage-background {
-  background-image: url("~assets/pics/main-background/gallery/item1.jpg");
+  background-image: url("~assets/pics/main-background/gallery/item2.jpg");
 }
 
 #home-page-container {
@@ -136,6 +136,10 @@ export default {
 @media (max-width: 1024px) {
   #home-page-container {
     margin: 500px 0 0;
+  }
+
+  .uni-intro {
+    margin: 0 !important;
   }
 }
 

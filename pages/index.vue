@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MessengerPlugin/>
+    <!-- <MessengerPlugin/> -->
     <MainNavBar></MainNavBar>
     <main>
         <nuxt-child />
@@ -14,14 +14,14 @@
 import MainNavBar from "@/components/common/MainNavBar.vue"
 import StickyInfoContact from "@/components/common/StickyInfoContact.vue"
 import Footer from "@/components/common/Footer.vue"
-import MessengerPlugin from "@/components/common/MessengerPlugin.vue"
+// import MessengerPlugin from "@/components/common/MessengerPlugin.vue"
 
 export default {
   components: {
     MainNavBar,
     StickyInfoContact,
     Footer,
-    MessengerPlugin
+    // MessengerPlugin
   },
 }
 </script>

@@ -143,8 +143,8 @@ export default {
     PartnersCarousel,
   },
 
-  mounted() {
-    this.$gsap.to(window, { duration: .5, scrollTo: 0 })
+  async mounted() {
+    await this.$gsap.to(window, { duration: .5, scrollTo: 0 })
     this.boxRotation()
   },
 

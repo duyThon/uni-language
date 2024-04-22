@@ -20,8 +20,8 @@
               <div class="overlay-news-heading"></div>
             </div>
             <div class="news-heading">
-              <h2>{{data.titleVn}}</h2>
-              <p>{{renderDate(data.createdAt)}}</p>
+              <h2>{{ data.titleVn }}</h2>
+              <p>{{ renderDate(data.createdAt) }}</p>
             </div>
           </div>
         </el-col>
@@ -31,7 +31,11 @@
       <el-row :gutter="20">
         <el-col :xs="24" :sm="24" :lg="16">
           <div class="news-container-main">
-            <div v-for="data in dataTable" :key="data.id" class="news-container-main-item">
+            <div
+              v-for="data in dataTable"
+              :key="data.id"
+              class="news-container-main-item"
+            >
               <div @click="openNews(data._id)">
                 <el-row :gutter="20">
                   <el-col :xs="8" :sm="8" :lg="8">
@@ -43,75 +47,53 @@
                     <div class="news-container-main-info">
                       <div class="news-title">
                         <h3>
-                          {{data.titleVn}}
+                          {{ data.titleVn }}
                         </h3>
-                        <p class="date">{{renderDate(data.createdAt)}}</p>
+                        <p class="date">{{ renderDate(data.createdAt) }}</p>
                       </div>
-                      <div class="news-desc" v-html="data.descriptionEn">
+                      <div class="news-desc">
+                        {{ data.summaryEn }}
                       </div>
+                      <!-- <div class="news-desc" v-html="data.descriptionEn">
+                      </div> -->
                     </div>
                   </el-col>
                 </el-row>
               </div>
             </div>
             <el-pagination
-              :hide-on-single-page="true"
+              :hide-on-single-page="hidePage"
               layout="prev, pager, next"
               :total="totalItem"
               :page-size="perPage"
               align="right"
               background
-              @change="updatePage"
-            ></el-pagination>
+              @current-change="setPage"
+            >
+            </el-pagination>
           </div>
         </el-col>
         <el-col :xs="24" :sm="24" :lg="8">
-          <div class="most-read">
-            <div class="most-read-heading">CÁC BÀI VIẾT XEM NHIỀU</div>
-            <div class="most-read-item">
-              <p>
-                218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic
-                Tiếng Anh THCS năm học 2017-2018
-              </p>
-              <p class="date">20/11/2023</p>
-            </div>
-            <div class="most-read-item">
-              <p>
-                218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic
-                Tiếng Anh THCS năm học 2017-2018
-              </p>
-              <p class="date">20/11/2023</p>
-            </div>
-            <div class="most-read-item">
-              <p>
-                218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic
-                Tiếng Anh THCS năm học 2017-2018
-              </p>
-              <p class="date">20/11/2023</p>
+          <div class="most-viewed">
+            <div class="most-viewed-heading">CÁC BÀI VIẾT XEM NHIỀU</div>
+            <div class="most-viewed-item">
+              <div v-for="data in mostViewedList" :key="data.id">
+                <p>
+                  {{ data.summaryEn }}
+                </p>
+                <p class="date">{{ renderDate(data.createdAt) }}</p>
+              </div>
             </div>
           </div>
-          <div class="most-read">
-            <div class="most-read-heading">CÁC BÀI VIẾT NGẪU NHIÊN</div>
-            <div class="most-read-item">
-              <p>
-                218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic
-                Tiếng Anh THCS năm học 2017-2018
-              </p>
-              <p class="date">20/11/2023</p>
-            </div>
-            <div class="most-read-item">
-              <p>
-                218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic
-                Tiếng Anh THCS năm học 2017-2018
-              </p>
-              <p class="date">20/11/2023</p>
-            </div>
-            <div class="most-read-item">
-              <p>
-                218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic
-                Tiếng Anh THCS năm học 2017-2018
-              </p>
-              <p class="date">20/11/2023</p>
+          <div class="most-viewed">
+            <div class="most-viewed-heading">CÁC BÀI VIẾT NGẪU NHIÊN</div>
+            <div class="most-viewed-item">
+              <div v-for="data in randomList" :key="data.id">
+                <p>
+                  {{ data.summaryEn }}
+                </p>
+                <p class="date">{{ renderDate(data.createdAt) }}</p>
+              </div>
             </div>
           </div>
         </el-col>
@@ -127,12 +109,15 @@ import PartnersCarousel from "@/components/common/PartnersCarousel.vue";
 export default {
   data() {
     return {
-      lastestData: [
-      ],
+      lastestData: [],
       dataTable: [],
+      randomList: [],
+      mostViewedList: [],
       totalItem: 0,
       perPage: 0,
-      apiUrl: process.env.API_URL
+      hidePage: true,
+      currentPage: 1,
+      apiUrl: process.env.API_URL,
     };
   },
 
@@ -141,44 +126,93 @@ export default {
   },
 
   async mounted() {
-    await this.getListData()
+    await this.getListData();
+    await this.getRandomList();
+    await this.getMostViewedList();
     this.$gsap.to(window, { duration: 0.5, scrollTo: 0 });
   },
 
   methods: {
     async getListData() {
-      let res = await fetch(
-          `${this.apiUrl}/news/search`,
-          {
-            method: "POST",
-            body: {"queryString": "{tags} == '''news'''"}
-          }
-        ).then(
-          res => res.json(),
-        );
-        if(res.success) {
+      let data = {
+        queryString: "{tags}=='''news'''",
+        pagingAndSorting: {
+          page: this.currentPage
+        }
+      };
+      let res = await fetch(`${this.apiUrl}/news/search`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((res) => res.json());
+      if (res.success) {
+        if(this.currentPage == 1) {
+          this.lastestData = res.data.slice(0, 2);
+          this.dataTable = res.data.slice(2);
+        } else {
           this.dataTable = res.data
         }
-        this.dataTable = res.data;
         this.totalItem = res.total;
         this.perPage = res.perPage;
-        this.lastestData = res.data.slice(0, 2);
+      }
+    },
+
+    async getRandomList() {
+      let data = {
+        numRecord: 3,
+      };
+      let res = await fetch(`${this.apiUrl}/news/search_random`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((res) => res.json());
+      if (res.success) {
+        this.randomList = res.data;
+      }
+    },
+
+    async getMostViewedList() {
+      let data = {
+        queryString: "",
+        pagingAndSorting: {
+          sort: {
+            viewCount: -1
+          }
+        }
+      };
+
+      let res = await fetch(`${this.apiUrl}/news/search`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((res) => res.json());
+      if (res.success) {
+        this.mostViewedList = res.data.slice(0,3)
+      }
     },
 
     renderDate(date) {
-      const formatedDate = new Date(date)
-      return formatedDate.toLocaleDateString('en-GB')
+      const formatedDate = new Date(date);
+      return formatedDate.toLocaleDateString("en-GB");
     },
 
     openNews(id) {
-      this.$router.push({ 
-        path: `news/${id}`
+      this.$router.push({
+        path: `news/${id}`,
       });
     },
-    updatePage(page) {
-      console.log(page);
-    }
-  }
+    async setPage(page) {
+      this.currentPage = page;
+      await this.getListData();
+      this.$gsap.to(window, { duration: .5, scrollTo: 0 })
+    },
+  },
 };
 </script>
 
@@ -262,11 +296,11 @@ export default {
   word-break: break-word;
 }
 
-.most-read {
+.most-viewed {
   margin-bottom: 60px;
 }
 
-.most-read-heading {
+.most-viewed-heading {
   font-size: 22px;
   line-height: 26px;
   padding: 10px 0px 20px 0px;
@@ -277,6 +311,9 @@ export default {
 
 /* mobile */
 @media screen and (max-width: 739px) {
+  .latest-news-item {
+    min-height: 300px;
+  }
 }
 
 /* tablet */

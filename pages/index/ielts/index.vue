@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="ielts-course-banner" class="banner">
-      <div class="intro">TIẾNG ANH</div>
+      <div class="intro english-intro">TIẾNG ANH</div>
       <div style="width: 70%;" class="intro-border"></div>
       <div class="intro intro-course">LUYỆN THI IELTS</div>
     </div>
@@ -98,9 +98,17 @@ export default {
   components: {
     OtherCourseSection
   },
-
-  mounted() {
-    this.$gsap.to(window, { duration: .5, scrollTo: 0 })
+  
+  async mounted() {
+    await this.$gsap.to(window, { duration: .5, scrollTo: 0 })
+    this.runAnimation()
+  },
+  methods: {
+    runAnimation() {
+      const gsap = this.$gsap;
+      gsap.to('.english-intro', {scrollTrigger:'.english-intro', opacity:1, y:0, duration: 1});
+      gsap.to('.intro-course', {scrollTrigger:'.intro-course', opacity:1, y:0, duration: 1});
+    }
   }
 };
 </script>

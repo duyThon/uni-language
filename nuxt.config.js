@@ -25,7 +25,6 @@ export default {
   plugins: [
     '@/plugins/element-ui',
     { src: "~/plugins/lightGallery.client.js", ssr: false },
-    // { src: '~/plugins/ckeditor.js', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

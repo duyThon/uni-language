@@ -51,7 +51,7 @@ export default {
     box-shadow: 0px 8px 8px rgb(0 0 0 / 0.45);
     -webkit-box-shadow: 0px 8px 8px rgb(0 0 0 / 0.45);
     -moz-box-shadow: 0px 8px 8px rgb(0 0 0 / 0.45);
-    background-image: url("~assets/pics/maps/item1.png");
+    background-image: url("~assets/pics/maps/item1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
