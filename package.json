@@ -14,16 +14,21 @@
     "@nuxtjs/dotenv": "^1.4.2",
     "@nuxtjs/i18n": "^7.3.1",
     "@nuxtjs/pwa": "^3.3.5",
+    "@panter/vue-i18next": "^0.15.2",
     "@tinymce/tinymce-vue": "^3.2.8",
     "core-js": "^3.25.3",
     "element-ui": "^2.15.10",
     "font-awesome": "^4.7.0",
+    "i18next": "^23.11.2",
+    "i18next-vue": "^1.1.0",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
+    "vue-i18next": "^0.9.4",
     "vue-light-gallery": "^1.0.1",
     "vue-server-renderer": "^2.7.10",
     "vue-ssr-carousel": "^2.3.2",
-    "vue-template-compiler": "^2.7.10"
+    "vue-template-compiler": "^2.7.10",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "nuxt-gsap-module": "^2.0.0"

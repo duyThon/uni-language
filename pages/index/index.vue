@@ -44,7 +44,7 @@
           </el-col>
       </el-row>
       <div class="btn-sign-up">
-        <a href="#">ĐĂNG KÝ TƯ VẤN</a>
+        <a @click="upToTop">ĐĂNG KÝ TƯ VẤN</a>
       </div>
       <!-- <LightGallery/> -->
     </div>
@@ -96,6 +96,10 @@ export default {
       gsap.to('.text-center-responsive', {scrollTrigger:'.text-center-responsive', y:0,opacity:1,duration: .5});
       gsap.to('.rotate-img', {scrollTrigger:'.rotate-img', rotation:0,opacity:1,duration: 1});
       gsap.to('.btn-sign-up', {scrollTrigger:'.btn-sign-up', y:0,opacity:1,duration: .5});
+    },
+
+    upToTop() {
+      this.$gsap.to(window,{duration: 1, scrollTo: "#banner-form"});
     }
   }
 };

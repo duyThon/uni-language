@@ -97,6 +97,8 @@
             </li>
           </ul>
         </div> -->
+        <!-- <button @click="switchLanguage">Switch Language</button> -->
+
       </div>
       <label for="nav-mobile-input" class="main-navbar-btn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -260,8 +262,9 @@ export default {
     handleSelect(key, keyPath) {
     },
 
-    changeLang(locale) {
-      this.$store.commit('setLocale', locale);
+    switchLanguage() {
+      const newLanguage = this.$i18n.language === 'en' ? 'vi' : 'en';
+      this.$store.commit('setLanguage', newLanguage);
     },
 
     routerTo(router,isMobile) {

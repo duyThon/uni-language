@@ -44,11 +44,11 @@
               placeholder="Nhập nội dung Tin tức và sự kiện"
               :config="editorConfig"
             /> -->
-            <!-- <Editor
+            <Editor
               api-key="ut7fjjlpkmogxx60bmoats48gwzbqa1b8hzmvehbozmzpcc5"
               :init="myInit"
-            /> -->
-            <textarea ref="editor"></textarea>
+            />
+            <!-- <textarea ref="editor"></textarea> -->
             <h3 style="font-size: 26px" class="admin-title">
               Tóm tắt nội dung bằng tiếng việt
             </h3>
@@ -159,6 +159,16 @@ import Editor from '@tinymce/tinymce-vue'
 export default {
   name: "app",
 
+  middleware({ $axios }) {
+    console.log('Middleware is working!');
+    $axios.onRequest(config => {
+      if (config.method === 'OPTIONS') {
+        config.method = 'POST';
+      }
+      return config;
+    });
+  },
+
   components: {
     Editor
   },
@@ -178,7 +188,7 @@ export default {
       myInit: {
         selector: 'textarea',
         plugins: 'advlist link image lists',
-        // images_upload_url: 'http://unilanguagesonla.com/api/media/upload',
+        images_upload_url: 'http://unilanguagesonla.com/api/media/upload',
         automatic_uploads: true,
         images_upload_handler: this.imgHandler
 
@@ -258,19 +268,19 @@ export default {
         xhr.send(formData);
       };
 
-      tinymce.init({
-        selector: 'textarea',
-        plugins: 'image',
-        toolbar: 'image',
-        images_upload_handler: exampleImageUploadHandler,
-        setup: (editor) => {
-          this.$refs.editor.editor = editor;
-          editor.on('change', () => {
-            // emit event if you need to pass the content somewhere
-            this.$emit('input', editor.getContent());
-          });
-        }
-      });
+      // this.tinymce.init({
+      //   selector: 'textarea',
+      //   plugins: 'image',
+      //   toolbar: 'image',
+      //   images_upload_handler: exampleImageUploadHandler,
+      //   setup: (editor) => {
+      //     this.$refs.editor.editor = editor;
+      //     editor.on('change', () => {
+      //       // emit event if you need to pass the content somewhere
+      //       this.$emit('input', editor.getContent());
+      //     });
+      //   }
+      // });
     }
   },
 };

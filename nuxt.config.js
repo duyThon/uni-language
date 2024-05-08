@@ -15,6 +15,7 @@ export default {
     ]
   },
 
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'element-ui/lib/theme-chalk/index.css',
@@ -25,6 +26,8 @@ export default {
   plugins: [
     '@/plugins/element-ui',
     { src: "~/plugins/lightGallery.client.js", ssr: false },
+    { src: "~/plugins/sendMail.js", ssr: false },
+    { src: '~/plugins/i18n.js' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

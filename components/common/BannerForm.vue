@@ -20,7 +20,7 @@
             </el-col>
             <el-col :xs="24" :sm="24" :lg="8">
                 <div class="btn-sign-up">
-                    <a href="#">ĐĂNG KÝ TƯ VẤN</a>
+                    <a @click="sendMail(ruleForm)">ĐĂNG KÝ TƯ VẤN</a>
                 </div>
             </el-col>
         </el-row>        
@@ -49,6 +49,12 @@ export default {
                     { required: true, message: 'Hãy nhập số điện thoại của mình hoặc của phụ huynh bạn nhé', trigger: 'blur' }
                 ]
             }
+        }
+    },
+
+    methods: {
+        sendMail() {
+            this.$sendMail(this.ruleForm)
         }
     }
 }

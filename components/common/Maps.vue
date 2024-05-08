@@ -1,6 +1,7 @@
 <template>
   <div class="maps">
     <h2>ĐỊA CHỈ CỦA LANGUAGE HOUSE SƠN LA</h2>
+    <!-- <strong>{{ $t("loadbundle", { lang: lang }) }}</strong> -->
     <iframe
       id="uni-maps"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.9494387986199!2d103.90909169878066!3d21.339952313602588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31328b3423500775%3A0x89e9f230d6d31bdc!2zNDU3IENodSBWxINuIFRo4buLbmgsIFAuIENoaeG7gW5nIEzhu4EsIFPGoW4gTGEsIDM2MDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1699424510932!5m2!1svi!2s"
@@ -13,7 +14,35 @@
 </template>
 
 <script>
+// import { i18next } from 'i18next';
+// import I18NextVue from 'i18next-vue';
+
+const locales = {
+  en: {
+    hello: 'Hello!',
+    loadbundle: 'Load bundle language: {{lang}}',
+  },
+  vn: {
+    hello: 'xin cao!',
+    loadbundle: 'tai bundle cua ngon ngu: {{lang}}',
+  }
+};
+
+// i18next.init({
+//   lng: 'vn',
+//   resources: {
+//     en: { translation: locales.en },
+//   },
+// });
+
+// const i18n = new I18NextVue(i18next);
 export default {
+  data() {
+    return {
+      lang: "VN"
+    }
+  },
+  // i18n,
   mounted() {
     this.runAnimation();
   },
