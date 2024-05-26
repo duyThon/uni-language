@@ -126,10 +126,10 @@ export default {
   },
 
   async mounted() {
+    this.$gsap.to(window, { duration: .5, scrollTo: 0 })
     await this.getListData();
     await this.getRandomList();
     await this.getMostViewedList();
-    this.$gsap.to(window, { duration: 0.5, scrollTo: 0 });
   },
 
   methods: {

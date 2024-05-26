@@ -1,6 +1,5 @@
 <template>
   <div class="online-testing-container">
-    {{currentLocale}}
     <h2 class="online-testing-heading">Đăng Kí Thi Thử Miễn Phí</h2>
     <div class="ot-main">
         <el-row :gutter="20">
@@ -87,19 +86,11 @@ export default {
     },
 
     async created() {
-        const language = this.$store.state.locale;
-        await this.$store.commit('setLocale', language);
     },
 
     mounted() {
         this.$gsap.to(window, { duration: .5, scrollTo: 0 });
     },
-
-    computed: {
-        currentLocale() {
-            return this.$store.state.locale;
-        },
-    }
 
 }
 </script>

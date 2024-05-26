@@ -118,10 +118,10 @@ export default {
   },
 
   async mounted() {
+    this.$gsap.to(window, { duration: .5, scrollTo: 0 })
     await this.getListData();
-    // await this.getMostViewList();
     await this.getRandomList();
-    this.$gsap.to(window, { duration: 0.5, scrollTo: 0 });
+    await this.getMostViewedList();
   },
 
   methods: {
@@ -151,10 +151,6 @@ export default {
         this.totalItem = res.total;
         this.perPage = res.perPage;
       }
-    },
-
-    async getMostViewList() {
-
     },
 
     async getRandomList() {

@@ -8,7 +8,8 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },{ rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap' },
+      { 'http-equiv': 'Content-Security-Policy', content: 'upgrade-insecure-requests' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -27,7 +28,6 @@ export default {
     '@/plugins/element-ui',
     { src: "~/plugins/lightGallery.client.js", ssr: false },
     { src: "~/plugins/sendMail.js", ssr: false },
-    { src: '~/plugins/i18n.js' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -81,20 +81,19 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/dotenv',
     '@nuxtjs/i18n',
-    '@nuxtjs/dotenv'
+    
   ],
+
 
   i18n: {
     locales: [
       { code: 'vi', iso: 'vi-VN' },
-      { code: 'en', iso: 'en-US'},
+      { code: 'en', iso: 'en-US' },
     ],
 
     vuex: {

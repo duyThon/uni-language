@@ -1,5 +1,5 @@
 export const state = () => ({
-  language: 'vi' // Default language
+  language: 'vi',
 });
 
 export const mutations = {

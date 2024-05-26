@@ -164,6 +164,135 @@ export default {
     Footer,
     PartnersCarousel
   },
+
+  data() {
+    return {
+      data: {
+        createdAt: "",
+        descriptionEn: "",
+        descriptionVn: "",
+        titleEn: "",
+        titleVn: "",
+      },
+      apiUrl: process.env.API_URL,
+      randomList: [],
+      mostViewedList: [],
+      dialog: false,
+    }
+  },
+
+  async mounted() {
+    await this.$gsap.to(window, { duration: 0.5, scrollTo: 0 });
+    await this.getData();
+    await this.getRandomList();
+    await this.getMostViewedList();
+  },
+
+  methods: {
+    async getData() {
+      console.log(this.$route);
+      let res = await fetch(`${this.apiUrl}/news/${this.$route.params.id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }).then((res) => res.json());
+      if (res.success) {
+        console.log(res);
+        this.data = {
+          createdAt: res.data.createdAt,
+          descriptionEn: res.data.descriptionEn,
+          descriptionVn: res.data.descriptionVn,
+          titleEn: res.data.titleEn,
+          titleVn: res.data.titleVn,
+        };
+      }
+    },
+
+    async getRandomList() {
+      let data = {
+        numRecord: 3,
+      };
+      let res = await fetch(`${this.apiUrl}/news/search_random`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((res) => res.json());
+      if (res.success) {
+        this.randomList = res.data;
+      }
+    },
+
+    async getMostViewedList() {
+      let data = {
+        queryString: "",
+        pagingAndSorting: {
+          sort: {
+            viewCount: -1,
+          },
+        },
+      };
+
+      let res = await fetch(`${this.apiUrl}/news/search`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((res) => res.json());
+      if (res.success) {
+        this.mostViewedList = res.data.slice(0, 3);
+      }
+    },
+
+    renderDate(date) {
+      const formatedDate = new Date(date);
+      return formatedDate.toLocaleDateString("en-GB");
+    },
+
+    shareOnFB() {
+      // Lấy URL hiện tại của trang web
+      var url = window.location.href;
+      console.log(url);
+      // Kiểm tra URL hợp lệ
+      try {
+        new URL(url);
+      } catch (e) {
+        console.error("Invalid URL:", url);
+        return;
+      }
+
+      // Mã hóa URL và tạo URL chia sẻ của Facebook
+      var facebookShareUrl =
+        "https://www.facebook.com/sharer/sharer.php?u=" +
+        encodeURIComponent(url);
+
+      // Mở cửa sổ mới để chia sẻ lên Facebook
+      window.open(
+        facebookShareUrl,
+        "facebook-share-dialog",
+        "width=800,height=600"
+      );
+    },
+    async copyLink() {
+      try {
+        await navigator.clipboard.writeText(
+          `http://localhost:3000${this.$route.fullPath}`
+        );
+        this.dialog = true;
+      } catch ($e) {
+        alert("Vui lòng thử lại");
+      }
+    },
+    // postOnZalo() {
+    //   var zaloPostUrl =
+    //     "https://developers.zalo.me/tools/share?url=" +
+    //     encodeURIComponent(this.currentUrl);
+    //   window.open(zaloPostUrl, "zalo-post-dialog", "width=800,height=600");
+    // },
+  },
 };
 </script>
 

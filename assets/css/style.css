@@ -230,8 +230,8 @@ body {
     text-decoration: none;
   }
   
-  .btn-sign-up a:visited {
-    transition: all 0.2s ease;
+  .btn-sign-up a:hover {
+    cursor: pointer;
   }
   
   .other-course {

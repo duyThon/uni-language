@@ -147,7 +147,7 @@
                     </tr>
                   </table>
                 </div>
-                <div style="display:flex"><button style="display:flex" class="back-to-home-btn">Quay lại trang chính</button></div>
+                <div style="display:flex"><router-link to="/" class="back-to-home-btn">Quay lại trang chính</router-link></div>
               </td>
             </tr>
           </tbody>
@@ -158,7 +158,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    backToHome() {
+      console.log("object");
+      this.$router.push({ 
+          path: ``
+        });
+    }
+  }
+};
 </script>
 
 <style>

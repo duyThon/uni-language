@@ -97,6 +97,7 @@
             </li>
           </ul>
         </div> -->
+        <!-- {{selectedLanguage}} -->
         <!-- <button @click="switchLanguage">Switch Language</button> -->
 
       </div>
@@ -217,7 +218,9 @@
           <div @click="routerTo('online-testing',true)"> THI THỬ </div>
         </el-menu-item>
       </el-menu>
-      <!-- <div class="switch-language-mobile">
+      
+
+      <div class="switch-language-mobile">
         <div class="switch-language-mobile-title">NGÔN NGỮ</div>
         <ul class="nation-logo-mobile">
           <li class="nation-logo-item-mobile">
@@ -235,12 +238,13 @@
             />
           </li>
         </ul>
-      </div> -->
+      </div>
     </div>
   </nav>
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   data() {
     return {
@@ -250,22 +254,28 @@ export default {
 
   computed: {
     supportedLocales() {
-      return this.$i18n.locales;
+      // return this.$i18n.locales;
     },
 
-    translatedHello() {
-      return this.$t('hello'); 
-    },
+    // selectedLanguage() {
+    //   return this.$store.state.language
+    // },
+
+  },
+
+  created() {
+    // console.log(this.$store.state);
   },
 
   methods: {
     handleSelect(key, keyPath) {
     },
 
-    switchLanguage() {
-      const newLanguage = this.$i18n.language === 'en' ? 'vi' : 'en';
-      this.$store.commit('setLanguage', newLanguage);
-    },
+    // switchLanguage() {
+    //   const newLanguage = this.$i18n.language === 'en' ? 'vi' : 'en';
+    //   this.$store.commit('setLanguage', newLanguage);
+    // },
+
 
     routerTo(router,isMobile) {
       this.$router.push({ 

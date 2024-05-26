@@ -39,16 +39,15 @@
             <h3 style="font-size: 26px" class="admin-content">
               Nội dung bài viết bằng tiếng việt
             </h3>
-            <!-- <ckeditor
-              v-model="viContent"
-              placeholder="Nhập nội dung Tin tức và sự kiện"
-              :config="editorConfig"
-            /> -->
+            <client-only>
             <Editor
+              id="newsViContent"
               api-key="ut7fjjlpkmogxx60bmoats48gwzbqa1b8hzmvehbozmzpcc5"
+              output-format="text"
               :init="myInit"
+              ref="editor1"
             />
-            <!-- <textarea ref="editor"></textarea> -->
+            </client-only>
             <h3 style="font-size: 26px" class="admin-title">
               Tóm tắt nội dung bằng tiếng việt
             </h3>
@@ -71,10 +70,13 @@
             <h3 style="font-size: 26px" class="admin-content">
               Nội dung bài viết bằng tiếng anh
             </h3>
-            <!-- <ckeditor
+            <Editor
+              id="newsEnContent"
+              api-key="ut7fjjlpkmogxx60bmoats48gwzbqa1b8hzmvehbozmzpcc5"
+              output-format="text"
+              :init="myInit"
               v-model="enContent"
-              placeholder="Nhập nội dung Tin tức và sự kiện"
-            /> -->
+            />
             <h3 style="font-size: 26px" class="admin-title">
               Tóm tắt nội dung bằng tiếng anh
             </h3>
@@ -102,10 +104,12 @@
             <h3 style="font-size: 26px" class="admin-content">
               Nội dung bài viết bằng tiếng việt
             </h3>
-            <!-- <ckeditor
-              v-model="viContent"
-              placeholder="Nhập nội dung Tin tức và sự kiện"
-            /> -->
+            <Editor
+              id="hofViContent"
+              api-key="ut7fjjlpkmogxx60bmoats48gwzbqa1b8hzmvehbozmzpcc5"
+              output-format="text"
+              :init="myInit"
+            />
             <h3 style="font-size: 26px" class="admin-title">
               Tóm tắt nội dung bằng tiếng việt
             </h3>
@@ -128,12 +132,15 @@
             <h3 style="font-size: 26px" class="admin-content">
               Nội dung bài viết bằng tiếng anh
             </h3>
-            <!-- <ckeditor
+            <Editor
+              id="hofEnContent"
+              api-key="ut7fjjlpkmogxx60bmoats48gwzbqa1b8hzmvehbozmzpcc5"
+              output-format="text"
+              :init="myInit"
               v-model="enContent"
-              placeholder="Nhập nội dung Tin tức và sự kiện"
-            /> -->
+            />
             <h3 style="font-size: 26px" class="admin-title">
-              Tóm tắt nội dung bằng tiếng việt
+              Tóm tắt nội dung bằng tiếng anh
             </h3>
             <textarea
               v-model="viSummary"
@@ -154,23 +161,23 @@
 </template>
 
 <script>
-import Editor from '@tinymce/tinymce-vue'
+import Editor from "@tinymce/tinymce-vue";
 
 export default {
   name: "app",
 
   middleware({ $axios }) {
-    console.log('Middleware is working!');
-    $axios.onRequest(config => {
-      if (config.method === 'OPTIONS') {
-        config.method = 'POST';
+    console.log("Middleware is working!");
+    $axios.onRequest((config) => {
+      if (config.method === "OPTIONS") {
+        config.method = "POST";
       }
       return config;
     });
   },
 
   components: {
-    Editor
+    Editor,
   },
 
   data() {
@@ -186,22 +193,63 @@ export default {
       apiUrl: process.env.API_URL,
       dialog: false,
       myInit: {
-        selector: 'textarea',
-        plugins: 'advlist link image lists',
-        images_upload_url: 'http://unilanguagesonla.com/api/media/upload',
+        height: 500,
+        selector: "textarea",
+        plugins: "advlist link image lists",
+        toolbar: "image",
+        images_upload_url: "https://unilanguagesonla.com/api/media/upload",
         automatic_uploads: true,
-        images_upload_handler: this.imgHandler
+        images_upload_handler: function (blobInfo, success, failure) {
+          let xhr, formData;
 
-      }
+          xhr = new XMLHttpRequest();
+          xhr.withCredentials = false;
+          xhr.open("POST", "https://unilanguagesonla.com/api/media/upload");
+
+          xhr.onload = function () {
+            let json;
+
+            if (xhr.status !== 200) {
+              failure("HTTP Error: " + xhr.status);
+              return;
+            }
+
+            json = JSON.parse(xhr.responseText);
+
+            if (!json || typeof json.data.url !== "string") {
+              failure("Invalid JSON: " + xhr.responseText);
+              return;
+            }
+
+            let imageUrl = json.data.url;
+            success(json.data.url);
+            tinymce.activeEditor.insertContent(
+              '<img src="' +
+                imageUrl +
+                '" style="width: 100%; height: auto;" />'
+            );
+          };
+
+          formData = new FormData();
+          formData.append("file", blobInfo.blob(), blobInfo.filename());
+          xhr.send(formData);
+        },
+      },
     };
   },
 
   mounted() {
-    this.initTinyMCE();
   },
 
   methods: {
     async saveContent() {
+      if(this.tabName == 0) {
+        this.viContent = tinyMCE.get('newsViContent').getContent();
+        this.enContent = tinyMCE.get('newsEnContent').getContent();
+      } else {
+        this.viContent = tinyMCE.get('hofViContent').getContent();
+        this.enContent = tinyMCE.get('hofEnContent').getContent();
+      }
       const body = {
         titleVn: this.viTitle,
         descriptionVn: this.viContent,
@@ -221,67 +269,12 @@ export default {
       }).then((res) => res.json());
       if (res.success) {
         this.dialog = true;
-        // this.$router.push({
-        //   path: `/news`
-        // });
+        this.$router.push({
+          path: `/news`
+        });
       }
     },
 
-    initTinyMCE() {
-      const exampleImageUploadHandler = (blobInfo, progress, success, failure) => {
-        const xhr = new XMLHttpRequest();
-        xhr.withCredentials = false;
-        xhr.open('POST', 'http://unilanguagesonla.com/api/media/upload');
-
-        xhr.upload.onprogress = (e) => {
-          progress(e.loaded / e.total * 100);
-        };
-
-        xhr.onload = () => {
-          if (xhr.status === 403) {
-            failure('HTTP Error: ' + xhr.status, { remove: true });
-            return;
-          }
-
-          if (xhr.status < 200 || xhr.status >= 300) {
-            failure('HTTP Error: ' + xhr.status);
-            return;
-          }
-
-          const json = JSON.parse(xhr.responseText);
-
-          if (!json || typeof json.location != 'string') {
-            failure('Invalid JSON: ' + xhr.responseText);
-            return;
-          }
-
-          success(json.location);
-        };
-
-        xhr.onerror = () => {
-          failure('Image upload failed due to a XHR Transport error. Code: ' + xhr.status);
-        };
-
-        const formData = new FormData();
-        formData.append('file', blobInfo.blob(), blobInfo.filename());
-
-        xhr.send(formData);
-      };
-
-      // this.tinymce.init({
-      //   selector: 'textarea',
-      //   plugins: 'image',
-      //   toolbar: 'image',
-      //   images_upload_handler: exampleImageUploadHandler,
-      //   setup: (editor) => {
-      //     this.$refs.editor.editor = editor;
-      //     editor.on('change', () => {
-      //       // emit event if you need to pass the content somewhere
-      //       this.$emit('input', editor.getContent());
-      //     });
-      //   }
-      // });
-    }
   },
 };
 </script>

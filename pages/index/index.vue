@@ -80,7 +80,7 @@ export default {
   watch: {
     '$store.state.locale': {
         handler(newLocale) {
-            this.$i18n.locale = newLocale
+            // this.$i18n.locale = newLocale
         },
         immediate: true
     }
