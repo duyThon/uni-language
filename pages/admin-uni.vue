@@ -260,7 +260,7 @@ export default {
         tags: this.tabName == 0 ? ["news"] : ["hof"],
       };
       console.log(body);
-      let res = await fetch(`${this.apiUrl}/news`, {
+      let res = await fetch(`${this.apiUrl}/api/news`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

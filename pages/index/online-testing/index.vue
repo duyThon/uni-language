@@ -34,8 +34,8 @@
                             </el-form-item>
                         </el-col>
                         <el-col :xs="24" :sm="24" :lg="24">
-                            <el-form-item prop="birthyear">
-                                <el-input placeholder="Năm sinh" v-model="otRuleForm.birthyear"></el-input>
+                            <el-form-item prop="birthYear">
+                                <el-input placeholder="Năm sinh" v-model="otRuleForm.birthYear"></el-input>
                             </el-form-item>
                         </el-col>
                         <el-col :xs="24" :sm="24" :lg="24">
@@ -50,7 +50,7 @@
                         </el-col>
                         <el-col :xs="24" :sm="24" :lg="24">
                             <div class="btn-confirm">
-                                <a href="#">{{ $t('onlineTestingSignUp') }}</a>
+                                <a @click="() => {this.$sendMail(this.otRuleForm)}">{{ $t('onlineTestingSignUp') }}</a>
                             </div>
                         </el-col>
                     </el-row>        
@@ -67,7 +67,7 @@ export default {
         return {
             otRuleForm: {
                 name: '',
-                birthyear: '',
+                birthYear: '',
                 phoneNo: '',
                 mail: ''
             },
@@ -75,7 +75,7 @@ export default {
                 name: [
                     { required: true, message: 'Hãy nhập tên của mình bạn nhé', trigger: 'blur' }
                 ],
-                birthyear: [
+                birthYear: [
                     { required: true, message: 'Hãy nhập năm sinh của mình bạn nhé', trigger: 'blur' }
                 ],
                 phoneNo: [
@@ -85,8 +85,6 @@ export default {
         }
     },
 
-    async created() {
-    },
 
     mounted() {
         this.$gsap.to(window, { duration: .5, scrollTo: 0 });

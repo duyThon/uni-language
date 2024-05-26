@@ -130,7 +130,7 @@ export default {
         queryString: "{tags}=='''hof'''"
       }
       let res = await fetch(
-          `${this.apiUrl}/news/search`,
+          `${this.apiUrl}/api/news/search`,
           {
             method: 'POST',
             headers: {
@@ -158,7 +158,7 @@ export default {
         numRecord: 3
       };
       let res = await fetch(
-          `${this.apiUrl}/news/search_random`,
+          `${this.apiUrl}/api/news/search_random`,
           {
             method: 'POST',
             headers: {  
@@ -184,7 +184,7 @@ export default {
         }
       };
 
-      let res = await fetch(`${this.apiUrl}/news/search`, {
+      let res = await fetch(`${this.apiUrl}/api/news/search`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -16,14 +16,15 @@
         </li>
       </ul>
       <div class="send-mail">
-        <div class="submit">
+        <!-- <div @click="() =>  this.$sendMail()" class="submit"> -->
+        <div @click="sendMail" class="submit">
           Gửi
         </div>
         <div class="input-field">
           <form class="input-field-container">
-            <input placeholder="Họ và tên học viên" class="input-field-item full-name" type="text">
-            <input placeholder="Năm sinh" class="input-field-item birthyear" type="text">
-            <input placeholder="Số điện thoại" class="input-field-item phone-number" type="text">
+            <input v-model="stickyForm.name" placeholder="Họ và tên học viên" class="input-field-item full-name" type="text">
+            <input v-model="stickyForm.birthYear" placeholder="Năm sinh" class="input-field-item birthYear" type="text">
+            <input v-model="stickyForm.phoneNo" placeholder="Số điện thoại" class="input-field-item phone-number" type="text">
           </form>
         </div>
       </div>
@@ -36,7 +37,25 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      stickyForm :{
+        name: '',
+        birthYear: '',
+        phoneNo: ''
+      }
+
+    }
+  },
+
+  methods: {
+    sendMail() {
+      console.log(this.stickyForm);
+      //  this.$sendMail(this.stickyForm)
+    }
+  }
+};
 </script>
 
 
@@ -135,6 +154,10 @@ export default {};
   align-items: center;
   background: var(--primary-color);
   color: #fff;
+}
+
+.submit:hover {
+  cursor: pointer;
 }
 
 .input-field {

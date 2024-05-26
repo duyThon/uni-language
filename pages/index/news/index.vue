@@ -140,7 +140,7 @@ export default {
           page: this.currentPage
         }
       };
-      let res = await fetch(`${this.apiUrl}/news/search`, {
+      let res = await fetch(`${this.apiUrl}/api/news/search`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -163,7 +163,7 @@ export default {
       let data = {
         numRecord: 3,
       };
-      let res = await fetch(`${this.apiUrl}/news/search_random`, {
+      let res = await fetch(`${this.apiUrl}/api/news/search_random`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -185,7 +185,7 @@ export default {
         }
       };
 
-      let res = await fetch(`${this.apiUrl}/news/search`, {
+      let res = await fetch(`${this.apiUrl}/api/news/search`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -6,8 +6,8 @@
                 <el-form-item prop="name">
                     <el-input placeholder="Họ và tên học viên" v-model="ruleForm.name"></el-input>
                 </el-form-item>
-                <el-form-item prop="birthyear">
-                    <el-input placeholder="Năm sinh" v-model="ruleForm.birthyear"></el-input>
+                <el-form-item prop="birthYear">
+                    <el-input placeholder="Năm sinh" v-model="ruleForm.birthYear"></el-input>
                 </el-form-item>
             </el-col>
             <el-col :xs="24" :sm="24" :lg="8">
@@ -34,7 +34,7 @@ export default {
         return {
             ruleForm: {
                 name: '',
-                birthyear: '',
+                birthYear: '',
                 phoneNo: '',
                 mail: ''
             },
@@ -42,7 +42,7 @@ export default {
                 name: [
                     { required: true, message: 'Hãy nhập tên của mình bạn nhé', trigger: 'blur' }
                 ],
-                birthyear: [
+                birthYear: [
                     { required: true, message: 'Hãy nhập năm sinh của mình bạn nhé', trigger: 'blur' }
                 ],
                 phoneNo: [
