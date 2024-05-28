@@ -22,7 +22,7 @@
         </li>
       </ul>
       <div  class="section1-intro-img illustration-img ">
-        <img v-for="img,index in this.imgs" :key="index" :src="img" alt=""/>  
+        <img v-for="img,index in this.imgs" :key="index" :src="img" alt=""/>
       </div>
     </div>
   </div>
