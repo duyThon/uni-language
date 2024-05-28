@@ -11,12 +11,10 @@
           :sm="24"
           :lg="12"
         >
-          <div class="latest-news-item">
+          <div @click="openNews(data._id)" class="latest-news-item">
             <div class="news-heading-image">
-              <img
-                src="https://llv.edu.vn/media/2023/07/how-to-give-a-presentation-in-english-3.png"
-                alt=""
-              />
+              <div style="overflow: hidden;" v-if="data.titleImage" class="heading-img" v-html="data.titleImage"></div>
+              <img v-else src="@/assets/pics/loading-img.jpg" alt="" />
               <div class="overlay-news-heading"></div>
             </div>
             <div class="news-heading">
@@ -40,7 +38,8 @@
                 <el-row :gutter="20">
                   <el-col :xs="8" :sm="8" :lg="8">
                     <div class="news-container-main-img">
-                      <img src="@/assets/pics/loading-img.jpg" alt="" />
+                      <div v-if="data.titleImage" class="content-img" v-html="data.titleImage"></div>
+                      <img v-else src="@/assets/pics/loading-img.jpg" alt="" />
                     </div>
                   </el-col>
                   <el-col :xs="16" :sm="16" :lg="16">
@@ -52,10 +51,8 @@
                         <p class="date">{{ renderDate(data.createdAt) }}</p>
                       </div>
                       <div class="news-desc">
-                        {{ data.summaryEn }}
+                        {{ data.summaryVn }}
                       </div>
-                      <!-- <div class="news-desc" v-html="data.descriptionEn">
-                      </div> -->
                     </div>
                   </el-col>
                 </el-row>
@@ -74,23 +71,23 @@
           </div>
         </el-col>
         <el-col :xs="24" :sm="24" :lg="8">
-          <div class="most-viewed">
+          <div v-if="this.mostViewedList.length > 2" class="most-viewed">
             <div class="most-viewed-heading">CÁC BÀI VIẾT XEM NHIỀU</div>
             <div class="most-viewed-item">
               <div v-for="data in mostViewedList" :key="data.id">
-                <p>
-                  {{ data.summaryEn }}
+                <p @click="openNews(data._id)">
+                  {{ data.summaryVn }}
                 </p>
                 <p class="date">{{ renderDate(data.createdAt) }}</p>
               </div>
             </div>
           </div>
-          <div class="most-viewed">
+          <div v-if="this.randomList.length > 2" class="most-viewed">
             <div class="most-viewed-heading">CÁC BÀI VIẾT NGẪU NHIÊN</div>
             <div class="most-viewed-item">
               <div v-for="data in randomList" :key="data.id">
-                <p>
-                  {{ data.summaryEn }}
+                <p @click="openNews(data._id)">
+                  {{ data.summaryVn }}
                 </p>
                 <p class="date">{{ renderDate(data.createdAt) }}</p>
               </div>
@@ -117,7 +114,7 @@ export default {
       perPage: 0,
       hidePage: true,
       currentPage: 1,
-      apiUrl: process.env.API_URL,
+      // apiUrl: process.env.API_URL,
     };
   },
 
@@ -131,8 +128,19 @@ export default {
     await this.getRandomList();
     await this.getMostViewedList();
   },
-
+  
+  watch: {
+    '$route.params.id': 'fetchAllData'
+  },
+  
   methods: {
+    async fetchAllData() {
+      await this.$gsap.to(window, { duration: 0.5, scrollTo: 0 });
+      await this.getData();
+      await this.getRandomList();
+      await this.getMostViewedList();
+    },
+
     async getListData() {
       let data = {
         queryString: "{tags}=='''news'''",
@@ -140,7 +148,7 @@ export default {
           page: this.currentPage
         }
       };
-      let res = await fetch(`${this.apiUrl}/api/news/search`, {
+      let res = await fetch(`${this.$API_URL}/news/search`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -163,7 +171,7 @@ export default {
       let data = {
         numRecord: 3,
       };
-      let res = await fetch(`${this.apiUrl}/api/news/search_random`, {
+      let res = await fetch(`${this.$API_URL}/news/search_random`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -185,7 +193,7 @@ export default {
         }
       };
 
-      let res = await fetch(`${this.apiUrl}/api/news/search`, {
+      let res = await fetch(`${this.$API_URL}/news/search`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -238,7 +246,21 @@ export default {
 
 .latest-news-item {
   background: var(--primary-color);
-  min-height: 530px;
+  height: 530px;
+  transition: .5s ease;
+}
+
+.latest-news-item:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.heading-img p {
+  margin: 0;
+}
+
+.heading-img img {
+  object-fit: cover;
 }
 
 .news-heading-image {

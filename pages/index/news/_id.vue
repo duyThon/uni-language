@@ -3,18 +3,18 @@
     <MainNavBar></MainNavBar>
     <main>
       <el-dialog title="Thông báo" :visible.sync="dialog" width="30%">
-      <div style="display: flex; align-items: center; flex-direction: column">
-        <img
-          style="width: 150px"
-          src="@/assets/icons/success-icon.png"
-          alt=""
-        />
-        <h3>Bài viết này đã được copy vào bộ nhớ tạm thời</h3>
-      </div>
-      <span slot="footer" class="dialog-footer">
-        <el-button type="primary" @click="dialog = false">Xin cảm ơn</el-button>
-      </span>
-    </el-dialog>
+        <div style="display: flex; align-items: center; flex-direction: column">
+          <img
+            style="width: 150px"
+            src="@/assets/icons/success-icon.png"
+            alt=""
+          />
+          <h3>Bài viết này đã được copy vào bộ nhớ tạm thời</h3>
+        </div>
+        <span slot="footer" class="dialog-footer">
+          <el-button type="primary" @click="dialog = false">Xin cảm ơn</el-button>
+        </span>
+      </el-dialog>
       <div style="margin: 120px">
         <div class="news-item-container">
           <el-row :gutter="20">
@@ -51,6 +51,7 @@
               <h1 class="news-post-heading">
                 {{ data.titleVn }}
               </h1>
+              <div class="heading-img" v-html="data.titleImage"></div>
               <p class="date">{{ renderDate(this.data.createdAt) }}</p>
               <div v-html="this.data.descriptionVn"></div>
             </el-col>
@@ -59,8 +60,8 @@
                 <div class="most-viewed-heading">CÁC BÀI VIẾT XEM NHIỀU</div>
                 <div class="most-viewed-item">
                   <div v-for="data in mostViewedList" :key="data.id">
-                    <p>
-                      {{ data.summaryEn }}
+                    <p @click="openNews(data._id)">
+                      {{ data.summaryVn }}
                     </p>
                     <p class="date">{{ renderDate(data.createdAt) }}</p>
                   </div>
@@ -70,8 +71,8 @@
                 <div class="most-viewed-heading">CÁC BÀI VIẾT NGẪU NHIÊN</div>
                 <div class="most-viewed-item">
                   <div v-for="data in randomList" :key="data.id">
-                    <p>
-                      {{ data.summaryEn }}
+                    <p @click="openNews(data._id)">
+                      {{ data.summaryVn }}
                     </p>
                     <p class="date">{{ renderDate(data.createdAt) }}</p>
                   </div>
@@ -104,13 +105,14 @@ export default {
   data() {
     return {
       data: {
+        titleImage: "",
         createdAt: "",
         descriptionEn: "",
         descriptionVn: "",
         titleEn: "",
         titleVn: "",
       },
-      apiUrl: process.env.API_URL,
+      // apiUrl: process.env.API_URL,
       randomList: [],
       mostViewedList: [],
       dialog: false,
@@ -124,10 +126,21 @@ export default {
     await this.getMostViewedList();
   },
 
+  watch: {
+    '$route.params.id': 'fetchAllData'
+  },
+
   methods: {
+    async fetchAllData() {
+      await this.$gsap.to(window, { duration: 0.5, scrollTo: 0 });
+      await this.getData();
+      await this.getRandomList();
+      await this.getMostViewedList();
+    },
+
     async getData() {
       console.log(this.$route);
-      let res = await fetch(`${this.apiUrl}/api/news/${this.$route.params.id}`, {
+      let res = await fetch(`${this.$API_URL}/news/${this.$route.params.id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -136,6 +149,7 @@ export default {
       if (res.success) {
         console.log(res);
         this.data = {
+          titleImage: res.data.titleImage,
           createdAt: res.data.createdAt,
           descriptionEn: res.data.descriptionEn,
           descriptionVn: res.data.descriptionVn,
@@ -149,7 +163,7 @@ export default {
       let data = {
         numRecord: 3,
       };
-      let res = await fetch(`${this.apiUrl}/api/news/search_random`, {
+      let res = await fetch(`${this.$API_URL}/news/search_random`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -171,7 +185,7 @@ export default {
         },
       };
 
-      let res = await fetch(`${this.apiUrl}/api/news/search`, {
+      let res = await fetch(`${this.$API_URL}/news/search`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -181,6 +195,12 @@ export default {
       if (res.success) {
         this.mostViewedList = res.data.slice(0, 3);
       }
+    },
+
+    openNews(id) {
+      this.$router.push({
+        path: `${id}`,
+      });
     },
 
     renderDate(date) {

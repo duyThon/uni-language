@@ -28,6 +28,7 @@ export default {
     '@/plugins/element-ui',
     { src: "~/plugins/lightGallery.client.js", ssr: false },
     { src: "~/plugins/sendMail.js", ssr: false },
+    '~/plugins/APIconstant.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

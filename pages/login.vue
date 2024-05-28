@@ -24,7 +24,7 @@ export default {
 
     methods: {
         checkPass() {
-          if(this.loginForm.loginUsername == "1" && this.loginForm.loginPassword == "2") {
+          if(this.loginForm.loginUsername == "unilanguagesonla" && this.loginForm.loginPassword == "admin") {
             localStorage.setItem("login", 'true');
             this.$router.push({ 
               path: `/admin-uni`
