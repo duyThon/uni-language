@@ -1184,14 +1184,14 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 197:
+/***/ 176:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/gmail-icon-black.1eff6e9.png";
+module.exports = __webpack_require__.p + "img/success-icon.1218fa2.png";
 
 /***/ }),
 
-/***/ 198:
+/***/ 197:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1213,13 +1213,14 @@ module.exports = __webpack_require__.p + "img/gmail-icon-black.1eff6e9.png";
   data() {
     return {
       data: {
+        titleImage: "",
         createdAt: "",
         descriptionEn: "",
         descriptionVn: "",
         titleEn: "",
         titleVn: ""
       },
-      apiUrl: "https://unilanguagesonla.com",
+      // apiUrl: process.env.API_URL,
       randomList: [],
       mostViewedList: [],
       dialog: false
@@ -1234,10 +1235,22 @@ module.exports = __webpack_require__.p + "img/gmail-icon-black.1eff6e9.png";
     await this.getRandomList();
     await this.getMostViewedList();
   },
+  watch: {
+    '$route.params.id': 'fetchAllData'
+  },
   methods: {
+    async fetchAllData() {
+      await this.$gsap.to(window, {
+        duration: 0.5,
+        scrollTo: 0
+      });
+      await this.getData();
+      await this.getRandomList();
+      await this.getMostViewedList();
+    },
     async getData() {
       console.log(this.$route);
-      let res = await fetch(`${this.apiUrl}/api/news/${this.$route.params.id}`, {
+      let res = await fetch(`${this.$API_URL}/news/${this.$route.params.id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json"
@@ -1246,6 +1259,7 @@ module.exports = __webpack_require__.p + "img/gmail-icon-black.1eff6e9.png";
       if (res.success) {
         console.log(res);
         this.data = {
+          titleImage: res.data.titleImage,
           createdAt: res.data.createdAt,
           descriptionEn: res.data.descriptionEn,
           descriptionVn: res.data.descriptionVn,
@@ -1258,7 +1272,7 @@ module.exports = __webpack_require__.p + "img/gmail-icon-black.1eff6e9.png";
       let data = {
         numRecord: 3
       };
-      let res = await fetch(`${this.apiUrl}/api/news/search_random`, {
+      let res = await fetch(`${this.$API_URL}/news/search_random`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -1278,7 +1292,7 @@ module.exports = __webpack_require__.p + "img/gmail-icon-black.1eff6e9.png";
           }
         }
       };
-      let res = await fetch(`${this.apiUrl}/api/news/search`, {
+      let res = await fetch(`${this.$API_URL}/news/search`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -1288,6 +1302,11 @@ module.exports = __webpack_require__.p + "img/gmail-icon-black.1eff6e9.png";
       if (res.success) {
         this.mostViewedList = res.data.slice(0, 3);
       }
+    },
+    openNews(id) {
+      this.$router.push({
+        path: `hall-of-fame/${id}`
+      });
     },
     renderDate(date) {
       const formatedDate = new Date(date);
@@ -1331,7 +1350,7 @@ module.exports = __webpack_require__.p + "img/gmail-icon-black.1eff6e9.png";
 
 /***/ }),
 
-/***/ 219:
+/***/ 218:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -1344,7 +1363,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(10).default
 module.exports.__inject__ = function (context) {
-  add("ac13444c", content, true, context)
+  add("14b0effc", content, true, context)
 };
 
 /***/ }),
@@ -1354,9 +1373,9 @@ module.exports.__inject__ = function (context) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_06e2f320_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(219);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_06e2f320_prod_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_06e2f320_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_06e2f320_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_06e2f320_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_889abbec_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(218);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_889abbec_prod_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_889abbec_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_889abbec_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_889abbec_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -1386,11 +1405,51 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index/hall-of-fame/_id.vue?vue&type=template&id=06e2f320&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index/hall-of-fame/_id.vue?vue&type=template&id=889abbec&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c('div', [_c('MainNavBar'), _vm._ssrNode(" "), _vm._ssrNode("<main>", "</main>", [_vm._ssrNode("<div style=\"margin: 120px\">", "</div>", [_vm._ssrNode("<div class=\"news-item-container\">", "</div>", [_c('el-row', {
+  return _c('div', [_c('MainNavBar'), _vm._ssrNode(" "), _vm._ssrNode("<main>", "</main>", [_c('el-dialog', {
+    attrs: {
+      "title": "Thông báo",
+      "visible": _vm.dialog,
+      "width": "30%"
+    },
+    on: {
+      "update:visible": function ($event) {
+        _vm.dialog = $event;
+      }
+    }
+  }, [_c('div', {
+    staticStyle: {
+      "display": "flex",
+      "align-items": "center",
+      "flex-direction": "column"
+    }
+  }, [_c('img', {
+    staticStyle: {
+      "width": "150px"
+    },
+    attrs: {
+      "src": __webpack_require__(176),
+      "alt": ""
+    }
+  }), _vm._v(" "), _c('h3', [_vm._v("Bài viết này đã được copy vào bộ nhớ tạm thời")])]), _vm._v(" "), _c('span', {
+    staticClass: "dialog-footer",
+    attrs: {
+      "slot": "footer"
+    },
+    slot: "footer"
+  }, [_c('el-button', {
+    attrs: {
+      "type": "primary"
+    },
+    on: {
+      "click": function ($event) {
+        _vm.dialog = false;
+      }
+    }
+  }, [_vm._v("Xin cảm ơn")])], 1)]), _vm._ssrNode(" "), _vm._ssrNode("<div style=\"margin: 120px\">", "</div>", [_vm._ssrNode("<div class=\"news-item-container\">", "</div>", [_c('el-row', {
     attrs: {
       "gutter": 20
     }
@@ -1404,8 +1463,10 @@ var render = function render() {
     staticClass: "share-list"
   }, [_c('a', {
     attrs: {
-      "href": "http://www.facebook.com/Anh.Ngu.Quoc.Te.Son.La",
       "target": "_blank"
+    },
+    on: {
+      "click": _vm.shareOnFB
     }
   }, [_c('img', {
     staticClass: "share-list-item",
@@ -1414,18 +1475,8 @@ var render = function render() {
       "alt": ""
     }
   })]), _vm._v(" "), _c('a', {
-    attrs: {
-      "href": "mailto:unilanguagesonla1@gmail.com"
-    }
-  }, [_c('img', {
-    staticClass: "share-list-item",
-    attrs: {
-      "src": __webpack_require__(197),
-      "alt": ""
-    }
-  })]), _vm._v(" "), _c('a', {
-    attrs: {
-      "href": "mailto:unilanguagesonla1@gmail.com"
+    on: {
+      "click": _vm.copyLink
     }
   }, [_c('svg', {
     staticClass: "share-list-item",
@@ -1446,40 +1497,18 @@ var render = function render() {
     }
   }, [_c('h1', {
     staticClass: "news-post-heading"
-  }, [_vm._v("\n              Bí quyết thành công từ Nguyễn Phương Duy đạt IELTS 8.0 khi mới\n              16 tuổi\n            ")]), _vm._v(" "), _c('p', {
-    staticClass: "date"
-  }, [_vm._v("20/10/2023")]), _vm._v(" "), _c('img', {
-    staticClass: "post-img",
-    attrs: {
-      "src": "https://ila.edu.vn/wp-content/uploads/2023/10/hoc-sinh-vung-cao-2.png",
-      "alt": ""
-    }
-  }), _vm._v(" "), _c('h2', {
-    staticClass: "post-title"
-  }), _vm._v(" "), _c('div', {
-    staticStyle: {
-      "font-size": "21px",
-      "line-height": "1.6"
-    }
-  }, [_c('p', {
-    staticStyle: {
-      "margin-bottom": "15px"
-    }
-  }, [_vm._v("\n                  Với Nguyễn Phương Duy, một trong số ít bạn trẻ đạt được cột mốc\n                  IELT 8.0 khi chỉ mới là học sinh lớp 10, thì tiếng Anh chỉ là\n                  “chuyện nhỏ” . Duy được bạn bè nể, không chỉ vì cậu học giỏi Anh\n                  văn “có số”, mà còn bởi Duy luôn tự tin, không ngại trong bất kì\n                  trường hợp ứng dụng Anh văn nào: Giao tiếp người nước ngoài, làm\n                  thuyết trình… Duy chia sẻ, có được điều này không chỉ do Duy gắn\n                  bó với Anh văn từ lớp 1 đến nay tại Trung tâm Anh ngữ ILA, mà\n                  còn bởi bạn may mắn chọn được cho mình phương pháp học đúng đắn:\n                  Kết hợp học kiến thức ở trường với học kĩ năng, tương tác ở ILA.\n                ")]), _vm._v(" "), _c('p', {
-    staticStyle: {
-      "margin-bottom": "15px"
-    }
-  }, [_vm._v("\n                  Duy kể, tự so sánh chương trình mình đang theo học với chương\n                  trình học của các bạn ở các Trung tâm Anh ngữ khác, Duy thấy\n                  phương pháp học Anh văn tại ILA phong phú, đa dạng, chú trọng về\n                  khả năng giao tiếp chứ không chỉ là kỹ năng, kiến thức hàn lâm.\n                  Bên cạnh đó, chương trình học không quá gò bó như chương trình\n                  học tiếng Anh phổ thông.Không chỉ học tiếng Anh, học viên còn\n                  học được học thêm nhiều kiến thức xã hội cũng như học cách sử\n                  dụng, biểu đạt bằng tiếng Anh.\n                ")]), _vm._v(" "), _c('img', {
-    staticClass: "post-img",
-    attrs: {
-      "src": "https://ila.edu.vn/wp-content/uploads/2023/10/thap-sang-tuong-lai-5-768x510.png",
-      "alt": ""
+  }, [_vm._v("\n              " + _vm._s(_vm.data.titleVn) + "\n            ")]), _vm._v(" "), _c('div', {
+    staticClass: "heading-img",
+    domProps: {
+      "innerHTML": _vm._s(_vm.data.titleImage)
     }
   }), _vm._v(" "), _c('p', {
-    staticStyle: {
-      "margin-bottom": "15px"
+    staticClass: "date"
+  }, [_vm._v(_vm._s(_vm.renderDate(this.data.createdAt)))]), _vm._v(" "), _c('div', {
+    domProps: {
+      "innerHTML": _vm._s(this.data.descriptionVn)
     }
-  }, [_vm._v("\n                  Một điểm khác biệt nữa, theo Duy, đó là tại ILA, học cấp độ nào\n                  cũng được tương tác với giáo viên nước ngoài nên rất hiệu quả.\n                  Học viên được tương tác nhiều, nghe nói nhiều, tối đa hóa thời\n                  gian học & tương tác với giáo viên, có thể nhớ bài ngay tại lớp\n                  mà không mất thời gian ôn bài nhiều khi về nhà.Chính vì thế, học\n                  viên có thể hoàn thiện trình độ tiếng Anh trong thời gian\n                  ngắn.Đặc biệt, điểm khác biệt lớn nhất của ILA so với các trung\n                  tâm khác còn là mối quan hệ giữa giáo viên và học viên.Giáo viên\n                  nhiệt tình, quan tâm đến học sinh, có thể nhớ tên và đặc điểm,\n                  học lực của từng học viên. Như Duy, khi học xong, một thời gian\n                  sau quay lại, giáo viên vẫn có thể nhớ và gọi tên mình. Duy nói,\n                  đây cũng giống “mái nhà thứ hai” của Duy, vì môi trường học rất\n                  vui vẻ, dễ chịu, kết hợp cả giao tiếp, vui chơi ngoại khóa. Cạnh\n                  đó, các thiết bị phục vụ việc học rất tốt như bảng điên tử thông\n                  minh, máy chiếu, thư viện, bàn học riêng… khiến học viên cảm\n                  giác cực kì thoải mái như ở nhà. Vì vậy, với Duy, 2 giờ học tại\n                  ILA mỗi ngày không hề khiến bạn có cảm giác “phải đi học”.\n                ")])])]), _vm._v(" "), _c('el-col', {
+  })]), _vm._v(" "), _c('el-col', {
     attrs: {
       "xs": 24,
       "sm": 24,
@@ -1487,44 +1516,48 @@ var render = function render() {
     }
   }, [_c('div', {
     staticClass: "most-viewed"
-  }, [_c('div', {
+  }, [this.mostViewedList.length > 2 ? _c('div', {
     staticClass: "most-viewed-heading"
-  }, [_vm._v("CÁC BÀI VIẾT XEM NHIỀU")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("CÁC BÀI VIẾT XEM NHIỀU")]) : _vm._e(), _vm._v(" "), _c('div', {
     staticClass: "most-viewed-item"
-  }, [_c('p', [_vm._v("\n              218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic\n              Tiếng Anh THCS năm học 2017-2018\n            ")]), _vm._v(" "), _c('p', {
-    staticClass: "date"
-  }, [_vm._v("20/11/2023")])]), _vm._v(" "), _c('div', {
-    staticClass: "most-viewed-item"
-  }, [_c('p', [_vm._v("\n              218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic\n              Tiếng Anh THCS năm học 2017-2018\n            ")]), _vm._v(" "), _c('p', {
-    staticClass: "date"
-  }, [_vm._v("20/11/2023")])]), _vm._v(" "), _c('div', {
-    staticClass: "most-viewed-item"
-  }, [_c('p', [_vm._v("\n              218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic\n              Tiếng Anh THCS năm học 2017-2018\n            ")]), _vm._v(" "), _c('p', {
-    staticClass: "date"
-  }, [_vm._v("20/11/2023")])])]), _vm._v(" "), _c('div', {
+  }, _vm._l(_vm.mostViewedList, function (data) {
+    return _c('div', {
+      key: data.id
+    }, [_c('p', {
+      on: {
+        "click": function ($event) {
+          return _vm.openNews(data._id);
+        }
+      }
+    }, [_vm._v("\n                    " + _vm._s(data.summaryVn) + "\n                  ")]), _vm._v(" "), _c('p', {
+      staticClass: "date"
+    }, [_vm._v(_vm._s(_vm.renderDate(data.createdAt)))])]);
+  }), 0)]), _vm._v(" "), _c('div', {
     staticClass: "most-viewed"
-  }, [_c('div', {
+  }, [this.randomList.length > 2 ? _c('div', {
     staticClass: "most-viewed-heading"
-  }, [_vm._v("CÁC BÀI VIẾT NGẪU NHIÊN")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("CÁC BÀI VIẾT NGẪU NHIÊN")]) : _vm._e(), _vm._v(" "), _c('div', {
     staticClass: "most-viewed-item"
-  }, [_c('p', [_vm._v("\n              218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic\n              Tiếng Anh THCS năm học 2017-2018\n            ")]), _vm._v(" "), _c('p', {
-    staticClass: "date"
-  }, [_vm._v("20/11/2023")])]), _vm._v(" "), _c('div', {
-    staticClass: "most-viewed-item"
-  }, [_c('p', [_vm._v("\n              218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic\n              Tiếng Anh THCS năm học 2017-2018\n            ")]), _vm._v(" "), _c('p', {
-    staticClass: "date"
-  }, [_vm._v("20/11/2023")])]), _vm._v(" "), _c('div', {
-    staticClass: "most-viewed-item"
-  }, [_c('p', [_vm._v("\n              218 thí sinh bước tiếp vào Vòng Chung Khảo Cuộc thi Olympic\n              Tiếng Anh THCS năm học 2017-2018\n            ")]), _vm._v(" "), _c('p', {
-    staticClass: "date"
-  }, [_vm._v("20/11/2023")])])])])], 1)], 1)]), _vm._ssrNode(" "), _c('PartnersCarousel')], 2), _vm._ssrNode(" "), _c('StickyInfoContact'), _vm._ssrNode(" "), _c('Footer')], 2);
+  }, _vm._l(_vm.randomList, function (data) {
+    return _c('div', {
+      key: data.id
+    }, [_c('p', {
+      on: {
+        "click": function ($event) {
+          return _vm.openNews(data._id);
+        }
+      }
+    }, [_vm._v("\n                    " + _vm._s(data.summaryVn) + "\n                  ")]), _vm._v(" "), _c('p', {
+      staticClass: "date"
+    }, [_vm._v(_vm._s(_vm.renderDate(data.createdAt)))])]);
+  }), 0)])])], 1)], 1)]), _vm._ssrNode(" "), _c('PartnersCarousel')], 2), _vm._ssrNode(" "), _c('StickyInfoContact'), _vm._ssrNode(" "), _c('Footer')], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index/hall-of-fame/_id.vue?vue&type=template&id=06e2f320&
+// CONCATENATED MODULE: ./pages/index/hall-of-fame/_id.vue?vue&type=template&id=889abbec&
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index/hall-of-fame/_id.vue?vue&type=script&lang=js&
-var _idvue_type_script_lang_js_ = __webpack_require__(198);
+var _idvue_type_script_lang_js_ = __webpack_require__(197);
 
 // CONCATENATED MODULE: ./pages/index/hall-of-fame/_id.vue?vue&type=script&lang=js&
  /* harmony default export */ var hall_of_fame_idvue_type_script_lang_js_ = (_idvue_type_script_lang_js_["a" /* default */]); 

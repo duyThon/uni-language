@@ -27,6 +27,7 @@ import nuxt_plugin_gsapModule_547c08c0 from 'nuxt_plugin_gsapModule_547c08c0' //
 import nuxt_plugin_elementui_d905880e from 'nuxt_plugin_elementui_d905880e' // Source: ../plugins/element-ui (mode: 'all')
 import nuxt_plugin_lightGalleryclient_235dd9a0 from 'nuxt_plugin_lightGalleryclient_235dd9a0' // Source: ../plugins/lightGallery.client.js (mode: 'client')
 import nuxt_plugin_sendMail_3a2279fc from 'nuxt_plugin_sendMail_3a2279fc' // Source: ../plugins/sendMail.js (mode: 'client')
+import nuxt_plugin_APIconstant_0dcdba8f from 'nuxt_plugin_APIconstant_0dcdba8f' // Source: ../plugins/APIconstant.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -296,6 +297,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_sendMail_3a2279fc === 'function') {
     await nuxt_plugin_sendMail_3a2279fc(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_APIconstant_0dcdba8f === 'function') {
+    await nuxt_plugin_APIconstant_0dcdba8f(app.context, inject)
   }
 
   // Lock enablePreview in context

@@ -1184,14 +1184,14 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 184:
+/***/ 176:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/success-icon.1218fa2.png";
 
 /***/ }),
 
-/***/ 199:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1213,13 +1213,14 @@ module.exports = __webpack_require__.p + "img/success-icon.1218fa2.png";
   data() {
     return {
       data: {
+        titleImage: "",
         createdAt: "",
         descriptionEn: "",
         descriptionVn: "",
         titleEn: "",
         titleVn: ""
       },
-      apiUrl: "https://unilanguagesonla.com",
+      // apiUrl: process.env.API_URL,
       randomList: [],
       mostViewedList: [],
       dialog: false
@@ -1234,10 +1235,22 @@ module.exports = __webpack_require__.p + "img/success-icon.1218fa2.png";
     await this.getRandomList();
     await this.getMostViewedList();
   },
+  watch: {
+    '$route.params.id': 'fetchAllData'
+  },
   methods: {
+    async fetchAllData() {
+      await this.$gsap.to(window, {
+        duration: 0.5,
+        scrollTo: 0
+      });
+      await this.getData();
+      await this.getRandomList();
+      await this.getMostViewedList();
+    },
     async getData() {
       console.log(this.$route);
-      let res = await fetch(`${this.apiUrl}/api/news/${this.$route.params.id}`, {
+      let res = await fetch(`${this.$API_URL}/news/${this.$route.params.id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json"
@@ -1246,6 +1259,7 @@ module.exports = __webpack_require__.p + "img/success-icon.1218fa2.png";
       if (res.success) {
         console.log(res);
         this.data = {
+          titleImage: res.data.titleImage,
           createdAt: res.data.createdAt,
           descriptionEn: res.data.descriptionEn,
           descriptionVn: res.data.descriptionVn,
@@ -1258,7 +1272,7 @@ module.exports = __webpack_require__.p + "img/success-icon.1218fa2.png";
       let data = {
         numRecord: 3
       };
-      let res = await fetch(`${this.apiUrl}/api/news/search_random`, {
+      let res = await fetch(`${this.$API_URL}/news/search_random`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -1278,7 +1292,7 @@ module.exports = __webpack_require__.p + "img/success-icon.1218fa2.png";
           }
         }
       };
-      let res = await fetch(`${this.apiUrl}/api/news/search`, {
+      let res = await fetch(`${this.$API_URL}/news/search`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -1288,6 +1302,11 @@ module.exports = __webpack_require__.p + "img/success-icon.1218fa2.png";
       if (res.success) {
         this.mostViewedList = res.data.slice(0, 3);
       }
+    },
+    openNews(id) {
+      this.$router.push({
+        path: `${id}`
+      });
     },
     renderDate(date) {
       const formatedDate = new Date(date);
@@ -1331,7 +1350,7 @@ module.exports = __webpack_require__.p + "img/success-icon.1218fa2.png";
 
 /***/ }),
 
-/***/ 220:
+/***/ 219:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -1344,7 +1363,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(10).default
 module.exports.__inject__ = function (context) {
-  add("4f5781de", content, true, context)
+  add("741af2a3", content, true, context)
 };
 
 /***/ }),
@@ -1354,9 +1373,9 @@ module.exports.__inject__ = function (context) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_03b24eee_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(220);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_03b24eee_prod_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_03b24eee_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_03b24eee_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_03b24eee_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_281e720d_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(219);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_281e720d_prod_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_281e720d_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_281e720d_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_id_vue_vue_type_style_index_0_id_281e720d_prod_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -1386,7 +1405,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index/news/_id.vue?vue&type=template&id=03b24eee&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index/news/_id.vue?vue&type=template&id=281e720d&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1412,7 +1431,7 @@ var render = function render() {
       "width": "150px"
     },
     attrs: {
-      "src": __webpack_require__(184),
+      "src": __webpack_require__(176),
       "alt": ""
     }
   }), _vm._v(" "), _c('h3', [_vm._v("Bài viết này đã được copy vào bộ nhớ tạm thời")])]), _vm._v(" "), _c('span', {
@@ -1478,7 +1497,12 @@ var render = function render() {
     }
   }, [_c('h1', {
     staticClass: "news-post-heading"
-  }, [_vm._v("\n              " + _vm._s(_vm.data.titleVn) + "\n            ")]), _vm._v(" "), _c('p', {
+  }, [_vm._v("\n              " + _vm._s(_vm.data.titleVn) + "\n            ")]), _vm._v(" "), _c('div', {
+    staticClass: "heading-img",
+    domProps: {
+      "innerHTML": _vm._s(_vm.data.titleImage)
+    }
+  }), _vm._v(" "), _c('p', {
     staticClass: "date"
   }, [_vm._v(_vm._s(_vm.renderDate(this.data.createdAt)))]), _vm._v(" "), _c('div', {
     domProps: {
@@ -1499,7 +1523,13 @@ var render = function render() {
   }, _vm._l(_vm.mostViewedList, function (data) {
     return _c('div', {
       key: data.id
-    }, [_c('p', [_vm._v("\n                    " + _vm._s(data.summaryEn) + "\n                  ")]), _vm._v(" "), _c('p', {
+    }, [_c('p', {
+      on: {
+        "click": function ($event) {
+          return _vm.openNews(data._id);
+        }
+      }
+    }, [_vm._v("\n                    " + _vm._s(data.summaryVn) + "\n                  ")]), _vm._v(" "), _c('p', {
       staticClass: "date"
     }, [_vm._v(_vm._s(_vm.renderDate(data.createdAt)))])]);
   }), 0)]), _vm._v(" "), _c('div', {
@@ -1511,17 +1541,23 @@ var render = function render() {
   }, _vm._l(_vm.randomList, function (data) {
     return _c('div', {
       key: data.id
-    }, [_c('p', [_vm._v("\n                    " + _vm._s(data.summaryEn) + "\n                  ")]), _vm._v(" "), _c('p', {
+    }, [_c('p', {
+      on: {
+        "click": function ($event) {
+          return _vm.openNews(data._id);
+        }
+      }
+    }, [_vm._v("\n                    " + _vm._s(data.summaryVn) + "\n                  ")]), _vm._v(" "), _c('p', {
       staticClass: "date"
     }, [_vm._v(_vm._s(_vm.renderDate(data.createdAt)))])]);
   }), 0)])])], 1)], 1)]), _vm._ssrNode(" "), _c('PartnersCarousel')], 2), _vm._ssrNode(" "), _c('StickyInfoContact'), _vm._ssrNode(" "), _c('Footer')], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index/news/_id.vue?vue&type=template&id=03b24eee&
+// CONCATENATED MODULE: ./pages/index/news/_id.vue?vue&type=template&id=281e720d&
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index/news/_id.vue?vue&type=script&lang=js&
-var _idvue_type_script_lang_js_ = __webpack_require__(199);
+var _idvue_type_script_lang_js_ = __webpack_require__(198);
 
 // CONCATENATED MODULE: ./pages/index/news/_id.vue?vue&type=script&lang=js&
  /* harmony default export */ var news_idvue_type_script_lang_js_ = (_idvue_type_script_lang_js_["a" /* default */]); 

@@ -72037,16 +72037,16 @@ function normalizeModule(moduleData, filePath) {
   return moduleData;
 }
 // CONCATENATED MODULE: ./.nuxt/components/index.js
-const SsrCarousel = () => __webpack_require__.e(/* import() | components/ssr-carousel */ 12).then(__webpack_require__.t.bind(null, 182, 7)).then(c => wrapFunctional(c.default || c));
-const CommonBannerForm = () => __webpack_require__.e(/* import() | components/common-banner-form */ 1).then(__webpack_require__.bind(null, 223)).then(c => wrapFunctional(c.default || c));
+const SsrCarousel = () => __webpack_require__.e(/* import() | components/ssr-carousel */ 12).then(__webpack_require__.t.bind(null, 184, 7)).then(c => wrapFunctional(c.default || c));
+const CommonBannerForm = () => __webpack_require__.e(/* import() | components/common-banner-form */ 1).then(__webpack_require__.bind(null, 222)).then(c => wrapFunctional(c.default || c));
 const CommonComitmentTraining = () => __webpack_require__.e(/* import() | components/common-comitment-training */ 2).then(__webpack_require__.bind(null, 175)).then(c => wrapFunctional(c.default || c));
 const CommonFooter = () => __webpack_require__.e(/* import() | components/common-footer */ 3).then(__webpack_require__.bind(null, 171)).then(c => wrapFunctional(c.default || c));
-const CommonLightGallery = () => __webpack_require__.e(/* import() | components/common-light-gallery */ 4).then(__webpack_require__.bind(null, 224)).then(c => wrapFunctional(c.default || c));
+const CommonLightGallery = () => __webpack_require__.e(/* import() | components/common-light-gallery */ 4).then(__webpack_require__.bind(null, 223)).then(c => wrapFunctional(c.default || c));
 const CommonMainNavBar = () => __webpack_require__.e(/* import() | components/common-main-nav-bar */ 5).then(__webpack_require__.bind(null, 169)).then(c => wrapFunctional(c.default || c));
-const CommonMaps = () => __webpack_require__.e(/* import() | components/common-maps */ 6).then(__webpack_require__.bind(null, 183)).then(c => wrapFunctional(c.default || c));
+const CommonMaps = () => __webpack_require__.e(/* import() | components/common-maps */ 6).then(__webpack_require__.bind(null, 185)).then(c => wrapFunctional(c.default || c));
 const CommonMessengerPlugin = () => __webpack_require__.e(/* import() | components/common-messenger-plugin */ 7).then(__webpack_require__.bind(null, 340)).then(c => wrapFunctional(c.default || c));
 const CommonOtherCourseSection = () => __webpack_require__.e(/* import() | components/common-other-course-section */ 8).then(__webpack_require__.bind(null, 140)).then(c => wrapFunctional(c.default || c));
-const CommonParentsComment = () => __webpack_require__.e(/* import() | components/common-parents-comment */ 9).then(__webpack_require__.bind(null, 225)).then(c => wrapFunctional(c.default || c));
+const CommonParentsComment = () => __webpack_require__.e(/* import() | components/common-parents-comment */ 9).then(__webpack_require__.bind(null, 224)).then(c => wrapFunctional(c.default || c));
 const CommonPartnersCarousel = () => __webpack_require__.e(/* import() | components/common-partners-carousel */ 10).then(__webpack_require__.bind(null, 147)).then(c => wrapFunctional(c.default || c));
 const CommonStickyInfoContact = () => __webpack_require__.e(/* import() | components/common-sticky-info-contact */ 11).then(__webpack_require__.bind(null, 170)).then(c => wrapFunctional(c.default || c));
 
@@ -73498,6 +73498,12 @@ var en_default = /*#__PURE__*/__webpack_require__.n(en);
 external_vue_default.a.use(element_ui_common_default.a, {
   locale: en_default.a
 });
+// CONCATENATED MODULE: ./plugins/APIconstant.js
+/* harmony default export */ var APIconstant = (({
+  app
+}, inject) => {
+  inject('API_URL', 'https://unilanguagesonla.com/api');
+});
 // CONCATENATED MODULE: ./.nuxt/index.js
 
 
@@ -73528,6 +73534,7 @@ external_vue_default.a.use(element_ui_common_default.a, {
  // Source: ../plugins/element-ui (mode: 'all')
  // Source: ../plugins/lightGallery.client.js (mode: 'client')
  // Source: ../plugins/sendMail.js (mode: 'client')
+ // Source: ../plugins/APIconstant.js (mode: 'all')
 
 // Component: <ClientOnly>
 external_vue_default.a.component(external_vue_client_only_default.a.name, external_vue_client_only_default.a);
@@ -73803,6 +73810,9 @@ async function createApp(ssrContext, config = {}) {
   }
   if (false) {}
   if (false) {}
+  if (typeof APIconstant === 'function') {
+    await APIconstant(app.context, inject);
+  }
 
   // Lock enablePreview in context
   if (false) {}
