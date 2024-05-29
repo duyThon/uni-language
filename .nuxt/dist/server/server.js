@@ -70598,7 +70598,7 @@ async function setContext(app, context) {
   // If context not defined, create it
   if (!app.context) {
     app.context = {
-      isStatic: true,
+      isStatic: false,
       isDev: false,
       isHMR: false,
       app,
@@ -71907,9 +71907,6 @@ const layouts = {
     },
     isFetching() {
       return this.nbFetching > 0;
-    },
-    isPreview() {
-      return Boolean(this.$options.previewData);
     }
   },
   methods: {
@@ -72804,7 +72801,7 @@ external_vue_default.a.use(external_vue_i18n_default.a);
       route
     } = context;
     let redirectPath = '';
-    const isStaticGenerate =  true && true;
+    const isStaticGenerate =  false && false;
     // Decide whether we should redirect to a different route.
     if (!isStaticGenerate && !app.i18n.differentDomains && nuxt_i18n_options["c" /* options */].strategy !== nuxt_i18n_options["a" /* Constants */].STRATEGIES.NO_PREFIX && (
     // Skip if already on the new locale unless the strategy is "prefix_and_default" and this is the default
@@ -72893,9 +72890,7 @@ external_vue_default.a.use(external_vue_i18n_default.a);
    */
   const doDetectBrowserLanguage = route => {
     // Browser detection is ignored if it is a nuxt generate.
-    if (true) {
-      return '';
-    }
+    if (false) {}
     if (nuxt_i18n_options["c" /* options */].strategy !== nuxt_i18n_options["a" /* Constants */].STRATEGIES.NO_PREFIX) {
       if (redirectOn === nuxt_i18n_options["a" /* Constants */].REDIRECT_ON_OPTIONS.ROOT) {
         if (route.path !== '/') {
@@ -73657,61 +73652,14 @@ async function createApp(ssrContext, config = {}) {
       }, {
         "http-equiv": "Content-Security-Policy",
         "content": "upgrade-insecure-requests"
-      }, {
-        "hid": "charset",
-        "charset": "utf-8"
-      }, {
-        "hid": "mobile-web-app-capable",
-        "name": "mobile-web-app-capable",
-        "content": "yes"
-      }, {
-        "hid": "apple-mobile-web-app-title",
-        "name": "apple-mobile-web-app-title",
-        "content": "uni-english-center"
-      }, {
-        "hid": "og:type",
-        "name": "og:type",
-        "property": "og:type",
-        "content": "website"
-      }, {
-        "hid": "og:title",
-        "name": "og:title",
-        "property": "og:title",
-        "content": "uni-english-center"
-      }, {
-        "hid": "og:site_name",
-        "name": "og:site_name",
-        "property": "og:site_name",
-        "content": "uni-english-center"
-      }, {
-        "hid": "og:description",
-        "name": "og:description",
-        "property": "og:description",
-        "content": "## Build Setup"
       }],
       "link": [{
         "rel": "icon",
         "type": "image\u002Fx-icon",
         "href": "\u002Ffavicon.ico"
-      }, {
-        "hid": "shortcut-icon",
-        "rel": "shortcut icon",
-        "href": "\u002F_nuxt\u002Ficons\u002Ficon_64x64.e3e9fb.png"
-      }, {
-        "hid": "apple-touch-icon",
-        "rel": "apple-touch-icon",
-        "href": "\u002F_nuxt\u002Ficons\u002Ficon_512x512.e3e9fb.png",
-        "sizes": "512x512"
-      }, {
-        "rel": "manifest",
-        "href": "\u002F_nuxt\u002Fmanifest.1d37d982.json",
-        "hid": "manifest"
       }],
       "style": [],
-      "script": [],
-      "htmlAttrs": {
-        "lang": "en"
-      }
+      "script": []
     },
     store,
     router,
