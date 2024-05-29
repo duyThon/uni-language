@@ -29,7 +29,7 @@
         <h3 style="font-size: 26px" class="admin-title">Ảnh tiêu đề</h3>
         <client-only>
             <Editor
-              id="titleImg"
+              id="titleImg-news"
               api-key="ut7fjjlpkmogxx60bmoats48gwzbqa1b8hzmvehbozmzpcc5"
               output-format="text"
               :init="myInit"
@@ -102,7 +102,7 @@
         <h3 style="font-size: 26px" class="admin-title">Ảnh tiêu đề</h3>
         <client-only>
             <Editor
-              id="titleImg"
+              id="titleImg-hof"
               api-key="ut7fjjlpkmogxx60bmoats48gwzbqa1b8hzmvehbozmzpcc5"
               output-format="text"
               :init="myInit"
@@ -207,6 +207,7 @@ export default {
       enSummary: "",
       title: "Tin tức và sự kiện",
       tabName: "",
+      titleImage: "",
       // apiUrl: process.env.API_URL,
       dialog: false,
       myInit: {
@@ -272,13 +273,14 @@ export default {
       if(this.tabName == 0) {
         this.viContent = tinyMCE.get('newsViContent').getContent();
         this.enContent = tinyMCE.get('newsEnContent').getContent();
+        this.titleImage = tinyMCE.get('titleImg-news').getContent();
       } else {
         this.viContent = tinyMCE.get('hofViContent').getContent();
         this.enContent = tinyMCE.get('hofEnContent').getContent();
+        this.titleImage = tinyMCE.get('titleImg-hof').getContent();
       }
-      let titleImage = tinyMCE.get('titleImg').getContent();
       const body = {
-        titleImage: titleImage,
+        titleImage: this.titleImage,
         titleVn: this.viTitle,
         descriptionVn: this.viContent,
         titleEn: this.enTitle,
