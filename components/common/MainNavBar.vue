@@ -146,7 +146,7 @@
           <a @click="scrollToFooter(true)">LIÊN HỆ</a>
         </el-menu-item>
         <el-submenu index="2">
-          <template slot="title">KHÓA HỌC</template>
+          <template  slot="title"><div style="padding: 0 10px">KHÓA HỌC</div></template>
           <div style="padding: 10px; font-weight: 600; font-size: 15px">
             Khóa học chính
           </div>
@@ -220,7 +220,7 @@
       </el-menu>
       
 
-      <div class="switch-language-mobile">
+      <!-- <div class="switch-language-mobile">
         <div class="switch-language-mobile-title">NGÔN NGỮ</div>
         <ul class="nation-logo-mobile">
           <li class="nation-logo-item-mobile">
@@ -238,7 +238,7 @@
             />
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </nav>
 </template>
@@ -511,6 +511,10 @@ export default {
 
   .main-navbar-list ul {
     display: none;
+  }
+
+  .el-submenu__title {
+    padding: 0 30px;
   }
 }
 

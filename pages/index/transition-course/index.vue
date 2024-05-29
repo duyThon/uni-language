@@ -108,22 +108,12 @@ export default {
     margin-right: 50p;
 }
 
-.section2-toeic {
+/* .section2-toeic {
     margin: 30px 400px;
-}
+} */
 
 .section2-toeic p {
     text-align: center;
-}
-
-.section2-toeic-content {
-    display: flex;
-    justify-content: center;
-}
-
-.section2-toeic-content img {
-    height: 130px;
-    margin: 20px 50px 0 50px;
 }
 
 .section2-toeic-intro-text {

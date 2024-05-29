@@ -93,9 +93,9 @@ export default {
     margin-right: 50p;
 }
 
-.section2-toeic {
+/* .section2-toeic {
     margin: 30px 400px;
-}
+} */
 
 .section2-toeic p {
     text-align: center;
@@ -116,5 +116,11 @@ export default {
     text-align: center;
     margin: 0px 0 0 20px;
     max-width: 250px;
+}
+
+@media (max-width: 46.1875em) {
+    .section2-toeic-content {
+        flex-direction: column;
+    }
 }
 </style>

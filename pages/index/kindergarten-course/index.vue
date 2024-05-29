@@ -90,7 +90,6 @@
         </p>
       </div>
     </div>
-    <CommitmentTraining :commitmentTrainingContent="this.commitmentTrainingContent"/>
     <div class="section section4">
       <h2 style="margin-top: 0; text-align: center">Lộ trình học tập</h2>
       <table class="schedule-table" border="1">
@@ -116,10 +115,11 @@
           </tr>
         </tbody>
       </table>
-      <div class="btn-sign-up">
+      <div style="opacity: 1" class="btn-sign-up">
         <a href="#">ĐĂNG KÝ TƯ VẤN</a>
       </div>
     </div>
+    <CommitmentTraining :commitmentTrainingContent="this.commitmentTrainingContent"/>
     <OtherCourseSection />
   </div>
 </template>

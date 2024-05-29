@@ -1,7 +1,7 @@
 <template>
   <div>
     <MainNavBar></MainNavBar>
-    <main>
+    <main class="news-container">
       <el-dialog title="Thông báo" :visible.sync="dialog" width="30%">
         <div style="display: flex; align-items: center; flex-direction: column">
           <img
@@ -15,12 +15,12 @@
           <el-button type="primary" @click="dialog = false">Xin cảm ơn</el-button>
         </span>
       </el-dialog>
-      <div style="margin: 120px">
+      <div class="news-container-wrapper">
         <div class="news-item-container">
           <el-row :gutter="20">
             <el-col :xs="24" :sm="24" :lg="4">
-              <h3>Học viên xuất sắc</h3>
-              <h3>Chia sẻ bài viết</h3>
+              <h3 class="title-of-news">Học viên xuất sắc</h3>
+              <h4>Chia sẻ bài viết</h4>
               <div class="share-list">
                 <a @click="shareOnFB" target="_blank"
                   ><img

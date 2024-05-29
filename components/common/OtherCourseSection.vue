@@ -30,7 +30,7 @@
         </el-col>
       </el-row>
 
-      <h2 class="other-course-section-heading" style="margin-top: 30px; text-align: center">
+      <h2 class="other-course-section-heading" style="margin: 30px 10px 10px 10px; text-align: center">
         CÁC CHƯƠNG TRÌNH HỌC NGẮN HẠN TẠI UNI LANGUAGE HOUSE
       </h2>
       <el-row class="other-course-section" :gutter="20">

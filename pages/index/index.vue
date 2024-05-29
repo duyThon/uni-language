@@ -129,6 +129,9 @@ export default {
 
 /* mobile */
 @media screen and (max-width: 739px) {
+  .text-center-responsive {
+    padding: 0 20px
+  }
 }
 
 /* tablet */
