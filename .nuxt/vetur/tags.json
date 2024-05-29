@@ -1,0 +1,38 @@
+{
+  "SsrCarousel": {
+    "description": "Auto imported from node_modules/vue-ssr-carousel/index.js"
+  },
+  "CommonBannerForm": {
+    "description": "Auto imported from components/common/BannerForm.vue"
+  },
+  "CommonComitmentTraining": {
+    "description": "Auto imported from components/common/ComitmentTraining.vue"
+  },
+  "CommonFooter": {
+    "description": "Auto imported from components/common/Footer.vue"
+  },
+  "CommonLightGallery": {
+    "description": "Auto imported from components/common/LightGallery.vue"
+  },
+  "CommonMainNavBar": {
+    "description": "Auto imported from components/common/MainNavBar.vue"
+  },
+  "CommonMaps": {
+    "description": "Auto imported from components/common/Maps.vue"
+  },
+  "CommonMessengerPlugin": {
+    "description": "Auto imported from components/common/MessengerPlugin.vue"
+  },
+  "CommonOtherCourseSection": {
+    "description": "Auto imported from components/common/OtherCourseSection.vue"
+  },
+  "CommonParentsComment": {
+    "description": "Auto imported from components/common/ParentsComment.vue"
+  },
+  "CommonPartnersCarousel": {
+    "description": "Auto imported from components/common/PartnersCarousel.vue"
+  },
+  "CommonStickyInfoContact": {
+    "description": "Auto imported from components/common/StickyInfoContact.vue"
+  }
+}
